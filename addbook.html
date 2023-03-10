@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Add A Book Here</h1>
-    <form action="addbook.js">
+    <form id="bookaddform">
         <input type="file" id="bookcovert" name="bookcovert" accept=".jpg, .png, .jpeg, .gif, "><br><br>
         <input type="number" name="bookNumberT" id="bookNumberT" placeholder="Book ID" required><br><br>
         <input type="text" name="bookNameT" id="bookNameT" placeholder="Book Name" required><br><br>
@@ -38,5 +38,6 @@
         <input type="number" name="bookPagesT" id="bookPagesT" placeholder="Number of Pages" required><br><br>
         <input type="submit">
     </form>
+    <script src="/js/addbook.js"></script>
 </body>
 </html>
