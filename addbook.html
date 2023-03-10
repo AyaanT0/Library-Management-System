@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+</head>
+<body>
+    <h1>Add A Book Here</h1>
+    <form action="addbook.js">
+        <input type="file" id="myFile" name="filename"><br><br>
+        <input type="number" name="bookNumberT" id="bookNumberT" placeholder="Book ID" required><br><br>
+        <input type="text" name="bookNameT" id="bookNameT" placeholder="Book Name" required><br><br>
+        <input type="text" name="bookAuthorT" id="bookAuthorT" placeholder="Book Author" required><br><br>
+        <input type="radio" id="bookTypeT" name="bookTypeT" value="fiction" required>
+        <label for="fiction">Fiction</label>
+        <input type="radio" id="bookTypeT" name="bookTypeT" value="non-fiction" required>
+        <label for="non-fiction">Non-Fiction</label>
+        <input type="radio" id="bookTypeT" name="bookTypeT" value="graphic-novel" required>
+        <label for="graphic-novel">Graphic Novel</label><br><br>
+        <select name="bookPublicationT" id="bookPublicationT" required>
+            <option value="before-2000">Before 2000</option>
+            <option value="2001-2005">2001-2005</option>
+            <option value="2006-2010">2006-2010</option>
+            <option value="2011-2015">2011-2015</option>
+            <option value="2016-2020">2016-2020</option>
+            <option value="2021-2023">2021-2023</option>
+        </select><br><br>
+        <select name="bookGenreT" id="bookGenreT" required>
+            <option value="fantasy">Fantasy</option>
+            <option value="science-fiction">Science Fiction</option>
+            <option value="mystery">Mystery</option>
+            <option value="horror">Horror</option>
+            <option value="Comedy">Comedy</option>
+            <option value="other">Other</option>
+        </select><br><br>
+        <input type="number" name="bookPagesT" id="bookPagesT" placeholder="Number of Pages" required><br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
