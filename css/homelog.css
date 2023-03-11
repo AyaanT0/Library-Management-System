@@ -11,7 +11,6 @@
   height: 1080px;
   left: 0px;
   top: 0px;
-  background: url(image1.jpg);
   opacity: 0.3;
 }
 .homelogo {
@@ -21,7 +20,6 @@
   left: 250px;
   top: -63px;
   opacity: 0.45;
-  background: url(logo.png);
 }
 .rectangle1h {
   box-sizing: border-box;
@@ -252,9 +250,46 @@
   margin-bottom: 0;
   text-decoration: none;
 }
+.text09235 {
+  top: 795px;
+  left: 324px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 150px;
+  align-self: auto;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25) ;
+  font-style: Bold;
+  text-align: center;
+  font-family: Expletus Sans;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  z-index: 3;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
 .loginT {
   position: relative;
   width: 1280px;
   height: 720px;
   background: #D5CFCF;
+}
+.back {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  left: 1480px;
+  top: 285px;
+  font-family: Roboto;
+  z-index: 10;
+  font-style: italic;
+  font-weight: 800;
+  text-align: center;
+  background: #cfd9f6;
+  border: 1.5px solid #000000;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 42px;
 }

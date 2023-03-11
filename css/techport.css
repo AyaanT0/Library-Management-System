@@ -1,0 +1,143 @@
+.homepage {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: #D5CFCF;
+}
+.technicianportal {
+  width: 100%;
+  height: 1080px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.sideimage1 {
+
+  position: absolute;
+  width: 487.5px;
+  height: 924px;
+  left: 0px;
+  top: 156px;
+  background: url(image1.jpg);
+  opacity: 0.25;
+  z-index: 4;
+}
+.rectangle00 {
+  position: absolute;
+  width: 487.5px;
+  height: 924px;
+  left: 486px;
+  top: 1080px;
+  background: #7B7B7B;
+  transform: rotate(180deg);
+}
+.rectangle000 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 487.5px;
+  height: 924px;
+  left: 0px;
+  top: 156px;
+  z-index: 3;
+  background: #7B7B7B;
+  border: 1.5px solid #000000;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+.rectangle0000 {
+  position: absolute;
+  width: 487.5px;
+  height: 156px;
+  left: 0px;
+  top: 0px;
+  background: #7294EE;
+  transform: rotate(180deg);
+}
+.rectangle0 {
+  position: absolute;
+  width: 1432.5px;
+  height: 156px;
+  left: 487.5px;
+  top: 0px;
+  background: #90A8E9;
+  transform: rotate(180deg);
+}
+.rectangle69 {
+  position: absolute;
+  width: 487.5px;
+  height: 70.5px;
+  left: 0px;
+  top: 210px;
+  background: #9C9C9C;
+  transform: rotate(180deg);
+  z-index: 5;
+}
+.welcome {
+  top: -90px;
+  left: 526px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 130px;
+  align-self: auto;
+  font-style: italic;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: condensed;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  z-index: 1;
+  text-shadow: 2px 0 white, 0 2px white, 2px 0 white, 0 2px white;
+}
+.logo {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 10px;
+  top: -20px;
+  z-index: 45;
+}
+.logotext {
+  top: -20px;
+  left: 200px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 50px;
+  align-self: auto;
+  font-style: italic;
+  z-index: 1;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 800;
+  line-height: normal;
+  font-stretch: condensed;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+  z-index: 5;
+  text-shadow: 1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 1.5px white;
+}
+.logout {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  left: 1810px;
+  top: 118px;
+  font-family: Roboto;
+  z-index: 1;
+  font-style: italic;
+  font-weight: 800;
+  text-align: center;
+  background: #cfd9f6;
+  border: 1.5px solid #000000;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 42px;
+}
