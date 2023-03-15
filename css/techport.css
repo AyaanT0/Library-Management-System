@@ -144,6 +144,11 @@
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
   border-radius: 42px;
 }
+.logout:hover {
+  background-color: #e48d7a;
+  color: white;
+  transform: scale(1.1);
+}
 .triangledown {
   position: absolute;
   width: 45px;
@@ -151,4 +156,100 @@
   left: 436px;
   top: 222px;
   z-index: 420;
+}
+.addbookside {
+  box-sizing: border-box;
+  position: absolute;
+  width: 462px;
+  height: 96px;
+  left: 13px;
+  top: 307.5px;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 27px;
+  z-index: 4;
+  text-align: center;
+  background: #D9D9D9;
+  border: 2.8px solid #000000;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 42px;
+  box-sizing: border-box;
+}
+.addbookside:hover {
+  background-color: #C0C0C0;
+  color: white;
+  transform: scale(1.03);
+}
+.removebookside {
+  box-sizing: border-box;
+  position: absolute;
+  width: 462px;
+  height: 96px;
+  left: 13px;
+  top: 436.5px;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 27px;
+  z-index: 4;
+  text-align: center;
+  background: #D9D9D9;
+  border: 2.8px solid #000000;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 42px;
+  box-sizing: border-box;
+}
+.removebookside:hover {
+  background-color: #C0C0C0;
+  color: white;
+  transform: scale(1.03);
+}
+.checkoutbookside {
+  box-sizing: border-box;
+  position: absolute;
+  width: 462px;
+  height: 96px;
+  left: 13px;
+  top: 570px;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 27px;
+  z-index: 4;
+  text-align: center;
+  background: #D9D9D9;
+  border: 2.8px solid #000000;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 42px;
+  box-sizing: border-box;
+}
+.checkoutbookside:hover {
+  background-color: #C0C0C0;
+  color: white;
+  transform: scale(1.03);
+}
+.checkinbookside {
+  box-sizing: border-box;
+  position: absolute;
+  width: 462px;
+  height: 96px;
+  left: 13px;
+  top: 699px;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 27px;
+  z-index: 4;
+  text-align: center;
+  background: #D9D9D9;
+  border: 2.8px solid #000000;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 42px;
+  box-sizing: border-box;
+}
+.checkinbookside:hover {
+  background-color: #C0C0C0;
+  color: white;
+  transform: scale(1.03);
 }
