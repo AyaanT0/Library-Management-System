@@ -1,255 +1,404 @@
 .technicianportal {
-  width: 1920px;
-  height: 1080px;
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-color: transparent;
-  background-color: rgba(255, 255, 255, 1);
-}
-.sideimage1 {
-  position: absolute;
-  width: 487.5px;
-  height: 924px;
-  left: 0px;
-  top: 156px;
-  background: url(image1.jpg);
-  opacity: 0.25;
-  z-index: 4;
-}
-.rectangle000 {
-  box-sizing: border-box;
-  position: absolute;
-  width: 487.5px;
-  height: 924px;
-  left: 0px;
-  top: 156px;
-  z-index: 3;
-  background: #7B7B7B;
-  border: 1.5px solid #000000;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-}
-.rectangle0000 {
-  position: absolute;
-  width: 487.5px;
-  height: 156px;
-  left: 0px;
-  top: 0px;
-  background: #7294EE;
-  transform: rotate(180deg);
-}
-.rectangle0 {
-  position: absolute;
-  width: 1432.5px;
-  height: 156px;
-  left: 487.5px;
-  top: 0px;
-  background: #90A8E9;
-  transform: rotate(180deg);
-}
-.rectangle69 {
-  position: absolute;
-  width: 487.5px;
-  height: 70.5px;
-  left: 0px;
-  top: 210px;
-  background: #9C9C9C;
-  transform: rotate(180deg);
-  z-index: 5;
-}
-.welcome {
-  top: -90px;
-  left: 526px;
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  position: absolute;
-  font-size: 130px;
-  align-self: auto;
-  font-style: italic;
-  text-align: center;
-  font-family: Roboto;
-  font-weight: 800;
-  line-height: normal;
-  font-stretch: condensed;
-  margin-right: 0;
-  margin-bottom: 0;
-  text-decoration: none;
-  z-index: 1;
-  text-shadow: 2px 0 white, 0 2px white, 2px 0 white, 0 2px white;
-}
-.sidebartext {
-  top: 180px;
-  left: 1px;
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  position: absolute;
-  font-size: 40px;
-  align-self: auto;
-  font-style: italic;
-  text-align: center;
-  font-family: Roboto;
-  font-weight: 800;
-  line-height: normal;
-  font-stretch: condensed;
-  margin-right: 0;
-  margin-bottom: 0;
-  text-decoration: none;
-  z-index: 10;
-}
-.logo {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  left: 10px;
-  top: -20px;
-  z-index: 45;
-}
-.logotext {
-  top: -20px;
-  left: 200px;
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  position: absolute;
-  font-size: 50px;
-  align-self: auto;
-  font-style: italic;
-  z-index: 1;
-  text-align: center;
-  font-family: Roboto;
-  font-weight: 800;
-  line-height: normal;
-  font-stretch: condensed;
-  margin-right: 0;
-  margin-bottom: 0;
-  text-decoration: none;
-  z-index: 5;
-  text-shadow: 1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 1.5px white;
-}
-.logout {
-  box-sizing: border-box;
-  position: absolute;
-  width: 100px;
-  height: 30px;
-  left: 1810px;
-  top: 118px;
-  font-family: Roboto;
-  z-index: 1;
-  font-style: italic;
-  font-weight: 800;
-  text-align: center;
-  background: #cfd9f6;
-  border: 1.5px solid #000000;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-  border-radius: 42px;
-}
-.logout:hover {
-  background-color: #e48d7a;
-  color: white;
-  transform: scale(1.1);
-}
-.triangledown {
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  left: 436px;
-  top: 222px;
-  z-index: 420;
-}
-.addbookside {
-  box-sizing: border-box;
-  position: absolute;
-  width: 462px;
-  height: 96px;
-  left: 13px;
-  top: 307.5px;
-  font-family: Roboto;
-  font-style: italic;
-  font-weight: 800;
-  font-size: 27px;
-  z-index: 4;
-  text-align: center;
-  background: #D9D9D9;
-  border: 2.8px solid #000000;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-  border-radius: 42px;
-  box-sizing: border-box;
-}
-.addbookside:hover {
-  background-color: #C0C0C0;
-  color: white;
-  transform: scale(1.03);
-}
-.removebookside {
-  box-sizing: border-box;
-  position: absolute;
-  width: 462px;
-  height: 96px;
-  left: 13px;
-  top: 436.5px;
-  font-family: Roboto;
-  font-style: italic;
-  font-weight: 800;
-  font-size: 27px;
-  z-index: 4;
-  text-align: center;
-  background: #D9D9D9;
-  border: 2.8px solid #000000;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-  border-radius: 42px;
-  box-sizing: border-box;
-}
-.removebookside:hover {
-  background-color: #C0C0C0;
-  color: white;
-  transform: scale(1.03);
-}
-.checkoutbookside {
-  box-sizing: border-box;
-  position: absolute;
-  width: 462px;
-  height: 96px;
-  left: 13px;
-  top: 570px;
-  font-family: Roboto;
-  font-style: italic;
-  font-weight: 800;
-  font-size: 27px;
-  z-index: 4;
-  text-align: center;
-  background: #D9D9D9;
-  border: 2.8px solid #000000;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-  border-radius: 42px;
-  box-sizing: border-box;
-}
-.checkoutbookside:hover {
-  background-color: #C0C0C0;
-  color: white;
-  transform: scale(1.03);
-}
-.checkinbookside {
-  box-sizing: border-box;
-  position: absolute;
-  width: 462px;
-  height: 96px;
-  left: 13px;
-  top: 699px;
-  font-family: Roboto;
-  font-style: italic;
-  font-weight: 800;
-  font-size: 27px;
-  z-index: 4;
-  text-align: center;
-  background: #D9D9D9;
-  border: 2.8px solid #000000;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-  border-radius: 42px;
-  box-sizing: border-box;
-}
-.checkinbookside:hover {
-  background-color: #C0C0C0;
-  color: white;
-  transform: scale(1.03);
-}
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .sideimage1 {
+    position: absolute;
+    width: 487.5px;
+    height: 924px;
+    left: 0px;
+    top: 156px;
+    background: url(image1.jpg);
+    opacity: 0.25;
+    z-index: 4;
+  }
+  .rectangle000 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 487.5px;
+    height: 924px;
+    left: 0px;
+    top: 156px;
+    z-index: 3;
+    background: #7B7B7B;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+  }
+  .rectangle0000 {
+    position: absolute;
+    width: 487.5px;
+    height: 156px;
+    left: 0px;
+    top: 0px;
+    background: #7294EE;
+    transform: rotate(180deg);
+  }
+  .rectangle0 {
+    position: absolute;
+    width: 1432.5px;
+    height: 156px;
+    left: 487.5px;
+    top: 0px;
+    background: #90A8E9;
+    transform: rotate(180deg);
+  }
+  .rectangle69 {
+    position: absolute;
+    width: 487.5px;
+    height: 70.5px;
+    left: 0px;
+    top: 210px;
+    background: #9C9C9C;
+    transform: rotate(180deg);
+    z-index: 5;
+  }
+  .welcome {
+    top: -90px;
+    left: 526px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 130px;
+    align-self: auto;
+    font-style: italic;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: condensed;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    z-index: 1;
+    text-shadow: 2px 0 white, 0 2px white, 2px 0 white, 0 2px white;
+  }
+  .sidebartext {
+    top: 180px;
+    left: 1px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 40px;
+    align-self: auto;
+    font-style: italic;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: condensed;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    z-index: 10;
+  }
+  .logo {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 10px;
+    top: -20px;
+    z-index: 45;
+  }
+  .logotext {
+    top: -20px;
+    left: 200px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 50px;
+    align-self: auto;
+    font-style: italic;
+    z-index: 1;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: condensed;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    z-index: 5;
+    text-shadow: 1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 1.5px white;
+  }
+  .logout {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 1810px;
+    top: 118px;
+    font-family: Roboto;
+    z-index: 1;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    background: #cfd9f6;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+  }
+  .logout:hover {
+    background-color: #e48d7a;
+    color: white;
+    transform: scale(1.1);
+  }
+  .triangledown {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 436px;
+    top: 222px;
+    z-index: 420;
+  }
+  .addbookside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 462px;
+    height: 96px;
+    left: 13px;
+    top: 307.5px;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 27px;
+    z-index: 4;
+    text-align: center;
+    background: #D9D9D9;
+    border: 2.8px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    box-sizing: border-box;
+  }
+  .addbookside:hover {
+    background-color: #C0C0C0;
+    color: white;
+    transform: scale(1.03);
+  }
+  .removebookside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 462px;
+    height: 96px;
+    left: 13px;
+    top: 436.5px;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 27px;
+    z-index: 4;
+    text-align: center;
+    background: #D9D9D9;
+    border: 2.8px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    box-sizing: border-box;
+  }
+  .removebookside:hover {
+    background-color: #C0C0C0;
+    color: white;
+    transform: scale(1.03);
+  }
+  .checkoutbookside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 462px;
+    height: 96px;
+    left: 13px;
+    top: 570px;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 27px;
+    z-index: 4;
+    text-align: center;
+    background: #D9D9D9;
+    border: 2.8px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    box-sizing: border-box;
+  }
+  .checkoutbookside:hover {
+    background-color: #C0C0C0;
+    color: white;
+    transform: scale(1.03);
+  }
+  .checkinbookside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 462px;
+    height: 96px;
+    left: 13px;
+    top: 699px;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 27px;
+    z-index: 4;
+    text-align: center;
+    background: #D9D9D9;
+    border: 2.8px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    box-sizing: border-box;
+  }
+  .checkinbookside:hover {
+    background-color: #C0C0C0;
+    color: white;
+    transform: scale(1.03);
+  }
+  .rectangle1bigtportal {
+    position: absolute;
+    width: 1434px;
+    height: 925.5px;
+    left: 485px;
+    top: 157px;
+    z-index: 1;
+    background: #D5CFCF;
+  }
+  .rectaddbook {
+    box-sizing: border-box;
+    position: absolute;
+    width: 594px;
+    height: 399px;
+    left: 531px;
+    top: 211.5px;
+    background: #EAEEFF;
+    opacity: 0.79;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+    border-radius: 42px;
+    font-family: 'Roboto';
+    font-style: italic;
+    text-align: left;
+    font-weight: 800;
+    font-size: 96px;
+    line-height: 112px;
+    text-align: right;
+    color: #000000;
+  }
+  .rectremovebook {
+    box-sizing: border-box;
+    position: absolute;
+    width: 594px;
+    height: 399px;
+    left: 1260px;
+    top: 211.5px;
+    background: #EAEEFF;
+    opacity: 0.79;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+    border-radius: 42px;
+    font-family: 'Roboto';
+    font-style: italic;
+    text-align: left;
+    font-weight: 800;
+    font-size: 96px;
+    line-height: 112px;
+    text-align: right;
+    color: #000000;
+  }
+  .rectcheckoutbook {
+    box-sizing: border-box;
+    position: absolute;
+    width: 594px;
+    height: 399px;
+    left: 531px;
+    top: 654px;
+    background: #EAEEFF;
+    opacity: 0.79;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+    border-radius: 42px;
+    font-family: 'Roboto';
+    font-style: italic;
+    text-align: left;
+    font-weight: 800;
+    font-size: 96px;
+    line-height: 112px;
+    text-align: right;
+    color: #000000;
+  }
+  .rectcheckinbook {
+    box-sizing: border-box;
+    position: absolute;
+    width: 594px;
+    height: 399px;
+    left: 1260px;
+    top: 654px;
+    background: #EAEEFF;
+    opacity: 0.79;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+    border-radius: 42px;
+    font-family: 'Roboto';
+    font-style: italic;
+    text-align: left;
+    font-weight: 800;
+    font-size: 96px;
+    line-height: 112px;
+    text-align: right;
+    color: #000000;
+  }
+  .rectaddbook:hover {
+    background-color: #B7C5FF;
+    color: white;
+    transform: scale(1);
+  }
+  .rectremovebook:hover {
+    background-color: #B7C5FF;
+    color: white;
+    transform: scale(1);
+  }
+  .rectcheckoutbook:hover {
+    background-color: #B7C5FF;
+    color: white;
+    transform: scale(1);
+  }
+  .rectcheckinbook:hover {
+    background-color: #B7C5FF;
+    color: white;
+    transform: scale(1);
+  }
+  .addbookimage {
+    position: absolute;
+    width: 321px;
+    height: 337.5px;
+    left: 565.5px;
+    top: 246px;
+    z-index: 5;
+  }
+  .removebookimage {
+    position: absolute;
+    width: 260px;
+    height: 337.5px;
+    left: 1281px;
+    top: 245px;
+    z-index: 5;
+  }
+  .checkoutbookimage {
+    position: absolute;
+    width: 321px;
+    height: 337.5px;
+    left: 565.5px;
+    top: 688.5px;
+    z-index: 5;
+  }
+  .checkinbookimage {
+    position: absolute;
+    width: 321px;
+    height: 337.5px;
+    left: 1281.5px;
+    top: 694px;
+    z-index: 5;
+  }
