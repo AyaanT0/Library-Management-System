@@ -1,43 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Book</title>
+    <link rel="stylesheet" href="css/addbook.css">
+    <script src="addbook.js"></script>
 </head>
+
 <body>
-    <h1>Add A Book Here</h1>
-    <form id="bookaddform">
-        <input type="file" id="bookcovert" name="bookcovert" accept=".jpg, .png, .jpeg, .gif, "><br><br>
-        <input type="number" name="bookNumberT" id="bookNumberT" placeholder="Book ID" required><br><br>
-        <input type="text" name="bookNameT" id="bookNameT" placeholder="Book Name" required><br><br>
-        <input type="text" name="bookAuthorT" id="bookAuthorT" placeholder="Book Author" required><br><br>
-        <input type="radio" id="bookTypeT" name="bookTypeT" value="fiction" required>
-        <label for="fiction">Fiction</label>
-        <input type="radio" id="bookTypeT" name="bookTypeT" value="non-fiction" required>
-        <label for="non-fiction">Non-Fiction</label>
-        <input type="radio" id="bookTypeT" name="bookTypeT" value="graphic-novel" required>
-        <label for="graphic-novel">Graphic Novel</label><br><br>
-        <select name="bookPublicationT" id="bookPublicationT" required>
-            <option value="before-2000">Before 2000</option>
-            <option value="2001-2005">2001-2005</option>
-            <option value="2006-2010">2006-2010</option>
-            <option value="2011-2015">2011-2015</option>
-            <option value="2016-2020">2016-2020</option>
-            <option value="2021-2023">2021-2023</option>
-        </select><br><br>
-        <select name="bookGenreT" id="bookGenreT" required>
-            <option value="fantasy">Fantasy</option>
-            <option value="science-fiction">Science Fiction</option>
-            <option value="mystery">Mystery</option>
-            <option value="horror">Horror</option>
-            <option value="Comedy">Comedy</option>
-            <option value="other">Other</option>
-        </select><br><br>
-        <input type="number" name="bookPagesT" id="bookPagesT" placeholder="Number of Pages" required><br><br>
-        <input type="submit">
-    </form>
-    <script src="/js/addbook.js"></script>
+    <div align="center" class="addbookpage" id="addbookpage">
+        <h1 class="welcome">Add New Books</h1>
+        <h2 class="logotext">North Park <br>Library</h2>
+        <p class="sidebartext">TECHNICIAN ACTIONS</p>
+        <rect class="rectangle000"></rect>
+        <rect class="rectangle0000"></rect>
+        <rect class="rectangle0"></rect>
+        <rect class="rectangle69"></rect>
+        <rect class="rectangle1bigtportal"></rect>
+        <rect class="rectangle1bigtadd"></rect>
+        <img src="img/addbook.png" class="topbarimage">
+        <img src="img/image1.jpg" class="sideimage1">
+        <img src="img/logo.png" class="logo">
+        <img src="img/logo.png" class="midlogo">
+        <img src="img/triangledown.png" class="triangledown">
+        <img src="img/addbookcover.png" class="addbookcoverimage">
+        <form action="technicianportal.html">
+            <button class="logout logout:hover">BACK</button>
+        </form>
+        <form action="addbook.html">
+            <button class="addbookside addbookside:hover">ADD BOOK</button>
+        </form>
+        <form action="removebook.html">
+            <button class="removebookside removebookside:hover">REMOVE BOOK</button>
+        </form>
+        <form action="checkoutbook.html">
+            <button class="checkoutbookside checkoutbookside:hover">CHECKOUT BOOK</button>
+        </form>
+        <form action="checkinbook.html">
+            <button class="checkinbookside checkinbookside:hover">CHECK IN BOOK</button>
+        </form> <!--copy until here for all future technician pages-->
+        <p class="bookcoveraddtext">Add A Cover</p>
+        <span class="booknumbertext">Book Number*:</span>
+        <span class="booktitletext">Title*:</span>
+        <span class="bookauthortext">Author*:</span>
+        <span class="booktypetext">Book Type*:</span>
+        <span class="bookpublicationtext">Publication Date*:</span>
+        <span class="bookgenretext">Genre*:</span>
+        <span class="pagenumbertext"># Of Pages*:</span>
+        <form id="bookaddform" class="addbookform">
+            <input class="bookcover bookcover:hover" type="file" id="bookcovert" name="bookcovert" accept=".jpg, .png, .jpeg, .gif, ">
+            <input class=booknumber type="number" name="bookNumberT" id="bookNumberT" placeholder="Enter Field Here" minlength="4" maxlength="8" required>
+            <input class="booktitle" type="text" id="bookNameT" name="bookNameT" placeholder="Enter Field Here" required>
+            <input class="bookauthor" type="text" name="bookAuthorT" id="bookAuthorT" placeholder="Enter Field Here" required>
+            <div class="booktype">
+                <input type="radio" id="bookTypeT" name="bookTypeT" value="fiction" required>
+                <label for="fiction">Fiction</label>
+                <input type="radio" id="bookTypeT" name="bookTypeT" value="non-fiction" required>
+                <label for="non-fiction">Non-Fiction</label>
+                <input type="radio" id="bookTypeT" name="bookTypeT" value="graphic-novel" required>
+                <label for="graphic-novel">Graphic Novel</label>
+            </div>
+            <select class="bookpublication" name="bookPublicationT" id="bookPublicationT" required>
+                <option value="before-2000">Before 2000</option>
+                <option value="2001-2005">2001-2005</option>
+                <option value="2006-2010">2006-2010</option>
+                <option value="2011-2015">2011-2015</option>
+                <option value="2016-2020">2016-2020</option>
+                <option value="2021-2023">2021-2023</option>
+            </select>
+            <select class="bookgenre" name="bookGenreT" id="bookGenreT" required>
+                <option value="fantasy">Fantasy</option>
+                <option value="science-fiction">Science Fiction</option>
+                <option value="mystery">Mystery</option>
+                <option value="horror">Horror</option>
+                <option value="Comedy">Comedy</option>
+                <option value="other">Other</option>
+            </select>
+            <input class="pagenumber" type="number" name="bookPagesT" id="bookPagesT" placeholder="Enter Field Here" required>
+            <button class="addbookbutton addbookbutton:hover" type="submit">ADD BOOK</button>
+        </form>
 </body>
+
 </html>
+
+
