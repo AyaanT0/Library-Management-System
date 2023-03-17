@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Book</title>
     <link rel="stylesheet" href="css/addbook.css">
-    <script src="addbook.js"></script>
+    <script src="js/add_book.js"></script>
 </head>
 
 <body>
@@ -80,8 +80,17 @@
                 <option value="other">Other</option>
             </select>
             <input class="pagenumber" type="number" name="bookPagesT" id="bookPagesT" placeholder="Enter Field Here" required>
-            <button class="addbookbutton addbookbutton:hover" type="submit">ADD BOOK</button>
+            <button class="addbookbutton addbookbutton:hover" type="submit" id="submit">ADD BOOK</button>
         </form>
+    </div>
+    
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
+
 </body>
 
 </html>
