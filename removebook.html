@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Remove Book</title>
+    <link rel="stylesheet" href="css/remobook.css">
+    <script src="js/remove_book.js"></script>
 </head>
+
 <body>
-    <div align="center" class="homepage" id="homepage">
-            <h1>Remove Book</h1>
-        <form action="/js/removebook.js">
-            <input id="bookrt" placeholder="Enter The Book Number" type="number" required></input>
-            <button class="rectangle3tl">Remove Book</button>
+    <div align="center" class="addbookpage" id="addbookpage">
+        <h1 class="welcome">Remove Books</h1>
+        <h2 class="logotext">North Park <br>Library</h2>
+        <p class="sidebartext">TECHNICIAN ACTIONS</p>
+        <rect class="rectangle000"></rect>
+        <rect class="rectangle0000"></rect>
+        <rect class="rectangle0"></rect>
+        <rect class="rectangle69"></rect>
+        <rect class="rectangle1bigtportal"></rect>
+        <rect class="rectangle1bigtremove"></rect>
+        <img src="img/removebook.png" class="topbarimage">
+        <img src="img/image1.jpg" class="sideimage1">
+        <img src="img/logo.png" class="logo">
+        <img src="img/logo.png" class="midlogo">
+        <img src="img/triangledown.png" class="triangledown">
+        <form action="technicianportal.html">
+            <button class="logout logout:hover">BACK</button>
+        </form>
+        <form action="addbook.html">
+            <button class="addbookside addbookside:hover">ADD BOOK</button>
+        </form>
+        <form action="removebook.html">
+            <button class="removebookside removebookside:hover">REMOVE BOOK</button>
+        </form>
+        <form action="checkoutbook.html">
+            <button class="checkoutbookside checkoutbookside:hover">CHECKOUT BOOK</button>
+        </form>
+        <form action="checkinbook.html">
+            <button class="checkinbookside checkinbookside:hover">CHECK IN BOOK</button>
+        </form> <!--copy until here for all future technician pages-->
+        <span class="booknumbertext">Book Number*:</span>
+        <form id="bookremoveform" class="removebookform">
+            <input class="booknumber" type="number" name="bookNumberT" id="bookNumberT" placeholder="Enter Field Here" minlength="4" maxlength="8" required>
+            <button class="removebookbutton removebookbutton:hover" type="submit" id="submit">REMOVE BOOK</button>
         </form>
     </div>
+
 </body>
+
 </html>
+
+
