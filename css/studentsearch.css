@@ -1,0 +1,606 @@
+.studentportal {
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.sideimage1 {
+    position: absolute;
+    width: 487.5px;
+    height: 924px;
+    left: 0px;
+    top: 156px;
+    opacity: 0.25;
+    z-index: 5;
+}
+
+.rectangle000 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 487.5px;
+    height: 924px;
+    left: 0px;
+    top: 156px;
+    z-index: 3;
+    background: #7B7B7B;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.rectangle0000 {
+    position: absolute;
+    width: 487.5px;
+    height: 156px;
+    left: 0px;
+    top: 0px;
+    background: #7294EE;
+    transform: rotate(180deg);
+}
+
+.rectangle0 {
+    position: absolute;
+    width: 1432.5px;
+    height: 156px;
+    left: 487.5px;
+    top: 0px;
+    background: #90A8E9;
+    transform: rotate(180deg);
+}
+
+.rectangle69 {
+    position: absolute;
+    width: 487.5px;
+    height: 70.5px;
+    left: 0px;
+    top: 210px;
+    background: #9C9C9C;
+    transform: rotate(180deg);
+    z-index: 5;
+}
+
+.welcome {
+    top: -90px;
+    left: 780px;
+    /*526 for other pages*/
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 130px;
+    align-self: auto;
+    font-style: italic;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: condensed;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    z-index: 1;
+    text-shadow: 2px 0 white, 0 2px white, 2px 0 white, 0 2px white;
+}
+
+.sidebartext {
+    top: 180px;
+    left: 1px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 40px;
+    align-self: auto;
+    font-style: italic;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: condensed;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.logo {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 10px;
+    top: -20px;
+    z-index: 45;
+}
+
+.logotext {
+    top: -20px;
+    left: 200px;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 50px;
+    align-self: auto;
+    font-style: italic;
+    z-index: 1;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: condensed;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    z-index: 5;
+    text-shadow: 1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 1.5px white;
+}
+
+.midlogo {
+    position: absolute;
+    width: 75%;
+    height: 1215px;
+    left: 485px;
+    top: 15px;
+    opacity: 0.45;
+    z-index: 3;
+}
+
+.logout {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    left: 1810px;
+    top: 118px;
+    font-family: Roboto;
+    z-index: 10;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    background: #cfd9f6;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+}
+
+.logout:hover {
+    background-color: #e48d7a;
+    color: white;
+    transform: scale(1.1);
+}
+
+.triangledown {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 436px;
+    top: 222px;
+    z-index: 420;
+}
+
+.searchbookside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 462px;
+    height: 96px;
+    left: 13px;
+    top: 307.5px;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 27px;
+    z-index: 5;
+    text-align: center;
+    background: #D9D9D9;
+    border: 2.8px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    box-sizing: border-box;
+}
+
+.searchbookside:hover {
+    background-color: #C0C0C0;
+    color: white;
+    transform: scale(1.03);
+}
+
+.checkedoutbookside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 462px;
+    height: 96px;
+    left: 13px;
+    top: 436.5px;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 27px;
+    z-index: 5;
+    text-align: center;
+    background: #D9D9D9;
+    border: 2.8px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    box-sizing: border-box;
+}
+
+.checkedoutbookside:hover {
+    background-color: #C0C0C0;
+    color: white;
+    transform: scale(1.03);
+}
+
+.fineholdbookside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 462px;
+    height: 96px;
+    left: 13px;
+    top: 570px;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 27px;
+    z-index: 5;
+    text-align: center;
+    background: #D9D9D9;
+    border: 2.8px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    box-sizing: border-box;
+}
+
+.fineholdbookside:hover {
+    background-color: #C0C0C0;
+    color: white;
+    transform: scale(1.03);
+}
+
+.requestbookside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 462px;
+    height: 96px;
+    left: 13px;
+    top: 699px;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 27px;
+    z-index: 5;
+    text-align: center;
+    background: #D9D9D9;
+    border: 2.8px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    box-sizing: border-box;
+}
+
+.requestbookside:hover {
+    background-color: #C0C0C0;
+    color: white;
+    transform: scale(1.03);
+}
+
+.topbarimage {
+    position: absolute;
+    width: 118.5px;
+    height: 130.5px;
+    left: 1605px;
+    top: 10.5px;
+    z-index: 3;
+}
+
+.rectangle1bigsportal {
+    position: absolute;
+    width: 1434px;
+    height: 925.5px;
+    left: 485px;
+    top: 157px;
+    z-index: 1;
+    background: #D5CFCF;
+}
+
+/*copy from beginning until here for all future student css pages*/
+.rectangle1bigsearchs {
+    box-sizing: border-box;
+    z-index: 4;
+    position: absolute;
+    width: 1354.5px;
+    height: 826.5px;
+    left: 531px;
+    top: 211.5px;
+    background: #EAEEFF;
+    opacity: 0.79;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+}
+
+.booknumber {
+    position: absolute;
+    width: 939px;
+    height: 72px;
+    left: 894px;
+    top: 307.5px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    text-decoration-line: underline;
+    z-index: 5;
+    color: #000000;
+    opacity: 0.68;
+    background: #D9D9D9;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+}
+
+.booktitle {
+    box-sizing: border-box;
+    position: absolute;
+    width: 1051.63px;
+    height: 72px;
+    left: 781.37px;
+    top: 400.5px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    text-decoration-line: underline;
+    z-index: 5;
+    opacity: 0.68;
+    background: #D9D9D9;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+}
+
+.bookauthor {
+    box-sizing: border-box;
+    position: absolute;
+    width: 1030.03px;
+    height: 72px;
+    left: 802.97px;
+    top: 486px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #000000;
+    z-index: 5;
+    opacity: 0.68;
+    background: #D9D9D9;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+}
+
+.booktype {
+    box-sizing: border-box;
+    position: absolute;
+    width: 1011px;
+    height: 57px;
+    left: 822px;
+    top: 571.5px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 200;
+    font-size: 30px;
+    line-height: 35px;
+    opacity: 0.68;
+    color: #000000;
+    background: #D9D9D9;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    z-index: 5
+}
+
+.bookgenre {
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 42px;
+    text-decoration-line: underline;
+    z-index: 5;
+    color: #000000;
+    opacity: 0.68;
+    position: absolute;
+    width: 895.5px;
+    height: 72px;
+    left: 937.5px;
+    top: 660px;
+    background: #D9D9D9;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+}
+
+.bookpublication {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1101px;
+    height: 72px;
+    left: 732px;
+    top: 745.5px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 42px;
+    text-decoration-line: underline;
+    color: #000000;
+    z-index: 5;
+    opacity: 0.68;
+    background: #D9D9D9;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+}
+
+.pagenumber {
+    box-sizing: border-box;
+    position: absolute;
+    width: 1005px;
+    height: 72px;
+    left: 828px;
+    top: 838.5px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 42px;
+    text-decoration-line: underline;
+    color: #000000;
+    z-index: 5;
+    opacity: 0.68;
+    background: #D9D9D9;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+}
+
+.searchbookbutton {
+    box-sizing: border-box;
+    position: absolute;
+    width: 462px;
+    height: 96px;
+    left: 1036.5px;
+    top: 921px;
+    background: #887676;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    z-index: 5;
+    color: #000000;
+}
+
+.submitbookbutton:hover {
+    background-color: #768888;
+    transform: scale(1.03);
+}
+
+.booknumbertext {
+    position: absolute;
+    width: 295.5px;
+    height: 49.5px;
+    left: 595px;
+    top: 310.5px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 56px;
+    color: #000000;
+    z-index: 5;
+}
+
+.booktitletext {
+    position: absolute;
+    width: 252px;
+    height: 55.5px;
+    left: 530px;
+    top: 400.5px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 56px;
+    color: #000000;
+    z-index: 5;
+}
+
+.bookauthortext {
+    position: absolute;
+    width: 252px;
+    height: 55.5px;
+    left: 550px;
+    top: 483px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 56px;
+    color: #000000;
+    z-index: 5;
+}
+
+.booktypetext {
+    position: absolute;
+    width: 252px;
+    height: 55.5px;
+    left: 580px;
+    top: 570px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 56px;
+    color: #000000;
+    z-index: 5;
+}
+
+.bookpublicationtext {
+    position: absolute;
+    width: 328.5px;
+    height: 55.5px;
+    left: 590px;
+    top: 660px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 56px;
+    color: #000000;
+    z-index: 5;
+}
+
+.bookgenretext {
+    position: absolute;
+    width: 252px;
+    height: 55.5px;
+    left: 532px;
+    top: 747px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 56px;
+    color: #000000;
+    z-index: 5;
+}
+
+.pagenumbertext {
+    position: absolute;
+    width: 252px;
+    height: 55.5px;
+    left: 570px;
+    top: 841.5px;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 56px;
+    color: #000000;
+    z-index: 5;
+}

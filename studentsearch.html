@@ -5,37 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Search</title>
+    <link rel="stylesheet" href="css/studentsearch.css">
+    <script src="js/search_book.js"></script>
 </head>
+
 <body>
-    <h1>Search For A Book</h1>
-    <form action="studentsearch.js">
-        <input type="number" name="bookNumberS" id="bookNumberS" placeholder="Book ID"><br><br>
-        <input type="text" name="bookNameS" id="bookNameS" placeholder="Book Name"><br><br>
-        <input type="text" name="bookAuthorS" id="bookAuthorS" placeholder="Book Author"><br><br>
-        <input type="radio" id="bookTypeS" name="bookTypeS" value="fiction">
-        <label for="fiction">Fiction</label>
-        <input type="radio" id="bookTypeS" name="bookTypeS" value="non-fiction">
-        <label for="non-fiction">Non-Fiction</label>
-        <input type="radio" id="bookTypeS" name="bookTypeS" value="graphic-novel">
-        <label for="graphic-novel">Graphic Novel</label><br><br>
-        <select name="bookPublicationS" id="bookPublicationS">
-            <option value="before-2000">Before 2000</option>
-            <option value="2001-2005">2001-2005</option>
-            <option value="2006-2010">2006-2010</option>
-            <option value="2011-2015">2011-2015</option>
-            <option value="2016-2020">2016-2020</option>
-            <option value="2021-2023">2021-2023</option>
-        </select><br><br>
-        <select name="bookGenreS" id="bookGenreS">
-            <option value="fantasy">Fantasy</option>
-            <option value="science-fiction">Science Fiction</option>
-            <option value="mystery">Mystery</option>
-            <option value="horror">Horror</option>
-            <option value="Comedy">Comedy</option>
-            <option value="other">Other</option>
-        </select><br><br>
-        <input type="number" name="bookPagesS" id="bookPagesS" placeholder="Number of Pages"><br><br>
-        <input type="submit">
-    </form>
+    <div align="center" class="studentportal" id="studentportal">
+        <h1 class="welcome">Book Search</h1>
+        <h2 class="logotext">North Park <br>Library</h2>
+        <p class="sidebartext">STUDENT ACTIONS</p>
+        <rect class="rectangle000"></rect>
+        <rect class="rectangle0000"></rect>
+        <rect class="rectangle0"></rect>
+        <rect class="rectangle69"></rect>
+        <rect class="rectangle1bigsportal"></rect>
+        <rect class="rectangle1bigsearchs"></rect>
+        <img src="img/image1.jpg" class="sideimage1">
+        <img src="img/logo.png" class="logo">
+        <img src="img/logo.png" class="midlogo">
+        <img src="img/triangledown.png" class="triangledown">
+        <img src="img/searchbook.png" class="topbarimage">
+
+        <button onclick="location.href = 'studentportal.html';" type="button" class="logout logout:hover">BACK</button>
+        <button onclick="location.href = 'studentsearch.html';" type="button" class="searchbookside searchbookside:hover">BOOK SEARCH</button>
+        <button onclick="location.href = 'WIP.html';" type="button" class="checkedoutbookside checkedoutbookside:hover">CHECKED OUT BOOKS</button>
+        <button onclick="location.href = 'WIP.html';" type="button" class="fineholdbookside fineholdbookside:hover">FINES & HOLDS</button>
+        <button onclick="location.href = 'WIP.html';" type="button" class="requestbookside requestbookside:hover">BOOK REQUEST</button><!--copy until here for all future student pages-->
+
+        <form id="booksearchform" class="searchbookform">
+            <input class=booknumber type="number" name="bookNumberT" id="bookNumberT" placeholder="Enter Field Here" minlength="4" maxlength="8">
+            <input class="booktitle" type="text" id="bookNameT" name="bookNameT" placeholder="Enter Field Here">
+            <input class="bookauthor" type="text" name="bookAuthorT" id="bookAuthorT" placeholder="Enter Field Here">
+            <div class="booktype">
+                <input type="checkbox" id="bookTypeT" name="bookTypeT" value="fiction">
+                <label for="fiction">Fiction</label>
+                <input type="checkbox" id="bookTypeT" name="bookTypeT" value="non-fiction">
+                <label for="non-fiction">Non-Fiction</label>
+                <input type="checkbox" id="bookTypeT" name="bookTypeT" value="graphic-novel">
+                <label for="graphic-novel">Graphic Novel</label>
+            </div>
+            <select class="bookpublication" name="bookPublicationT" id="bookPublicationT">
+                <option value="before-2000">Before 2000</option>
+                <option value="2001-2005">2001-2005</option>
+                <option value="2006-2010">2006-2010</option>
+                <option value="2011-2015">2011-2015</option>
+                <option value="2016-2020">2016-2020</option>
+                <option value="2021-2023">2021-2023</option>
+            </select>
+            <select class="bookgenre" name="bookGenreT" id="bookGenreT">
+                <option value="fantasy">Fantasy</option>
+                <option value="science-fiction">Science Fiction</option>
+                <option value="mystery">Mystery</option>
+                <option value="horror">Horror</option>
+                <option value="Comedy">Comedy</option>
+                <option value="other">Other</option>
+            </select>
+            <input class="pagenumber" type="number" name="bookPagesT" id="bookPagesT" placeholder="Enter Field Here">
+            <button class="searchbookbutton searchbookbutton:hover" type="submit" id="submit">SUBMIT BOOK</button>
+        </form>
+        <span class="booknumbertext">Book Number:</span>
+        <span class="booktitletext">Title:</span>
+        <span class="bookauthortext">Author:</span>
+        <span class="booktypetext">Book Type:</span>
+        <span class="bookpublicationtext">Publication Date:</span>
+        <span class="bookgenretext">Genre:</span>
+        <span class="pagenumbertext"># Of Pages:</span>
 </body>
 </html>
