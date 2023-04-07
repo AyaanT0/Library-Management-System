@@ -45,7 +45,7 @@ function login(){
     if(email === "technician@northpark.com")
     {
         firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-            // Handle Errors here.
+            // Handle Errors
             var errorCode = error.code;
             var errorMessage = error.message;
             window.alert(errorMessage);

@@ -30,7 +30,7 @@ function logout()
 {
     firebase.auth().signOut().then(function() {
         console.log("logout done");
-        window.location = 'admin_login.html';
+        window.location = 'homepage.html';
     }).catch(function(error) {
         console.log("error");
     });

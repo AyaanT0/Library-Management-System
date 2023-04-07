@@ -53,7 +53,7 @@
         <span class="pagenumbertext"># Of Pages*:</span>
         <form id="bookaddform" name="bookaddform" class="addbookform">
             <input class="bookcover bookcover:hover" type="file" id="bookcovert" name="bookcovert" accept=".jpg, .png, .jpeg, .gif, ">
-            <input class=booknumber type="number" name="bookNumberT" id="bookNumberT" placeholder="Enter Field Here" minlength="4" maxlength="8" required>
+            <input class=booknumber type="number" name="bookNumberT" id="bookNumberT" placeholder="Enter Field Here" minlength="1" maxlength="8" required>
             <input class="booktitle" type="text" id="bookNameT" name="bookNameT" placeholder="Enter Field Here" required>
             <input class="bookauthor" type="text" name="bookAuthorT" id="bookAuthorT" placeholder="Enter Field Here" required>
             <div class="booktype">
@@ -85,6 +85,7 @@
     </div>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
 </body>
 
 </html>

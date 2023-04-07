@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Remove Book</title>
     <link rel="stylesheet" href="css/remobook.css">
-    <script src="js/remove_book.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/removebook.js" defer></script>
 </head>
 
 <body>
@@ -43,11 +44,14 @@
         </form> <!--copy until here for all future technician pages-->
         <span class="booknumbertext">Book Number*:</span>
         <form id="bookremoveform" class="removebookform">
-            <input class="booknumber" type="number" name="bookNumberT" id="bookNumberT" placeholder="Enter Field Here" minlength="4" maxlength="8" required>
-            <button class="removebookbutton removebookbutton:hover" type="submit" id="submit">REMOVE BOOK</button>
+            <input class="booknumber" type="number" name="bookNumberT" id="bookNumberT" placeholder="Enter Field Here" minlength="1" maxlength="8" required>
+            <input class="removebookbutton removebookbutton:hover" id="submit" type='submit'>
         </form>
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
 </body>
 
 </html>

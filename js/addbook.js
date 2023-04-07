@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     var firebaseConfig = {
         apiKey: "AIzaSyBuyAp0-coTH4f2B-yV90Yk9rbnE7Qwb3w",
         authDomain: "librarymanagementsystem-fcb1c.firebaseapp.com",
@@ -13,17 +13,25 @@ $(document).ready(function() {
 
     var db = firebase.firestore();
 
-    $("#bookaddform").submit(function(e) {
+    $("#bookaddform").submit(function (e) {
         e.preventDefault();
     });
 
-    $('#submit').click(function() {
-      add_this();
+    $('#submit').click(function () {
+        add_this();
     });
+
+    firebase.auth().onAuthStateChanged(user => {
+        if (!user) {
+            window.location = 'homepage.html';
+        }
+    });
+
 });
 
-function add_this()
-{
+
+
+function add_this() {
     /*var bookCover = document.getElementById("bookcovert").files[0];*/ //doesn't work :(
     var BookNumber = document.getElementById("bookNumberT").value;
     var BookName = document.getElementById("bookNameT").value;
@@ -45,15 +53,15 @@ function add_this()
         bookpages: BookPages
     })
 
-    //it worked :)
-    .then(function() {
-        console.log("success");
-        window.alert("Book Added Successfully");
-        window.location = 'technicianportal.html';
-    })
+        //it worked :)
+        .then(function () {
+            console.log("success");
+            window.alert("Book Added Successfully");
+            window.location = 'technicianportal.html';
+        })
 
-    //error thrown when it is brokey
-    .catch(function(error) {
-        console.error("Error writing document: ", error);
-    });
+        //error thrown when it is brokey
+        .catch(function (error) {
+            console.error("Error writing document: ", error);
+        });
 }
