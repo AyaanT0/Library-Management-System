@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technician Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/homelog.css">
+    <script src="js/adminLogin.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
     </style>
@@ -16,16 +18,18 @@
         <h1 class="text09234">TECHNICIAN LOGIN!</h1>
         <img src="img/technicianphoto.jpg" class="homeimage1">
         <img src="img/logo.png" class="homelogo">
-        <form action="technicianportal.html">
-            <input class="rectangle1tl" id="usert" placeholder="Enter your username" type="username" minlength="8" maxlength="12" required></input>
+        <form id="loginform">
+            <input class="rectangle1tl" id="usert" placeholder="Enter your username" type="text" minlength="8" maxlength="30" required></input>
             <input class="rectangle2tl" id="passt" placeholder="Enter your password" type="password" minlength="8" maxlength="12" required></input>
-            <button class="rectangle3tl">LOGIN</button>
+            <button class="rectangle3tl" id="submit">LOGIN</button>
         </form>
-        <form action="homepage.html">
+        <form id='back' action="homepage.html">
             <button class="back">BACK</button>
         </form>
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
 </body>
 </html>
 

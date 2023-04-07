@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technician Portal</title>
     <link rel="stylesheet" href="css/techport.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/techport.js"></script>
 </head>
 
 <body>
@@ -24,7 +26,7 @@
         <img src="img/logo.png" class="midlogo">
         <img src="img/triangledown.png" class="triangledown">
         
-        <button onclick="location.href = 'homepage.html';" type="button" class="logout logout:hover">LOGOUT</button>
+        <button type="button" id="logout" class="logout logout:hover">LOGOUT</button>
         <button onclick="location.href = 'addbook.html';" type="button" class="addbookside addbookside:hover">ADD BOOK</button>
         <button onclick="location.href = 'removebook.html';" type="button" class="removebookside removebookside:hover">REMOVE BOOK</button>
         <button onclick="location.href = 'checkoutbook.html';" type="button" class="checkoutbookside checkoutbookside:hover">CHECKOUT BOOK</button>
@@ -41,6 +43,9 @@
         <a href="checkoutbook.html"><img src="img/checkoutbook.png" class="checkoutbookimage"></a>
         <a href="checkinbook.html"><img src="img/checkinbook.png" class="checkinbookimage"></a>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
 </body>
 
 </html>
