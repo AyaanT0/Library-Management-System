@@ -46,27 +46,27 @@ function move_book_to_books(BookNumber) {
             // Add the book data to the "books" collection with the same book number as the document ID
             db.collection("books").doc(BookNumber).set(bookData)
             .then(function() {
-                console.log("Book moved to books collection successfully");
-                window.alert("Book moved to books collection successfully");
+                console.log("Book checked in successfully");
+                window.alert("Book checked in successfully");
 
                 // Delete the book document from the "checkedout" collection
                 boooook.delete()
                 .then(function() {
-                    console.log("Book removed from checkedout collection successfully");
+                    console.log("removed from checked out success");
                     // Perform any additional actions after book removal
                 })
                 .catch(function(error) {
-                    console.error("Error removing book from checkedout collection: ", error);
+                    console.error("Error checking in: ", error);
                     // Handle error if book removal from checkedout collection fails
                 });
             })
             .catch(function(error) {
-                console.error("Error adding book to books collection: ", error);
+                console.error("Error checking in: ", error);
                 // Handle error if adding book to books collection fails
             });
         } else {
-            console.error("Book not found in checkedout collection");
-            window.alert("Book not found in checkedout collection");
+            console.error("Book not checked out");
+            window.alert("Book not checked out");
         }
     })
     .catch(function(error) {

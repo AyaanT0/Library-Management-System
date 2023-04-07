@@ -45,22 +45,22 @@ function move_book_to_checkedout(BookNumber) {
             //adds book data to "checkedout" section with same data
             db.collection("checkedout").doc(BookNumber).set(bookData)
             .then(function() {
-                console.log("Book moved to checked out collection successfully");
-                window.alert("Book moved to checked out collection successfully");
+                console.log("Book checked out successfully");
+                window.alert("Book checked out successfully");
 
                 //deletes book data from books section
                 boooook.delete()
                 .then(function() {
-                    console.log("Book removed from books collection successfully");
+                    console.log("Book checked out successfully");
                     //logs success message to console
                 })
                 .catch(function(error) {
-                    console.error("Error removing book from books collection: ", error);
+                    console.error("Error checking out: ", error);
                     //error
                 });
             })
             .catch(function(error) {
-                console.error("Error adding book to checkedout collection: ", error);
+                console.error("Error checking out: ", error);
                 //error
             });
         } else {

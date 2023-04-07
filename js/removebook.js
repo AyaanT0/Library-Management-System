@@ -54,7 +54,7 @@ function remove_this(BookNumber) {
             });
         } else {
             //error
-            window.alert("Book does not exist in the collection");
+            window.alert("Book does not exist. Please check if the book is checked in first.");
         }
     })
     .catch(function(error) {
