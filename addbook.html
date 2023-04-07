@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Book</title>
     <link rel="stylesheet" href="css/addbook.css">
-    <script src="js/add_book.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/addbook.js"></script>
 </head>
 
 <body>
@@ -50,7 +51,7 @@
         <span class="bookpublicationtext">Publication Date*:</span>
         <span class="bookgenretext">Genre*:</span>
         <span class="pagenumbertext"># Of Pages*:</span>
-        <form id="bookaddform" class="addbookform">
+        <form id="bookaddform" name="bookaddform" class="addbookform">
             <input class="bookcover bookcover:hover" type="file" id="bookcovert" name="bookcovert" accept=".jpg, .png, .jpeg, .gif, ">
             <input class=booknumber type="number" name="bookNumberT" id="bookNumberT" placeholder="Enter Field Here" minlength="4" maxlength="8" required>
             <input class="booktitle" type="text" id="bookNameT" name="bookNameT" placeholder="Enter Field Here" required>
@@ -80,17 +81,10 @@
                 <option value="other">Other</option>
             </select>
             <input class="pagenumber" type="number" name="bookPagesT" id="bookPagesT" placeholder="Enter Field Here" required>
-            <button class="addbookbutton addbookbutton:hover" type="submit" id="submit">ADD BOOK</button>
-        </form>
+            <input class="addbookbutton addbookbutton:hover" id="submit" type='submit'>
     </div>
-    
-<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
-
-<!-- Add Firebase products that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-auth.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
 </body>
 
 </html>
