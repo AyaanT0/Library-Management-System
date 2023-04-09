@@ -33,19 +33,33 @@ function remove_this(BookNumber) {
     var BookNumber = document.getElementById("bookNumberT").value;
     var db = firebase.firestore();
 
-    //collects book number from input
+    //gets book num from input
     var boooook = db.collection("books").doc(BookNumber);
 
     //check if book exists
     boooook.get()
     .then(function(doc) {
         if (doc.exists) {
-            //delete book if exists
+            //gets book cover url from the book data document (saved in storage)
+            var coverImageURL = doc.data().bookCover;
+            
+            //delete book
             boooook.delete()
             .then(function() {
                 console.log("Book removed successfully");
                 window.alert("Book removed successfully");
-                //alert and log success
+
+                //deletes book cover image from storage
+                if (coverImageURL) {
+                    var storageRef = firebase.storage().refFromURL(coverImageURL);
+                    storageRef.delete()
+                    .then(function() {
+                        console.log("Cover image removed successfully");
+                    })
+                    .catch(function(error) {
+                        console.error("Error removing cover image: ", error);
+                    });
+                }
             })
             .catch(function(error) {
                 console.error("Error removing book: ", error);

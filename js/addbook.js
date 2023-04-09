@@ -29,10 +29,50 @@ $(document).ready(function () {
 
 });
 
-
-
 function add_this() {
-    /*var bookCover = document.getElementById("bookcovert").files[0];*/ //doesn't work :(
+    var bookCoverFile = document.getElementById("bookcovert").files[0];
+    var BookNumber = document.getElementById("bookNumberT").value;
+    var BookName = document.getElementById("bookNameT").value;
+    var BookAuthor = document.getElementById("bookAuthorT").value;
+    var BookType = document.querySelector('input[name="bookTypeT"]:checked').value;
+    var BookPublication = document.getElementById("bookPublicationT").value;
+    var BookGenre = document.getElementById("bookGenreT").value;
+    var BookPages = document.getElementById("bookPagesT").value;
+    var db = firebase.firestore();
+
+    //upload book cover image to firebase storage
+    var storageRef = firebase.storage().ref();
+    var coverImageRef = storageRef.child('book_covers/' + BookNumber);
+    coverImageRef.put(bookCoverFile)
+    .then(function(snapshot) {
+        return snapshot.ref.getDownloadURL();
+    })
+    .then(function(downloadURL) {
+        //saves book details and book cover url from storage
+        return db.collection("books").doc(BookNumber).set({
+            bookCover: downloadURL,
+            booknumber: BookNumber,
+            bookname: BookName,
+            bookauthor: BookAuthor,
+            booktype: BookType,
+            bookpublication: BookPublication,
+            bookgenre: BookGenre,
+            bookpages: BookPages
+        });
+    })
+    .then(function() {
+        console.log("success");
+        window.alert("Book Added Successfully");
+        window.location = 'technicianportal.html';
+    })
+    .catch(function(error) {
+        console.error("Error writing document: ", error);
+    });
+}
+
+//old code with broken image upload
+/*function add_this() {
+    var bookCover = document.getElementById("bookcovert").files[0]; //doesn't work :(
     var BookNumber = document.getElementById("bookNumberT").value;
     var BookName = document.getElementById("bookNameT").value;
     var BookAuthor = document.getElementById("bookAuthorT").value;
@@ -43,7 +83,7 @@ function add_this() {
     var db = firebase.firestore();
 
     db.collection("books").doc(BookNumber).set({
-        /*bookCover: bookCover,*/ //doesn't work :(
+        bookCover: downloadURL, //doesn't work :(
         booknumber: BookNumber,
         bookname: BookName,
         bookauthor: BookAuthor,
@@ -64,4 +104,4 @@ function add_this() {
         .catch(function (error) {
             console.error("Error writing document: ", error);
         });
-}
+}*/
