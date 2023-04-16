@@ -11,5 +11,7 @@ Username: technician@northpark.com <br>
 Password: Admin123<br><br>
 
 
-**SCREEN SIZE DOESN'T FIT? :**<br>
-If the page doesn't fit your screen, CTRL + Minus Key will make it smaller, and CTRL + Plus Key will make it bigger. This program was not made with different aspect ratios in mind, so rescaling is the best option
+**CREDITS**<br>
+- khaledkzy (made this super useful converter: https://khaledkzy.github.io/pixel-vh-vw-converter/)
+
+
