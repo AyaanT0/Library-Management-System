@@ -171,7 +171,7 @@ body {
     text-align: center;
     background: #cfd9f6;
     border: 0.075vw solid #000000;
-    box-shadow: 0px 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
     border-radius: 2vw;
 }
 
@@ -422,36 +422,36 @@ body {
 
 .addbookimage {
     position: absolute;
-    width: 321px;
-    height: 337.5px;
-    left: 640px;
-    top: 205px;
+    width: 15.7vw;
+    height: 33.4vh;
+    left: 31.25vw;
+    top: 20.3vh;
     z-index: 5;
 }
 
 .removebookimage {
     position: absolute;
-    width: 260px;
-    height: 337.5px;
-    left: 1355px;
-    top: 210px;
+    width: 12.7vw;
+    height: 33.4vh;
+    left: 66.2vw;
+    top: 20.8vh;
     z-index: 5;
 }
 
 .checkoutbookimage {
     position: absolute;
-    width: 321px;
-    height: 337.5px;
-    left: 640px;
-    top: 645px;
+    width: 15.7vw;
+    height: 33.4vh;
+    left: 31.25vw;
+    top: 64vh;
     z-index: 5;
 }
 
 .checkinbookimage {
     position: absolute;
-    width: 321px;
-    height: 337.5px;
-    left: 1355px;
-    top: 645px;
+    width: 15.7vw;
+    height: 33.4vh;
+    left: 66.2vw;
+    top: 64vh;
     z-index: 5;
 }
