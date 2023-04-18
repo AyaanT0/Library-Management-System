@@ -75,7 +75,7 @@ body {
 }
 
 .welcome {
-    top: -9.26vh;
+    top: -7vh;
     left: 27.39vw;
     color: rgba(0, 0, 0, 1);
     height: auto;
@@ -96,7 +96,7 @@ body {
 }
 
 .sidebartext {
-    top: 16.2vh;
+    top: 17vh;
     left: 0.3vw;
     color: rgba(0, 0, 0, 1);
     height: auto;
