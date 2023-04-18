@@ -21,7 +21,7 @@ body {
 .sideimage1 {
   position: absolute;
   width: 25vw;
-  height: 86vh;
+  height: 85vh;
   left: 0vw;
   top: 15vh;
   opacity: 0.25;
@@ -32,7 +32,7 @@ body {
   box-sizing: border-box;
   position: absolute;
   width: 25vw;
-  height: 86vh;
+  height: 85vh;
   left: 0vw;
   top: 15vh;
   z-index: 3;
@@ -76,7 +76,7 @@ body {
 
 .welcome {
   top: -9vh;
-  left: 32.39vw;
+  left: 28vw;
   color: rgba(0, 0, 0, 1);
   height: auto;
   position: absolute;
@@ -148,10 +148,10 @@ body {
 
 .midlogo {
   position: absolute;
-  width: 75vw;
-  height: 114vh;
-  left: 24.5vw;
-  top: 0.6vh;
+  width: 60vw;
+  height: 100vh;
+  left: 32vw;
+  top: 5vh;
   opacity: 0.45;
   z-index: 3;
 }
@@ -306,162 +306,11 @@ body {
 
 /*copy from beginning until here for all future student css pages*/
 
-.rectsearchbook {
-  box-sizing: border-box;
-  position: absolute;
-  width: 30vw;
-  height: 40vh;
-  left: 30vw;
-  top: 17vh;
-  background: #EAEEFF;
-  opacity: 0.79;
-  border: 0.07vw solid #000000;
-  box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
-  z-index: 3;
-  border-radius: 2vw;
-  font-family: 'Roboto';
-  font-style: italic;
-  text-align: right;
-  font-weight: 800;
-  font-size: 4.7vw;
-  line-height: 5vw;
-  color: #000000;
-}
-
-.rectcheckedoutbook {
-  box-sizing: border-box;
-  position: absolute;
-  width: 30vw;
-  height: 40vh;
-  left: 65vw;
-  top: 17vh;
-  background: #EAEEFF;
-  opacity: 0.79;
-  border: 0.07vw solid #000000;
-  box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
-  z-index: 3;
-  border-radius: 2vw;
-  font-family: 'Roboto';
-  font-style: italic;
-  text-align: left;
-  font-weight: 800;
-  font-size: 4.7vw;
-  line-height: 5.5vw;
-  text-align: right;
-  color: #000000;
-}
-
-.rectfineholdbook {
-  box-sizing: border-box;
-  position: absolute;
-  width: 30vw;
-  height: 40vh;
-  left: 30vw;
-  top: 59vh;
-  background: #EAEEFF;
-  opacity: 0.79;
-  border: 0.07vw solid #000000;
-  box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
-  z-index: 3;
-  border-radius: 2vw;
-  font-family: 'Roboto';
-  font-style: italic;
-  text-align: left;
-  font-weight: 800;
-  font-size: 4.7vw;
-  line-height: 5.5vw;
-  text-align: right;
-  color: #000000;
-}
-
-.rectbookrequestbook {
-  box-sizing: border-box;
-  position: absolute;
-  width: 30vw;
-  height: 40vh;
-  left: 65vw;
-  top: 59vh;
-  background: #EAEEFF;
-  opacity: 0.79;
-  border: 0.07vw solid #000000;
-  box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
-  z-index: 3;
-  border-radius: 2vw;
-  font-family: 'Roboto';
-  font-style: italic;
-  text-align: left;
-  font-weight: 800;
-  font-size: 4.7vw;
-  line-height: 5.5vw;
-  text-align: right;
-  color: #000000;
-}
-
-.rectsearchbook:hover {
-  background-color: #B7C5FF;
-  color: white;
-  transform: scale(1);
-}
-
-.rectcheckedoutbook:hover {
-  background-color: #B7C5FF;
-  color: white;
-  transform: scale(1);
-}
-
-.rectfineholdbook:hover {
-  background-color: #B7C5FF;
-  color: white;
-  transform: scale(1);
-}
-
-.rectbookrequestbook:hover {
-  background-color: #B7C5FF;
-  color: white;
-  transform: scale(1);
-}
-
-.searchbookimage {
-  position: absolute;
-  width: 13.5vw;
-  height: 33.4vh;
-  left: 31.25vw;
-  top: 20.5vh;
-  z-index: 5;
-}
-
-.checkedoutbookimage {
-  position: absolute;
-  width: 13.5vw;
-  height: 33.4vh;
-  left: 65.2vw;
-  top: 21.4vh;
-  z-index: 5;
-}
-
-.fineholdbookimage {
-  position: absolute;
-  width: 15.7vw;
-  height: 33.4vh;
-  left: 30.52vw;
-  top: 64vh;
-  z-index: 5;
-}
-
-.bookrequestbookimage {
-  position: absolute;
-  width: 15.7vw;
-  height: 33.4vh;
-  left: 63.7vw;
-  top: 64vh;
-  z-index: 5;
-}
-
 .wiptext {
   position: absolute;
   width: 39.06vw;
   height: 25.75vh;
-  left: 830px;
+  left: 870px;
   top: 44vh;
   font-family: Roboto;
   font-style: italic;
