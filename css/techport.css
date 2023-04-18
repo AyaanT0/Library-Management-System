@@ -1,6 +1,14 @@
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 .technicianportal {
-    width: 1920px;
-    height: 1080px;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     overflow: hidden;
     position: relative;
@@ -8,63 +16,71 @@
     flex-shrink: 0;
     border-color: transparent;
     background-color: rgba(255, 255, 255, 1);
-  }
-  .sideimage1 {
+}
+
+.sideimage1 {
     position: absolute;
-    width: 487.5px;
-    height: 924px;
-    left: 0px;
-    top: 156px;
+    width: 25vw;
+    height: 86vh;
+    left: 0vw;
+    top: 15vh;
     opacity: 0.25;
     z-index: 5;
-  }
-  .rectangle000 {
+}
+
+.rectangle000 {
     box-sizing: border-box;
     position: absolute;
-    width: 487.5px;
-    height: 924px;
-    left: 0px;
-    top: 156px;
+    width: 25vw;
+    height: 86vh;
+    left: 0vw;
+    top: 15vh;
     z-index: 3;
     background: #7B7B7B;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-  }
-  .rectangle0000 {
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+}
+
+.rectangle0000 {
     position: absolute;
-    width: 487.5px;
-    height: 156px;
-    left: 0px;
-    top: 0px;
+    width: 25vw;
+    height: 15vh;
+    left: 0vw;
+    top: 0vh;
     background: #7294EE;
     transform: rotate(180deg);
-  }
-  .rectangle0 {
+    z-index: 2;
+}
+
+.rectangle0 {
     position: absolute;
-    width: 1432.5px;
-    height: 156px;
-    left: 487.5px;
-    top: 0px;
+    width: 75vw;
+    height: 15vh;
+    left: 25vw;
+    top: 0vh;
     background: #90A8E9;
     transform: rotate(180deg);
-  }
-  .rectangle69 {
+    z-index: 2;
+}
+
+.rectangle69 {
     position: absolute;
-    width: 487.5px;
-    height: 70.5px;
-    left: 0px;
-    top: 210px;
+    width: 25vw;
+    height: 6.5vh;
+    left: 0vw;
+    top: 19.44vh;
     background: #9C9C9C;
     transform: rotate(180deg);
     z-index: 5;
-  }
-  .welcome {
-    top: -90px;
-    left: 526px;
+}
+
+.welcome {
+    top: -9.26vh;
+    left: 27.39vw;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
-    font-size: 130px;
+    font-size: 6.48vw;
     align-self: auto;
     font-style: italic;
     text-align: center;
@@ -75,16 +91,17 @@
     margin-right: 0;
     margin-bottom: 0;
     text-decoration: none;
-    z-index: 1;
-    text-shadow: 2px 0 white, 0 2px white, 2px 0 white, 0 2px white;
-  }
-  .sidebartext {
-    top: 180px;
-    left: 1px;
+    z-index: 3;
+    text-shadow: 0.1vw 0 white, 0 0.1vw white, 0.1vw 0 white, 0 0.1vw white;
+}
+
+.sidebartext {
+    top: 16.2vh;
+    left: 0.3vw;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
-    font-size: 40px;
+    font-size: 2vw;
     align-self: auto;
     font-style: italic;
     text-align: center;
@@ -96,25 +113,27 @@
     margin-bottom: 0;
     text-decoration: none;
     z-index: 10;
-  }
-  .logo {
+}
+
+.logo {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    left: 10px;
-    top: -20px;
+    width: 9.8vw;
+    height: 19.8vh;
+    left: 0.5vw;
+    top: -2.5vh;
     z-index: 45;
-  }
-  .logotext {
-    top: -20px;
-    left: 200px;
+}
+
+.logotext {
+    top: -2.8vh;
+    left: 10vw;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
-    font-size: 50px;
+    font-size: 2.44vw;
     align-self: auto;
     font-style: italic;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     font-family: Roboto;
     font-weight: 800;
@@ -124,289 +143,315 @@
     margin-bottom: 0;
     text-decoration: none;
     z-index: 5;
-    text-shadow: 1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 1.5px white;
-  }
-  .midlogo {
+    text-shadow: 0.07vw 0 white, 0 0.07vw white, 0.07vw 0 white, 0 0.07vw white;
+}
+
+.midlogo {
     position: absolute;
-    width: 75%;
-    height: 1215px;
-    left: 485px;
-    top: 15px;
+    width: 75vw;
+    height: 114vh;
+    left: 24.5vw;
+    top: 0.6vh;
     opacity: 0.45;
     z-index: 3;
-  }
-  .logout {
+}
+
+.logout {
     box-sizing: border-box;
     position: absolute;
-    width: 100px;
-    height: 30px;
-    left: 1810px;
-    top: 118px;
+    width: 4.9vw;
+    height: 3vh;
+    left: 91vw;
+    top: 9.5vh;
+    font-size: 1.4vh;
     font-family: Roboto;
     z-index: 10;
     font-style: italic;
     font-weight: 800;
     text-align: center;
     background: #cfd9f6;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
-  }
-  .logout:hover {
+    border: 0.075vw solid #000000;
+    box-shadow: 0px 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2vw;
+}
+
+.logout:hover {
     background-color: #e48d7a;
     color: white;
     transform: scale(1.1);
-  }
-  .triangledown {
+}
+
+.triangledown {
     position: absolute;
-    width: 45px;
-    height: 45px;
-    left: 436px;
-    top: 222px;
+    width: 2vw;
+    height: 2vw;
+    left: 21.8vw;
+    top: 20.7vh;
     z-index: 420;
-  }
-  .addbookside {
+}
+
+.addbookside {
     box-sizing: border-box;
     position: absolute;
-    width: 462px;
-    height: 96px;
-    left: 13px;
-    top: 307.5px;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 30.45vh;
     font-family: Roboto;
     font-style: italic;
     font-weight: 800;
-    font-size: 27px;
+    font-size: 1.3vw;
     z-index: 5;
     text-align: center;
     background: #D9D9D9;
-    border: 2.8px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     box-sizing: border-box;
-  }
-  .addbookside:hover {
+}
+
+.addbookside:hover {
     background-color: #C0C0C0;
     color: white;
     transform: scale(1.03);
-  }
-  .removebookside {
+}
+
+.removebookside {
     box-sizing: border-box;
     position: absolute;
-    width: 462px;
-    height: 96px;
-    left: 13px;
-    top: 436.5px;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 43.2vh;
     font-family: Roboto;
     font-style: italic;
     font-weight: 800;
-    font-size: 27px;
+    font-size: 1.3vw;
     z-index: 5;
     text-align: center;
     background: #D9D9D9;
-    border: 2.8px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     box-sizing: border-box;
-  }
-  .removebookside:hover {
+}
+
+.removebookside:hover {
     background-color: #C0C0C0;
     color: white;
     transform: scale(1.03);
-  }
-  .checkoutbookside {
+}
+
+.checkoutbookside {
     box-sizing: border-box;
     position: absolute;
-    width: 462px;
-    height: 96px;
-    left: 13px;
-    top: 570px;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 56.4vh;
     font-family: Roboto;
     font-style: italic;
     font-weight: 800;
-    font-size: 27px;
+    font-size: 1.3vw;
     z-index: 5;
     text-align: center;
     background: #D9D9D9;
-    border: 2.8px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     box-sizing: border-box;
-  }
-  .checkoutbookside:hover {
+}
+
+.checkoutbookside:hover {
     background-color: #C0C0C0;
     color: white;
     transform: scale(1.03);
-  }
-  .checkinbookside {
+}
+
+.checkinbookside {
     box-sizing: border-box;
     position: absolute;
-    width: 462px;
-    height: 96px;
-    left: 13px;
-    top: 699px;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 69.2vh;
     font-family: Roboto;
     font-style: italic;
     font-weight: 800;
-    font-size: 27px;
+    font-size: 1.3vw;
     z-index: 5;
     text-align: center;
     background: #D9D9D9;
-    border: 2.8px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     box-sizing: border-box;
-  }
-  .checkinbookside:hover {
+}
+
+.checkinbookside:hover {
     background-color: #C0C0C0;
     color: white;
     transform: scale(1.03);
-  }
-  .rectangle1bigtportal {
-    position: absolute;
-    width: 1434px;
-    height: 925.5px;
-    left: 485px;
-    top: 157px;
+}
+
+.rectangle1bigtportal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
     z-index: 1;
     background: #D5CFCF;
-  } /*copy from beginning until here for all future technician css pages*/
-  .rectaddbook {
+}
+/*copy from beginning until here for all future technician css pages*/
+
+.rectaddbook {
     box-sizing: border-box;
     position: absolute;
-    width: 594px;
-    height: 399px;
-    left: 531px;
-    top: 211.5px;
+    width: 30vw;
+    height: 40vh;
+    left: 30vw;
+    top: 17vh;
     background: #EAEEFF;
     opacity: 0.79;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
     z-index: 3;
-    border-radius: 42px;
+    border-radius: 2vw;
+    font-family: 'Roboto';
+    font-style: italic;
+    text-align: right;
+    font-weight: 800;
+    font-size: 4.7vw;
+    line-height: 5vw;
+    color: #000000;
+}
+
+.rectremovebook {
+    box-sizing: border-box;
+    position: absolute;
+    width: 30vw;
+    height: 40vh;
+    left: 65vw;
+    top: 17vh;
+    background: #EAEEFF;
+    opacity: 0.79;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    z-index: 3;
+    border-radius: 2vw;
     font-family: 'Roboto';
     font-style: italic;
     text-align: left;
     font-weight: 800;
-    font-size: 96px;
-    line-height: 112px;
+    font-size: 4.7vw;
+    line-height: 5.5vw;
     text-align: right;
     color: #000000;
-  }
-  .rectremovebook {
+}
+
+.rectcheckoutbook {
     box-sizing: border-box;
     position: absolute;
-    width: 594px;
-    height: 399px;
-    left: 1260px;
-    top: 211.5px;
+    width: 30vw;
+    height: 40vh;
+    left: 30vw;
+    top: 59vh;
     background: #EAEEFF;
     opacity: 0.79;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
     z-index: 3;
-    border-radius: 42px;
+    border-radius: 2vw;
     font-family: 'Roboto';
     font-style: italic;
     text-align: left;
     font-weight: 800;
-    font-size: 96px;
-    line-height: 112px;
+    font-size: 4.7vw;
+    line-height: 5.5vw;
     text-align: right;
     color: #000000;
-  }
-  .rectcheckoutbook {
+}
+
+.rectcheckinbook {
     box-sizing: border-box;
     position: absolute;
-    width: 594px;
-    height: 399px;
-    left: 531px;
-    top: 654px;
+    width: 30vw;
+    height: 40vh;
+    left: 65vw;
+    top: 59vh;
     background: #EAEEFF;
     opacity: 0.79;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
     z-index: 3;
-    border-radius: 42px;
+    border-radius: 2vw;
     font-family: 'Roboto';
     font-style: italic;
     text-align: left;
     font-weight: 800;
-    font-size: 96px;
-    line-height: 112px;
+    font-size: 4.7vw;
+    line-height: 5.5vw;
     text-align: right;
     color: #000000;
-  }
-  .rectcheckinbook {
-    box-sizing: border-box;
-    position: absolute;
-    width: 594px;
-    height: 399px;
-    left: 1260px;
-    top: 654px;
-    background: #EAEEFF;
-    opacity: 0.79;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    z-index: 3;
-    border-radius: 42px;
-    font-family: 'Roboto';
-    font-style: italic;
-    text-align: left;
-    font-weight: 800;
-    font-size: 96px;
-    line-height: 112px;
-    text-align: right;
-    color: #000000;
-  }
-  .rectaddbook:hover {
+}
+
+.rectaddbook:hover {
     background-color: #B7C5FF;
     color: white;
     transform: scale(1);
-  }
-  .rectremovebook:hover {
+}
+
+.rectremovebook:hover {
     background-color: #B7C5FF;
     color: white;
     transform: scale(1);
-  }
-  .rectcheckoutbook:hover {
+}
+
+.rectcheckoutbook:hover {
     background-color: #B7C5FF;
     color: white;
     transform: scale(1);
-  }
-  .rectcheckinbook:hover {
+}
+
+.rectcheckinbook:hover {
     background-color: #B7C5FF;
     color: white;
     transform: scale(1);
-  }
-  .addbookimage {
+}
+
+.addbookimage {
     position: absolute;
     width: 321px;
     height: 337.5px;
-    left: 565.5px;
-    top: 246px;
+    left: 640px;
+    top: 205px;
     z-index: 5;
-  }
-  .removebookimage {
+}
+
+.removebookimage {
     position: absolute;
     width: 260px;
     height: 337.5px;
-    left: 1281px;
-    top: 245px;
+    left: 1355px;
+    top: 210px;
     z-index: 5;
-  }
-  .checkoutbookimage {
+}
+
+.checkoutbookimage {
     position: absolute;
     width: 321px;
     height: 337.5px;
-    left: 565.5px;
-    top: 688.5px;
+    left: 640px;
+    top: 645px;
     z-index: 5;
-  }
-  .checkinbookimage {
+}
+
+.checkinbookimage {
     position: absolute;
     width: 321px;
     height: 337.5px;
-    left: 1281.5px;
-    top: 694px;
+    left: 1355px;
+    top: 645px;
     z-index: 5;
-  }
+}
