@@ -1,6 +1,14 @@
-.addbookpage {
-    width: 1920px;
-    height: 1080px;
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.checkinbookpage {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     overflow: hidden;
     position: relative;
@@ -12,65 +20,76 @@
 
 .sideimage1 {
     position: absolute;
-    width: 487.5px;
-    height: 924px;
-    left: 0px;
-    top: 156px;
+    width: 25vw;
+    height: 86vh;
+    left: 0vw;
+    top: 15vh;
     opacity: 0.25;
     z-index: 5;
+}
+
+.topbarimage {
+    position: absolute;
+    width: 5.79vw;
+    height: 13vh;
+    left: 82.3vw;
+    top: 1.04vh;
+    z-index: 3;
 }
 
 .rectangle000 {
     box-sizing: border-box;
     position: absolute;
-    width: 487.5px;
-    height: 924px;
-    left: 0px;
-    top: 156px;
+    width: 25vw;
+    height: 86vh;
+    left: 0vw;
+    top: 15vh;
     z-index: 3;
     background: #7B7B7B;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
 }
 
 .rectangle0000 {
     position: absolute;
-    width: 487.5px;
-    height: 156px;
-    left: 0px;
-    top: 0px;
+    width: 25vw;
+    height: 15vh;
+    left: 0vw;
+    top: 0vh;
     background: #7294EE;
     transform: rotate(180deg);
+    z-index: 2;
 }
 
 .rectangle0 {
     position: absolute;
-    width: 1432.5px;
-    height: 156px;
-    left: 487.5px;
-    top: 0px;
+    width: 75vw;
+    height: 15vh;
+    left: 25vw;
+    top: 0vh;
     background: #90A8E9;
     transform: rotate(180deg);
+    z-index: 2;
 }
 
 .rectangle69 {
     position: absolute;
-    width: 487.5px;
-    height: 70.5px;
-    left: 0px;
-    top: 210px;
+    width: 25vw;
+    height: 6.5vh;
+    left: 0vw;
+    top: 19.44vh;
     background: #9C9C9C;
     transform: rotate(180deg);
     z-index: 5;
 }
 
 .welcome {
-    top: -90px;
-    left: 659px;
+    position: absolute;
+    top: -8vh;
+    left: 34vw;
     color: rgba(0, 0, 0, 1);
     height: auto;
-    position: absolute;
-    font-size: 130px;
+    font-size: 6.48vw;
     align-self: auto;
     font-style: italic;
     text-align: center;
@@ -81,26 +100,17 @@
     margin-right: 0;
     margin-bottom: 0;
     text-decoration: none;
-    z-index: 1;
-    text-shadow: 2px 0 white, 0 2px white, 2px 0 white, 0 2px white;
-}
-
-.topbarimage {
-    position: absolute;
-    width: 118.5px;
-    height: 130.5px;
-    left: 1605px;
-    top: 10.5px;
     z-index: 3;
+    text-shadow: 0.1vw 0 white, 0 0.1vw white, 0.1vw 0 white, 0 0.1vw white;
 }
 
 .sidebartext {
-    top: 180px;
-    left: 1px;
+    top: 17vh;
+    left: 0.3vw;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
-    font-size: 40px;
+    font-size: 2vw;
     align-self: auto;
     font-style: italic;
     text-align: center;
@@ -116,23 +126,23 @@
 
 .logo {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    left: 10px;
-    top: -20px;
+    width: 9.8vw;
+    height: 19.8vh;
+    left: 0.5vw;
+    top: -2.5vh;
     z-index: 45;
 }
 
 .logotext {
-    top: -20px;
-    left: 200px;
+    top: -2.8vh;
+    left: 10vw;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
-    font-size: 50px;
+    font-size: 2.44vw;
     align-self: auto;
     font-style: italic;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     font-family: Roboto;
     font-weight: 800;
@@ -142,35 +152,36 @@
     margin-bottom: 0;
     text-decoration: none;
     z-index: 5;
-    text-shadow: 1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 1.5px white;
+    text-shadow: 0.07vw 0 white, 0 0.07vw white, 0.07vw 0 white, 0 0.07vw white;
 }
 
 .midlogo {
     position: absolute;
-    width: 75%;
-    height: 1215px;
-    left: 485px;
-    top: 15px;
+    width: 75vw;
+    height: 114vh;
+    left: 24.5vw;
+    top: 0.6vh;
     opacity: 0.45;
-    z-index: 2;
+    z-index: 3;
 }
 
 .logout {
     box-sizing: border-box;
     position: absolute;
-    width: 100px;
-    height: 30px;
-    left: 1810px;
-    top: 118px;
+    width: 4.9vw;
+    height: 3vh;
+    left: 91vw;
+    top: 9.5vh;
+    font-size: 1.4vh;
     font-family: Roboto;
     z-index: 10;
     font-style: italic;
     font-weight: 800;
     text-align: center;
     background: #cfd9f6;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.075vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2vw;
 }
 
 .logout:hover {
@@ -181,30 +192,30 @@
 
 .triangledown {
     position: absolute;
-    width: 45px;
-    height: 45px;
-    left: 436px;
-    top: 222px;
+    width: 2vw;
+    height: 2vw;
+    left: 21.8vw;
+    top: 20.7vh;
     z-index: 420;
 }
 
 .addbookside {
     box-sizing: border-box;
     position: absolute;
-    width: 462px;
-    height: 96px;
-    left: 13px;
-    top: 307.5px;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 30.45vh;
     font-family: Roboto;
     font-style: italic;
     font-weight: 800;
-    font-size: 27px;
+    font-size: 1.3vw;
     z-index: 5;
     text-align: center;
     background: #D9D9D9;
-    border: 2.8px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     box-sizing: border-box;
 }
 
@@ -217,20 +228,20 @@
 .removebookside {
     box-sizing: border-box;
     position: absolute;
-    width: 462px;
-    height: 96px;
-    left: 13px;
-    top: 436.5px;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 43.2vh;
     font-family: Roboto;
     font-style: italic;
     font-weight: 800;
-    font-size: 27px;
+    font-size: 1.3vw;
     z-index: 5;
     text-align: center;
     background: #D9D9D9;
-    border: 2.8px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     box-sizing: border-box;
 }
 
@@ -243,20 +254,20 @@
 .checkoutbookside {
     box-sizing: border-box;
     position: absolute;
-    width: 462px;
-    height: 96px;
-    left: 13px;
-    top: 570px;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 56.4vh;
     font-family: Roboto;
     font-style: italic;
     font-weight: 800;
-    font-size: 27px;
+    font-size: 1.3vw;
     z-index: 5;
     text-align: center;
     background: #D9D9D9;
-    border: 2.8px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     box-sizing: border-box;
 }
 
@@ -269,20 +280,20 @@
 .checkinbookside {
     box-sizing: border-box;
     position: absolute;
-    width: 462px;
-    height: 96px;
-    left: 13px;
-    top: 699px;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 69.2vh;
     font-family: Roboto;
     font-style: italic;
     font-weight: 800;
-    font-size: 27px;
+    font-size: 1.3vw;
     z-index: 5;
     text-align: center;
     background: #D9D9D9;
-    border: 2.8px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     box-sizing: border-box;
 }
 
@@ -293,46 +304,49 @@
 }
 
 .rectangle1bigtportal {
-    position: absolute;
-    width: 1434px;
-    height: 925.5px;
-    left: 485px;
-    top: 157px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
     z-index: 1;
     background: #D5CFCF;
 }
 
+/*copy from beginning until here for all future technician css pages*/
+
+
 .rectangle1bigtcheckin {
     box-sizing: border-box;
     position: absolute;
-    width: 1339.5px;
-    height: 583.5px;
-    left: 534px;
-    top: 318px;
-    z-index: 3;
+    width: 65.4vw;
+    height: 57.8vh;
+    left: 29.3vw;
+    top: 28.7vh;
+    z-index: 4;
     background: #EAEEFF;
     opacity: 0.79;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
 }
 
 .booknumber {
     box-sizing: border-box;
     position: absolute;
-    width: 534px;
-    height: 102px;
-    left: 1168.5px;
-    top: 487.5px;
+    width: 26.1vw;
+    height: 10.1vh;
+    left: 60.06vw;
+    top: 48.3vh;
     background: #D9D9D9;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 1.76vw;
+    line-height: 2.05vw;
     text-align: center;
     text-decoration-line: underline;
     color: #000000;
@@ -343,20 +357,20 @@
 .checkinbookbutton {
     box-sizing: border-box;
     position: absolute;
-    width: 462px;
-    height: 96px;
-    left: 973.5px;
-    top: 768px;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 49.6vw;
+    top: 71.3vh;
     z-index: 4;
     background: #887676;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 48px;
-    line-height: 70px;
+    font-size: 2.34vw;
+    line-height: 3.42vw;
     text-align: center;
     color: #000000;
 }
@@ -368,15 +382,15 @@
 
 .booknumbertext {
     position: absolute;
-    width: 682.5px;
-    height: 298.5px;
-    left: 543px;
-    top: 478.5px;
+    width: 33.33vw;
+    height: 29.55vh;
+    left: 28.6vw;
+    top: 47.38vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 72px;
-    line-height: 112px;
+    font-size: 3.52vw;
+    line-height: 5.5vw;
     text-align: center;
     z-index: 4;
     color: #000000;

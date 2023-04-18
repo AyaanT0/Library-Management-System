@@ -74,10 +74,19 @@ body {
     z-index: 5;
 }
 
+.topbarimage {
+    position: absolute;
+    width: 5.79vw;
+    height: 13vh;
+    left: 82.3vw;
+    top: 1.04vh;
+    z-index: 3;
+}
+
 .welcome {
     position: absolute;
     top: -8vh;
-    left: 37vw;
+    left: 34vw;
     color: rgba(0, 0, 0, 1);
     height: auto;
     font-size: 6.48vw;
