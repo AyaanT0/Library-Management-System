@@ -1,6 +1,14 @@
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 .studentportal {
-    width: 1920px;
-    height: 1080px;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     overflow: hidden;
     position: relative;
@@ -10,12 +18,21 @@
     background-color: rgba(255, 255, 255, 1);
 }
 
+.topbarimage {
+    position: absolute;
+    width: 5.79vw;
+    height: 13vh;
+    left: 81vw;
+    top: 1.04vh;
+    z-index: 3;
+}
+
 .sideimage1 {
     position: absolute;
-    width: 487.5px;
-    height: 924px;
-    left: 0px;
-    top: 156px;
+    width: 25vw;
+    height: 86vh;
+    left: 0vw;
+    top: 15vh;
     opacity: 0.25;
     z-index: 5;
 }
@@ -23,55 +40,56 @@
 .rectangle000 {
     box-sizing: border-box;
     position: absolute;
-    width: 487.5px;
-    height: 924px;
-    left: 0px;
-    top: 156px;
+    width: 25vw;
+    height: 86vh;
+    left: 0vw;
+    top: 15vh;
     z-index: 3;
     background: #7B7B7B;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
 }
 
 .rectangle0000 {
     position: absolute;
-    width: 487.5px;
-    height: 156px;
-    left: 0px;
-    top: 0px;
+    width: 25vw;
+    height: 15vh;
+    left: 0vw;
+    top: 0vh;
     background: #7294EE;
     transform: rotate(180deg);
+    z-index: 2;
 }
 
 .rectangle0 {
     position: absolute;
-    width: 1432.5px;
-    height: 156px;
-    left: 487.5px;
-    top: 0px;
+    width: 75vw;
+    height: 15vh;
+    left: 25vw;
+    top: 0vh;
     background: #90A8E9;
     transform: rotate(180deg);
+    z-index: 2;
 }
 
 .rectangle69 {
     position: absolute;
-    width: 487.5px;
-    height: 70.5px;
-    left: 0px;
-    top: 210px;
+    width: 25vw;
+    height: 6.5vh;
+    left: 0vw;
+    top: 19.44vh;
     background: #9C9C9C;
     transform: rotate(180deg);
     z-index: 5;
 }
 
 .welcome {
-    top: -90px;
-    left: 780px;
-    /*526 for other pages*/
+    top: -8vh;
+    left: 40vw;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
-    font-size: 130px;
+    font-size: 6.48vw;
     align-self: auto;
     font-style: italic;
     text-align: center;
@@ -82,17 +100,17 @@
     margin-right: 0;
     margin-bottom: 0;
     text-decoration: none;
-    z-index: 1;
-    text-shadow: 2px 0 white, 0 2px white, 2px 0 white, 0 2px white;
+    z-index: 3;
+    text-shadow: 0.1vw 0 white, 0 0.1vw white, 0.1vw 0 white, 0 0.1vw white;
 }
 
 .sidebartext {
-    top: 180px;
-    left: 1px;
+    top: 17vh;
+    left: 0.3vw;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
-    font-size: 40px;
+    font-size: 2vw;
     align-self: auto;
     font-style: italic;
     text-align: center;
@@ -108,23 +126,23 @@
 
 .logo {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    left: 10px;
-    top: -20px;
+    width: 9.8vw;
+    height: 19.8vh;
+    left: 0.5vw;
+    top: -2.5vh;
     z-index: 45;
 }
 
 .logotext {
-    top: -20px;
-    left: 200px;
+    top: -2.8vh;
+    left: 10vw;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
-    font-size: 50px;
+    font-size: 2.44vw;
     align-self: auto;
     font-style: italic;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     font-family: Roboto;
     font-weight: 800;
@@ -134,15 +152,15 @@
     margin-bottom: 0;
     text-decoration: none;
     z-index: 5;
-    text-shadow: 1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 1.5px white;
+    text-shadow: 0.07vw 0 white, 0 0.07vw white, 0.07vw 0 white, 0 0.07vw white;
 }
 
 .midlogo {
     position: absolute;
-    width: 75%;
-    height: 1215px;
-    left: 485px;
-    top: 15px;
+    width: 75vw;
+    height: 114vh;
+    left: 24.5vw;
+    top: 0.6vh;
     opacity: 0.45;
     z-index: 3;
 }
@@ -150,19 +168,20 @@
 .logout {
     box-sizing: border-box;
     position: absolute;
-    width: 100px;
-    height: 30px;
-    left: 1810px;
-    top: 118px;
+    width: 4.9vw;
+    height: 3vh;
+    left: 91vw;
+    top: 9.5vh;
+    font-size: 1.4vh;
     font-family: Roboto;
     z-index: 10;
     font-style: italic;
     font-weight: 800;
     text-align: center;
     background: #cfd9f6;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.075vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2vw;
 }
 
 .logout:hover {
@@ -173,30 +192,30 @@
 
 .triangledown {
     position: absolute;
-    width: 45px;
-    height: 45px;
-    left: 436px;
-    top: 222px;
+    width: 2vw;
+    height: 2vw;
+    left: 21.8vw;
+    top: 20.7vh;
     z-index: 420;
 }
 
 .searchbookside {
     box-sizing: border-box;
     position: absolute;
-    width: 462px;
-    height: 96px;
-    left: 13px;
-    top: 307.5px;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 30.45vh;
     font-family: Roboto;
     font-style: italic;
     font-weight: 800;
-    font-size: 27px;
+    font-size: 1.3vw;
     z-index: 5;
     text-align: center;
     background: #D9D9D9;
-    border: 2.8px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     box-sizing: border-box;
 }
 
@@ -209,20 +228,20 @@
 .checkedoutbookside {
     box-sizing: border-box;
     position: absolute;
-    width: 462px;
-    height: 96px;
-    left: 13px;
-    top: 436.5px;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 43.2vh;
     font-family: Roboto;
     font-style: italic;
     font-weight: 800;
-    font-size: 27px;
+    font-size: 1.3vw;
     z-index: 5;
     text-align: center;
     background: #D9D9D9;
-    border: 2.8px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     box-sizing: border-box;
 }
 
@@ -235,20 +254,20 @@
 .fineholdbookside {
     box-sizing: border-box;
     position: absolute;
-    width: 462px;
-    height: 96px;
-    left: 13px;
-    top: 570px;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 56.4vh;
     font-family: Roboto;
     font-style: italic;
     font-weight: 800;
-    font-size: 27px;
+    font-size: 1.3vw;
     z-index: 5;
     text-align: center;
     background: #D9D9D9;
-    border: 2.8px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     box-sizing: border-box;
 }
 
@@ -261,20 +280,20 @@
 .requestbookside {
     box-sizing: border-box;
     position: absolute;
-    width: 462px;
-    height: 96px;
-    left: 13px;
-    top: 699px;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 69.2vh;
     font-family: Roboto;
     font-style: italic;
     font-weight: 800;
-    font-size: 27px;
+    font-size: 1.3vw;
     z-index: 5;
     text-align: center;
     background: #D9D9D9;
-    border: 2.8px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     box-sizing: border-box;
 }
 
@@ -284,323 +303,318 @@
     transform: scale(1.03);
 }
 
-.topbarimage {
-    position: absolute;
-    width: 118.5px;
-    height: 130.5px;
-    left: 1605px;
-    top: 10.5px;
-    z-index: 3;
-}
-
 .rectangle1bigsportal {
-    position: absolute;
-    width: 1434px;
-    height: 925.5px;
-    left: 485px;
-    top: 157px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
     z-index: 1;
     background: #D5CFCF;
 }
-
 /*copy from beginning until here for all future student css pages*/
+
 .rectangle1bigsearchs {
     box-sizing: border-box;
     z-index: 4;
     position: absolute;
-    width: 1354.5px;
-    height: 826.5px;
-    left: 531px;
-    top: 211.5px;
+    width: 66.14vw;
+    height: 81.83vh;
+    left: 29.3vw;
+    top: 16.39vh;
     background: #EAEEFF;
     opacity: 0.79;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
 }
 
 .booknumber {
+    box-sizing: border-box;
     position: absolute;
-    width: 939px;
-    height: 72px;
-    left: 894px;
-    top: 307.5px;
+    width: 45.85vw;
+    height: 7.13vh;
+    left: 44.92vw;
+    top: 24.75vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 1.76vw;
+    line-height: 2.05vw;
     text-align: center;
     text-decoration-line: underline;
     z-index: 5;
     color: #000000;
     opacity: 0.68;
     background: #D9D9D9;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
 }
 
 .booktitle {
     box-sizing: border-box;
     position: absolute;
-    width: 1051.63px;
-    height: 72px;
-    left: 781.37px;
-    top: 400.5px;
+    width: 51.35vw;
+    height: 7.13vh;
+    left: 39.6vw;
+    top: 34.65vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 1.76vw;
+    line-height: 2.05vw;
     text-align: center;
     text-decoration-line: underline;
     z-index: 5;
+    color: #000000;
     opacity: 0.68;
     background: #D9D9D9;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
 }
 
 .bookauthor {
     box-sizing: border-box;
     position: absolute;
-    width: 1030.03px;
-    height: 72px;
-    left: 802.97px;
-    top: 486px;
+    width: 50.3vw;
+    height: 7.13vh;
+    left: 40.53vw;
+    top: 44.16vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 1.76vw;
+    line-height: 2.05vw;
     text-align: center;
     text-decoration-line: underline;
     color: #000000;
     z-index: 5;
     opacity: 0.68;
     background: #D9D9D9;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
 }
 
 .booktype {
     box-sizing: border-box;
     position: absolute;
-    width: 1011px;
-    height: 57px;
-    left: 822px;
-    top: 571.5px;
+    width: 49.37vw;
+    height: 5.64vh;
+    left: 41.31vw;
+    top: 53.02vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 200;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 1.76vw;
+    line-height: 1.71vw;
     opacity: 0.68;
     color: #000000;
     background: #D9D9D9;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     z-index: 5
 }
 
 .bookgenre {
     box-sizing: border-box;
+    position: absolute;
+    width: 50.5vw;
+    height: 7.13vh;
+    left: 40.04vw;
+    top: 60.4vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 1.76vw;
+    line-height: 2.05vw;
+    text-align: center;
     text-decoration-line: underline;
     z-index: 5;
     color: #000000;
     opacity: 0.68;
-    position: absolute;
-    width: 895.5px;
-    height: 72px;
-    left: 937.5px;
-    top: 660px;
     background: #D9D9D9;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
 }
 
 .bookpublication {
     box-sizing: border-box;
-
+    text-align: center;
     position: absolute;
-    width: 1101px;
-    height: 72px;
-    left: 732px;
-    top: 745.5px;
+    width: 43.7vw;
+    height: 7.13vh;
+    left: 46.875vw;
+    top: 69.36vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 1.76vw;
+    line-height: 2.05vw;
     text-decoration-line: underline;
     color: #000000;
     z-index: 5;
     opacity: 0.68;
     background: #D9D9D9;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
 }
 
 .pagenumber {
     box-sizing: border-box;
     position: absolute;
-    width: 1005px;
-    height: 72px;
-    left: 828px;
-    top: 838.5px;
+    text-align: center;
+    width: 49.07vw;
+    height: 7.13vh;
+    left: 41.5vw;
+    top: 78.07vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 1.76vw;
+    line-height: 2.05vw;
     text-decoration-line: underline;
     color: #000000;
     z-index: 5;
     opacity: 0.68;
     background: #D9D9D9;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
 }
 
 .searchbookbutton {
     box-sizing: border-box;
     position: absolute;
-    width: 462px;
-    height: 96px;
-    left: 1036.5px;
-    top: 921px;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 51.51vw;
+    top: 87.6vh;
     background: #887676;
-    border: 1.5px solid #000000;
-    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 42px;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 2.34vw;
+    line-height: 2.73vw;
     text-align: center;
     z-index: 5;
     color: #000000;
 }
 
-.submitbookbutton:hover {
+.searchbookbutton:hover {
     background-color: #768888;
     transform: scale(1.03);
 }
 
 .booknumbertext {
     position: absolute;
-    width: 295.5px;
-    height: 49.5px;
-    left: 595px;
-    top: 310.5px;
+    width: 14.43vw;
+    height: 4.9vh;
+    left: 30.03vw;
+    top: 12.7vw;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 56px;
+    font-size: 1.95vw;
+    line-height: 2.73vw;
     color: #000000;
     z-index: 5;
 }
 
 .booktitletext {
     position: absolute;
-    width: 252px;
-    height: 55.5px;
-    left: 530px;
-    top: 400.5px;
+    width: 12.3vw;
+    height: 5.5vh;
+    left: 26.86vw;
+    top: 35.64vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 56px;
+    font-size: 1.95vw;
+    line-height: 2.73vw;
     color: #000000;
     z-index: 5;
 }
 
 .bookauthortext {
     position: absolute;
-    width: 252px;
-    height: 55.5px;
-    left: 550px;
-    top: 483px;
+    width: 12.3vw;
+    height: 5.5vh;
+    left: 28.08vw;
+    top: 45.05vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 56px;
+    font-size: 1.95vw;
+    line-height: 2.73vw;
     color: #000000;
     z-index: 5;
 }
 
 .booktypetext {
     position: absolute;
-    width: 252px;
-    height: 55.5px;
-    left: 580px;
-    top: 570px;
+    width: 12.3vw;
+    height: 5.5vh;
+    left: 29.54vw;
+    top: 52.97vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 56px;
+    font-size: 1.95vw;
+    line-height: 2.73vw;
     color: #000000;
     z-index: 5;
 }
 
 .bookpublicationtext {
     position: absolute;
-    width: 328.5px;
-    height: 55.5px;
-    left: 590px;
-    top: 660px;
+    width: 16.04vw;
+    height: 5.5vh;
+    left: 30.27vw;
+    top: 70.3vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 56px;
+    font-size: 1.95vw;
+    line-height: 2.73vw;
     color: #000000;
     z-index: 5;
 }
 
 .bookgenretext {
     position: absolute;
-    width: 252px;
-    height: 55.5px;
-    left: 532px;
-    top: 747px;
+    width: 12.3vw;
+    height: 5.5vh;
+    left: 27.34vw;
+    top: 61.39vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 56px;
+    font-size: 1.95vw;
+    line-height: 2.73vw;
     color: #000000;
     z-index: 5;
 }
 
 .pagenumbertext {
     position: absolute;
-    width: 252px;
-    height: 55.5px;
-    left: 570px;
-    top: 841.5px;
+    width: 12.3vw;
+    height: 5.5vh;
+    left: 29.54vw;
+    top: 79.2vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 56px;
+    font-size: 1.95vw;
+    line-height: 2.73vw;
     color: #000000;
     z-index: 5;
 }
