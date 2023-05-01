@@ -149,9 +149,9 @@ body {
 .midlogo {
   position: absolute;
   width: 60vw;
-  height: 100vh;
+  height: 90vh;
   left: 32vw;
-  top: 5vh;
+  top: 7vh;
   opacity: 0.45;
   z-index: 3;
 }
@@ -310,7 +310,7 @@ body {
   position: absolute;
   width: 39.06vw;
   height: 25.75vh;
-  left: 870px;
+  left: 42.5vw;
   top: 44vh;
   font-family: Roboto;
   font-style: italic;

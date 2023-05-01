@@ -40,35 +40,66 @@ function add_this() {
     var BookPages = document.getElementById("bookPagesT").value;
     var db = firebase.firestore();
 
-    //upload book cover image to firebase storage
-    var storageRef = firebase.storage().ref();
-    var coverImageRef = storageRef.child('book_covers/' + BookNumber);
-    coverImageRef.put(bookCoverFile)
-    .then(function(snapshot) {
-        return snapshot.ref.getDownloadURL();
-    })
-    .then(function(downloadURL) {
-        //saves book details and book cover url from storage
-        return db.collection("books").doc(BookNumber).set({
-            bookCover: downloadURL,
-            booknumber: BookNumber,
-            bookname: BookName,
-            bookauthor: BookAuthor,
-            booktype: BookType,
-            bookpublication: BookPublication,
-            bookgenre: BookGenre,
-            bookpages: BookPages
+    var bookExists = false;
+
+    // Check if book number already exists in the database
+    // Check if book number already exists in the database
+    db.collection("books").doc(BookNumber).get().then(function (doc) {
+        if (doc.exists) {
+            // Book already exists in books collection, so alert user and do not add book
+            window.alert("Book already exists");
+            bookExists = true;
+            return;
+        }
+
+        // Check if book number exists in checkedout collection
+        db.collection("checkedout").doc(BookNumber).get().then(function (doc) {
+            if (doc.exists) {
+                // Book already exists in checkedout collection, so alert user and do not add book
+                window.alert("Book already exists");
+                bookExists = true;
+                return;
+            }
+
+            // If the book does not exist, continue with adding the book
+            if (!bookExists) {
+                // Upload book cover image to firebase storage
+                var storageRef = firebase.storage().ref();
+                var coverImageRef = storageRef.child('book_covers/' + BookNumber);
+                coverImageRef.put(bookCoverFile)
+                    .then(function (snapshot) {
+                        return snapshot.ref.getDownloadURL();
+                    })
+                    .then(function (downloadURL) {
+                        // Save book details and book cover url from storage
+                        return db.collection("books").doc(BookNumber).set({
+                            bookCover: downloadURL,
+                            booknumber: BookNumber,
+                            bookname: BookName,
+                            bookauthor: BookAuthor,
+                            booktype: BookType,
+                            bookpublication: BookPublication,
+                            bookgenre: BookGenre,
+                            bookpages: BookPages
+                        });
+                    })
+                    .then(function () {
+                        console.log("success");
+                        window.alert("Book Added Successfully");
+                        window.location = 'technicianportal.html';
+                    })
+                    .catch(function (error) {
+                        console.error("Error writing document: ", error);
+                    });
+            }
+        }).catch(function (error) {
+            console.error("Error getting document: ", error);
         });
-    })
-    .then(function() {
-        console.log("success");
-        window.alert("Book Added Successfully");
-        window.location = 'technicianportal.html';
-    })
-    .catch(function(error) {
-        console.error("Error writing document: ", error);
+    }).catch(function (error) {
+        console.error("Error getting document: ", error);
     });
 }
+
 
 //old code with broken image upload
 /*function add_this() {

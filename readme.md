@@ -14,5 +14,5 @@ Password: Admin123<br><br>
 **CREDITS**<br>
 - khaledkzy (made this super useful converter: https://khaledkzy.github.io/pixel-vh-vw-converter/)
 - Firebase Docs (couldn't have completed the project without it: https://firebase.google.com/docs)
-
+- jQuery Docs (helped debug soem issues with Firebase: https://api.jquery.com/)
 
