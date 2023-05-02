@@ -44,7 +44,7 @@
         <form action="checkinbook.html">
             <button class="checkinbookside checkinbookside:hover">CHECK IN BOOK</button>
         </form> <!--copy until here for all future technician pages-->
-        <p class="bookcoveraddtext">Add A Cover</p>
+        <p class="bookcoveraddtext">Add A Cover*</p>
         <span class="booknumbertext">Book Number*:</span>
         <span class="booktitletext">Title*:</span>
         <span class="bookauthortext">Author*:</span>
@@ -66,6 +66,7 @@
                 <label for="graphic-novel">Graphic Novel</label>
             </div>
             <select class="bookpublication" name="bookPublicationT" id="bookPublicationT" required>
+                <option value="">Select Publication Year</option>
                 <option value="before-2000">Before 2000</option>
                 <option value="2001-2005">2001-2005</option>
                 <option value="2006-2010">2006-2010</option>
@@ -74,6 +75,7 @@
                 <option value="2021-2023">2021-2023</option>
             </select>
             <select class="bookgenre" name="bookGenreT" id="bookGenreT" required>
+                <option value="">Select Genre</option>
                 <option value="fantasy">Fantasy</option>
                 <option value="science-fiction">Science Fiction</option>
                 <option value="mystery">Mystery</option>
