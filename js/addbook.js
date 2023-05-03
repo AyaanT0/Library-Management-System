@@ -1,5 +1,5 @@
-$(document).ready(function () {
-    var firebaseConfig = {
+$(document).ready(function () { //jquery event listener, once page is loaded, the script is loaded in and waits for something to be submitted
+    var firebaseConfig = { //contains all the information needed to connect to the firebase database
         apiKey: "AIzaSyBuyAp0-coTH4f2B-yV90Yk9rbnE7Qwb3w",
         authDomain: "librarymanagementsystem-fcb1c.firebaseapp.com",
         databaseURL: "https://librarymanagementsystem-fcb1c-default-rtdb.firebaseio.com/",
@@ -11,25 +11,25 @@ $(document).ready(function () {
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
-    var db = firebase.firestore();
+    var db = firebase.firestore(); //sets up a connection to the firebase database (used to store data)
 
     $("#bookaddform").submit(function (e) {
         e.preventDefault();
-    });
+    }); //prevents submission of form when enter is pressed if the form is not filled out
 
     $('#submit').click(function () {
         add_this();
-    });
+    }); //once the submit button is clicked, the add_this function is called
 
     firebase.auth().onAuthStateChanged(user => {
         if (!user) {
             window.location = 'homepage.html';
         }
-    });
+    }); //event listener that checks whether the user is authenticated as a technician, if not, they are redirected to the homepage
 
 });
 
-function add_this() {
+function add_this() { //takes all the data from the form and adds it to the database
     var bookCoverFile = document.getElementById("bookcovert").files[0];
     var BookNumber = document.getElementById("bookNumberT").value;
     var BookName = document.getElementById("bookNameT").value;
@@ -40,9 +40,8 @@ function add_this() {
     var BookPages = document.getElementById("bookPagesT").value;
     var db = firebase.firestore();
 
-    var bookExists = false;
+    var bookExists = false; // Flag to check if book already exists in database
 
-    // Check if book number already exists in the database
     // Check if book number already exists in the database
     db.collection("books").doc(BookNumber).get().then(function (doc) {
         if (doc.exists) {
@@ -72,8 +71,10 @@ function add_this() {
                     })
                     .then(function (downloadURL) {
                         // Save book details and book cover url from storage
+                        //saves variable to specific value/key in database
+                        //code is formatted as variable:key
                         return db.collection("books").doc(BookNumber).set({
-                            bookCover: downloadURL,
+                            bookCover: downloadURL, 
                             booknumber: BookNumber,
                             bookname: BookName,
                             bookauthor: BookAuthor,
@@ -83,6 +84,7 @@ function add_this() {
                             bookpages: BookPages
                         });
                     })
+                    //logs and alerts success message if book is added successfully
                     .then(function () {
                         console.log("success");
                         window.alert("Book Added Successfully");
@@ -90,14 +92,14 @@ function add_this() {
                     })
                     .catch(function (error) {
                         console.error("Error writing document: ", error);
-                    });
+                    });//if a firebase error occurs, it is logged in the console
             }
         }).catch(function (error) {
             console.error("Error getting document: ", error);
-        });
+        }); //if a firebase error occurs, it is logged in the console
     }).catch(function (error) {
         console.error("Error getting document: ", error);
-    });
+    });//if a firebase error occurs, it is logged in the console
 }
 
 

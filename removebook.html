@@ -5,50 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remove Book</title>
-    <link rel="stylesheet" href="css/remobook.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/removebook.js" defer></script>
+    <title>Remove Book</title><!--tab title-->
+    <link rel="stylesheet" href="css/remobook.css"><!--this links the css stylesheet for this page, located in the css folder-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--this initializes jQuery, the JS library used for scripting and firebase api calls -->
+    <script src="js/removebook.js" defer></script><!--this links the js script for this page, located in the js folder-->
 </head>
 
 <body>
-    <div align="center" class="removebookpage" id="removebookpage">
-        <h1 class="welcome">Remove Books</h1>
-        <h2 class="logotext">North Park <br>Library</h2>
-        <p class="sidebartext">TECHNICIAN ACTIONS</p>
-        <rect class="rectangle000"></rect>
-        <rect class="rectangle0000"></rect>
-        <rect class="rectangle0"></rect>
-        <rect class="rectangle69"></rect>
-        <rect class="rectangle1bigtportal"></rect>
+    <div align="center" class="removebookpage" id="removebookpage"><!--main content div-->
+        <h1 class="welcome">Remove Books</h1><!--title top h1-->
+        <h2 class="logotext">North Park <br>Library</h2><!--north park library title h2-->
+        <p class="sidebartext">TECHNICIAN ACTIONS</p><!--technician actions label-->
+        <rect class="rectangle000"></rect><!--sidebar rectangle-->
+        <rect class="rectangle0000"></rect><!--top bar rectangle logo-->
+        <rect class="rectangle0"></rect><!--top bar rectangle title-->
+        <rect class="rectangle69"></rect><!--actions label rectangle-->
+        <rect class="rectangle1bigtportal"></rect><!--main content rectangle-->
         <rect class="rectangle1bigtremove"></rect>
-        <img src="img/removebook.png" class="topbarimage">
-        <img src="img/image1.jpg" class="sideimage1">
-        <a href="homepage.html"><img src="img/logo.png" class="logo"></a>
-        <img src="img/logo.png" class="midlogo">
-        <img src="img/triangledown.png" class="triangledown">
-        <form action="technicianportal.html">
-            <button class="logout logout:hover">BACK</button>
-        </form>
-        <form action="addbook.html">
-            <button class="addbookside addbookside:hover">ADD BOOK</button>
-        </form>
-        <form action="removebook.html">
-            <button class="removebookside removebookside:hover">REMOVE BOOK</button>
-        </form>
-        <form action="checkoutbook.html">
-            <button class="checkoutbookside checkoutbookside:hover">CHECKOUT BOOK</button>
-        </form>
-        <form action="checkinbook.html">
-            <button class="checkinbookside checkinbookside:hover">CHECK IN BOOK</button>
-        </form> <!--copy until here for all future technician pages-->
-        <span class="booknumbertext">Book Number*:</span>
-        <form id="bookremoveform" class="removebookform">
+        <img src="img/removebook.png" class="topbarimage"><!--top bar image icon for remove book title-->
+        <img src="img/image1.jpg" class="sideimage1"><!--sidebar image-->
+        <a href="homepage.html"><img src="img/logo.png" class="logo"></a><!--top bar logo-->
+        <img src="img/logo.png" class="midlogo"><!--main content logo middle-->
+        <img src="img/triangledown.png" class="triangledown"><!--technician actions label button-->
+
+        <button onclick="location.href = 'technicianportal.html';" type="button" class="logout logout:hover">Back</button><!--back button to technician portal-->
+        <button onclick="location.href = 'addbook.html';" type="button" class="addbookside addbookside:hover">ADD BOOK</button><!--add book side button redirect-->
+        <button onclick="location.href = 'removebook.html';" type="button" class="removebookside removebookside:hover">REMOVE BOOK</button><!--remove book side button redirect-->
+        <button onclick="location.href = 'checkoutbook.html';" type="button" class="checkoutbookside checkoutbookside:hover">CHECKOUT BOOK</button><!--checkout book side button redirect-->
+        <button onclick="location.href = 'checkinbook.html';" type="button" class="checkinbookside checkinbookside:hover">CHECK IN BOOK</button><!--checkin book side button redirect-->
+        <!--copy until here for all future technician pages-->
+
+        <span class="booknumbertext">Book Number*:</span><!--book number input label-->
+        <form id="bookremoveform" class="removebookform"><!--book remove form with book number input-->
+            <!--input book number with min char 1 and max char 8-->
             <input class="booknumber" type="number" name="bookNumberT" id="bookNumberT" placeholder="Enter Field Here" minlength="1" maxlength="8" required>
+            <!--submit button to send book removal to firebase-->
             <input class="removebookbutton removebookbutton:hover" id="submit" type='submit'>
         </form>
     </div>
-
+    <!--various firebase scripts required for functionality of the database, such as initializing the firebase api instance,
+    initializing firestore database, initializing firebase authentication (for technician auth), and initializing firebase storage 
+    (for book cover storage), defer means to run the script after the others-->
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>

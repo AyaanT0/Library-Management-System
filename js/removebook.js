@@ -1,5 +1,5 @@
-$(document).ready(function () {
-    var firebaseConfig = {
+$(document).ready(function () { //jquery event listener, once page is loaded, the script is loaded in and waits for something to be submitted
+    var firebaseConfig = { //contains all the information needed to connect to the firebase database
         apiKey: "AIzaSyBuyAp0-coTH4f2B-yV90Yk9rbnE7Qwb3w",
         authDomain: "librarymanagementsystem-fcb1c.firebaseapp.com",
         databaseURL: "https://librarymanagementsystem-fcb1c-default-rtdb.firebaseio.com/",
@@ -11,24 +11,26 @@ $(document).ready(function () {
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
-    var db = firebase.firestore();
+    var db = firebase.firestore(); //sets up a connection to the firebase database (used to store data)
 
     $("#bookremoveform").submit(function (e) {
         e.preventDefault();
-    });
+    }); //prevents submission of form when enter is pressed if the form is not filled out
 
     $('#submit').click(function () {
         remove_this();
-    });
+    }); //once the submit button is clicked, the remove_this function is called
 
     firebase.auth().onAuthStateChanged(user => {
         if (!user) {
             window.location = 'homepage.html';
         }
-    });
+    }); //event listener that checks whether the user is authenticated as a technician, if not, they are redirected to the homepage
+
 
 });
 
+//removes book from database
 function remove_this(BookNumber) {
     var BookNumber = document.getElementById("bookNumberT").value;
     var db = firebase.firestore();
@@ -46,8 +48,8 @@ function remove_this(BookNumber) {
             //delete book
             boooook.delete()
             .then(function() {
-                console.log("Book removed successfully");
-                window.alert("Book removed successfully");
+                console.log("Book removed successfully"); //logs success message to console
+                window.alert("Book removed successfully"); //alerts user that book was removed successfully
 
                 //deletes book cover image from storage
                 if (coverImageURL) {
@@ -55,10 +57,10 @@ function remove_this(BookNumber) {
                     storageRef.delete()
                     .then(function() {
                         console.log("Cover image removed successfully");
-                    })
+                    }) //cover image deleted
                     .catch(function(error) {
                         console.error("Error removing cover image: ", error);
-                    });
+                    });//could not delete cover image
                 }
             })
             .catch(function(error) {

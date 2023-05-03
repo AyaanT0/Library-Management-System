@@ -1,5 +1,5 @@
-$(document).ready(function () {
-    var firebaseConfig = {
+$(document).ready(function () { //jquery event listener, once page is loaded, the script is loaded in and waits for something to be submitted
+    var firebaseConfig = { //contains all the information needed to connect to the firebase database
         apiKey: "AIzaSyBuyAp0-coTH4f2B-yV90Yk9rbnE7Qwb3w",
         authDomain: "librarymanagementsystem-fcb1c.firebaseapp.com",
         databaseURL: "https://librarymanagementsystem-fcb1c-default-rtdb.firebaseio.com/",
@@ -11,22 +11,21 @@ $(document).ready(function () {
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
-    var db = firebase.firestore();
+    var db = firebase.firestore(); //sets up a connection to the firebase database (used to store data)
 
     $("#bookcheckinform").submit(function (e) {
         e.preventDefault();
-    });
+    }); //prevents submission of form when enter is pressed if the form is not filled out
 
     $('#submit').click(function () {
         move_book_to_books();
-    });
+    }); //once the submit button is clicked, the move_book_to_books function is called
 
     firebase.auth().onAuthStateChanged(user => {
         if (!user) {
             window.location = 'homepage.html';
         }
-    });
-
+    }); //event listener that checks whether the user is authenticated as a technician, if not, they are redirected to the homepage
 });
 
 //takes book out of checked out section and moves into books section
@@ -65,8 +64,8 @@ function move_book_to_books(BookNumber) {
                 // Handle error if adding book to books collection fails
             });
         } else {
-            console.error("Book not checked out");
-            window.alert("Book not checked out");
+            console.error("Book not checked out"); //logs error if book did not get checked out
+            window.alert("Book not checked out"); //alerts user that book did not get checked out
         }
     })
     .catch(function(error) {

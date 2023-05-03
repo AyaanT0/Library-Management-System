@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technician Login</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/homelog.css">
-    <script src="js/adminLogin.js"></script>
+    <title>Technician Login</title><!--tab title-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--this initializes jQuery, the JS library used for scripting and firebase api calls -->
+    <link rel="stylesheet" href="css/homelog.css"><!--this links the css stylesheet for this page, located in the css folder-->
+    <script src="js/adminLogin.js"></script><!--this links the js script for this page, located in the js folder-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
-    </style>
+    </style><!--imports the main font for the page-->
 </head>
 <body>
-    <div align="center" class="homepage" id="homepage">
-        <h1 class="text07">WELCOME!</h1>
-        <h1 class="text09234">TECHNICIAN LOGIN!</h1>
-        <img src="img/technicianphoto.jpg" class="homeimage1">
-        <img src="img/logo.png" class="homelogo">
-        <form id="loginform">
+    <div align="center" class="homepage" id="homepage"><!--main content div-->
+        <h1 class="text07">WELCOME!</h1><!--title h1-->
+        <h1 class="text09234">TECHNICIAN LOGIN!</h1><!--title h1-->
+        <img src="img/technicianphoto.jpg" class="homeimage1"><!--background image-->
+        <img src="img/logo.png" class="homelogo"><!--background logo-->
+        <form id="loginform"><!--form that handles technician login data-->
+            <!--username field with 8 char min and 30 char max (auth handled by firebase)-->
             <input class="rectangle1tl" id="usert" placeholder="Enter your username" type="text" minlength="8" maxlength="30" required></input>
+            <!--password field with type password, 8 char min and 30 char max (auth handled by firebase)-->
             <input class="rectangle2tl" id="passt" placeholder="Enter your password" type="password" minlength="8" maxlength="12" required></input>
-            <button class="rectangle3tl" id="submit">LOGIN</button>
+            <button class="rectangle3tl" id="submit">LOGIN</button><!--login button-->
         </form>
         <form id='back' action="homepage.html">
-            <button class="back">BACK</button>
+            <button class="back">BACK</button><!--back button to homepage-->
         </form>
     </div>
+        <!--various firebase scripts required for functionality of the database, such as initializing the firebase api instance,
+    initializing firestore database, initializing firebase authentication (for technician auth), defer means to run the script after the others-->
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>

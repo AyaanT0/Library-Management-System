@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Login</title>
-    <link rel="stylesheet" href="css/homelog.css">
+    <title>Student Login</title><!--tab title-->
+    <link rel="stylesheet" href="css/homelog.css"><!--this links the css stylesheet for this page, located in the css folder-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
-    </style>
+    </style><!--imports the main font-->
 </head>
 <body>
-    <div align="center" class="homepage" id="homepage">
-        <h1 class="text07">WELCOME!</h1>
-        <h1 class="text09235">STUDENT LOGIN!</h1>
-        <img src="img/studentphoto.jpg" class="homeimage1">
-        <img src="img/logo.png" class="homelogo">
-        <form action="studentportal.html">
+    <div align="center" class="homepage" id="homepage"><!--main content div-->
+        <h1 class="text07">WELCOME!</h1><!--welcome title h1-->
+        <h1 class="text09235">STUDENT LOGIN!</h1><!--login title h1-->
+        <img src="img/studentphoto.jpg" class="homeimage1"><!--background photo-->
+        <img src="img/logo.png" class="homelogo"><!--logo photo background-->
+        <form action="studentportal.html"><!--login form-->
+            <!--student number input with min char 6 and max char 12-->
             <input class="rectangle1sl" id="users" placeholder="Enter your student number" type="username" minlength="6" maxlength="12" required></input>
+            <!--submit button, form takes you to student portal-->
             <button class="rectangle3sl rectangle3sl:hover">LOGIN</button>
         </form>
+        <!--back button to homepage-->
         <form action="homepage.html">
             <button class="back back:hover">BACK</button>
         </form>

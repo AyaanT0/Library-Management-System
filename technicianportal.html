@@ -5,44 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technician Portal</title>
-    <link rel="stylesheet" href="css/techport.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/techport.js"></script>
+    <title>Technician Portal</title><!--tab title-->
+    <link rel="stylesheet" href="css/techport.css"><!--this links the css stylesheet for this page, located in the css folder-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--this initializes jQuery, the JS library used for scripting and firebase api calls -->
+    <script src="js/techport.js"></script><!--this links the js script for this page, located in the js folder-->
 </head>
 
 <body>
-    <div align="center" class="technicianportal" id="technicianportal">
-        <h1 class="welcome">Welcome, Technician</h1>
-        <h2 class="logotext">North Park <br>Library</h2>
-        <p class="sidebartext">TECHNICIAN ACTIONS</p>
-        <rect class="rectangle000"></rect>
-        <rect class="rectangle0000"></rect>
-        <rect class="rectangle0"></rect>
-        <rect class="rectangle69"></rect>
-        <rect class="rectangle1bigtportal"></rect>
-        <img src="img/image1.jpg" class="sideimage1">
-        <a href="homepage.html"><img src="img/logo.png" class="logo"></a>
-        <img src="img/logo.png" class="midlogo">
-        <img src="img/triangledown.png" class="triangledown">
-        
-        <button type="button" id="logout" class="logout logout:hover">LOGOUT</button>
-        <button onclick="location.href = 'addbook.html';" type="button" class="addbookside addbookside:hover">ADD BOOK</button>
-        <button onclick="location.href = 'removebook.html';" type="button" class="removebookside removebookside:hover">REMOVE BOOK</button>
-        <button onclick="location.href = 'checkoutbook.html';" type="button" class="checkoutbookside checkoutbookside:hover">CHECKOUT BOOK</button>
-        <button onclick="location.href = 'checkinbook.html';" type="button" class="checkinbookside checkinbookside:hover">CHECK IN BOOK</button><!--copy until here for all future technician pages-->
-        
+    <div align="center" class="technicianportal" id="technicianportal"><!--main content div-->
+        <h1 class="welcome">Welcome, Technician</h1><!--technician welcome title top h1-->
+        <h2 class="logotext">North Park <br>Library</h2><!--north park library title h2-->
+        <p class="sidebartext">TECHNICIAN ACTIONS</p><!--technician actions label-->
+        <rect class="rectangle000"></rect><!--sidebar rectangle-->
+        <rect class="rectangle0000"></rect><!--top bar rectangle logo-->
+        <rect class="rectangle0"></rect><!--top bar rectangle title-->
+        <rect class="rectangle69"></rect><!--actions label rectangle-->
+        <rect class="rectangle1bigtportal"></rect><!--main content rectangle-->
+        <img src="img/image1.jpg" class="sideimage1"><!--sidebar image-->
+        <a href="homepage.html"><img src="img/logo.png" class="logo"></a><!--top bar logo-->
+        <img src="img/logo.png" class="midlogo"><!--main content logo middle-->
+        <img src="img/triangledown.png" class="triangledown"><!--technician actions label button-->
 
-        <button onclick="location.href = 'addbook.html';" type="button" class="rectaddbook rectaddbook:hover">Add <br>Book</button>
-        <button onclick="location.href = 'removebook.html';" type="button" class="rectremovebook rectremovebook:hover">Remove<br> Book</button>
-        <button onclick="location.href = 'checkoutbook.html';" type="button" class="rectcheckoutbook rectcheckinbook:hover">Check<br>Out<br> Book</button>
-        <button onclick="location.href = 'checkinbook.html';" type="button" class="rectcheckinbook rectcheckinbook:hover">Check <br>In<br> Book</button>
+        <button type="button" id="logout" class="logout logout:hover">LOGOUT</button><!--logout button linked to firebase auth-->
+        <button onclick="location.href = 'addbook.html';" type="button" class="addbookside addbookside:hover">ADD BOOK</button><!--add book side button redirect-->
+        <button onclick="location.href = 'removebook.html';" type="button" class="removebookside removebookside:hover">REMOVE BOOK</button><!--remove book side button redirect-->
+        <button onclick="location.href = 'checkoutbook.html';" type="button" class="checkoutbookside checkoutbookside:hover">CHECKOUT BOOK</button><!--checkout book side button redirect-->
+        <button onclick="location.href = 'checkinbook.html';" type="button" class="checkinbookside checkinbookside:hover">CHECK IN BOOK</button><!--checkin book side button redirect-->
+        <!--copy until here for all future technician pages-->
 
-        <a href="addbook.html"><img src="img/addbook.png" class="addbookimage"></a>
-        <a href="removebook.html"><img src="img/removebook.png" class="removebookimage"></a>
-        <a href="checkoutbook.html"><img src="img/checkoutbook.png" class="checkoutbookimage"></a>
-        <a href="checkinbook.html"><img src="img/checkinbook.png" class="checkinbookimage"></a>
+        <button onclick="location.href = 'addbook.html';" type="button" class="rectaddbook rectaddbook:hover">Add <br>Book</button><!--add book middle button redirect-->
+        <button onclick="location.href = 'removebook.html';" type="button" class="rectremovebook rectremovebook:hover">Remove<br> Book</button><!--remove button middle button redirect-->
+        <button onclick="location.href = 'checkoutbook.html';" type="button" class="rectcheckoutbook rectcheckinbook:hover">Check<br>Out<br> Book</button><!--checkout book middle button redirect-->
+        <button onclick="location.href = 'checkinbook.html';" type="button" class="rectcheckinbook rectcheckinbook:hover">Check <br>In<br> Book</button><!--checkin book middle button redirect-->
+
+        <a href="addbook.html"><img src="img/addbook.png" class="addbookimage"></a><!--add book middle button icon-->
+        <a href="removebook.html"><img src="img/removebook.png" class="removebookimage"></a><!--remove book middle button icon-->
+        <a href="checkoutbook.html"><img src="img/checkoutbook.png" class="checkoutbookimage"></a><!--checkout book middle button icon-->
+        <a href="checkinbook.html"><img src="img/checkinbook.png" class="checkinbookimage"></a><!--check in book middle button icon-->
     </div>
+        <!--various firebase scripts required for functionality of the database, such as initializing the firebase api instance,
+    initializing firestore database, initializing firebase authentication (for technician auth)-->
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
