@@ -42,11 +42,11 @@
             <input class="bookauthor" type="text" name="bookAuthorS" id="bookAuthorS" placeholder="Enter Field Here">
             <!--book type checkboxes with options fiction, non-fiction, and graphic novel-->
             <div class="booktype">
-                <input type="checkbox" id="bookTypeS" name="bookTypeS" value="fiction">
+                <input type="checkbox" id="bookTypeF" name="bookTypeF" value="fiction">
                 <label for="fiction">Fiction</label>
-                <input type="checkbox" id="bookTypeS" name="bookTypeS" value="non-fiction">
+                <input type="checkbox" id="bookTypeNF" name="bookTypeNF" value="non-fiction">
                 <label for="non-fiction">Non-Fiction</label>
-                <input type="checkbox" id="bookTypeS" name="bookTypeS" value="graphic-novel">
+                <input type="checkbox" id="bookTypeGN" name="bookTypeGN" value="graphic-novel">
                 <label for="graphic-novel">Graphic Novel</label>
             </div>
             <!--book publication year dropdown list with options before 2000, 2001-2005, 2006-2010, 2011-2015, 2016-2020, and 2021-2023-->
@@ -85,9 +85,11 @@
     <!--various firebase scripts required for functionality of the database, such as initializing the firebase api instance,
     initializing firestore database, initializing firebase authentication (for technician auth), and initializing firebase storage 
     (for book cover storage), defer means to run the script after the others-->
-        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
-        <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
-        <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
-        <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.0.2/firebase-storage.js"></script>
     </body>
 </html>
+
+<!--6.0.2-->

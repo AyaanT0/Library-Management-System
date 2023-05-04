@@ -34,11 +34,15 @@ function searchBooks() {
   const bookNumber = document.getElementById("bookNumberS").value;
   const bookName = document.getElementById("bookNameS").value;
   const bookAuthor = document.getElementById("bookAuthorS").value;
-  const bookType = document.querySelectorAll('input[name="bookTypeS"]:checked');
+  const bookTypeF = document.querySelector("#bookTypeF");
+  const bookTypeNF = document.querySelector("#bookTypeNF");
+  const bookTypeGN = document.querySelector("#bookTypeGN");
+  /*const bookTypeF = document.getElementById("bookTypeF").checked;
+  const bookTypeNF = document.getElementById("bookTypeNF").checked;
+  const bookTypeGN = document.getElementById("bookTypeGN").checked;*/
   const bookPublication = document.getElementById("bookPublicationS").value;
   const bookGenre = document.getElementById("bookGenreS").value;
   const bookPages = document.getElementById("bookPagesS").value;
-
   // Initialize query with 'booksRef'
   let query = booksRef;
 
@@ -52,17 +56,21 @@ function searchBooks() {
   if (bookAuthor !== "") {
     query = query.where("bookauthor", "==", bookAuthor);
   }
-  //book type doesn't work yet :(
-  //i am trying to find out how to read the checkbox value and match to to the database
-  //my guess is that the values dont correspond
-  if (bookType.length > 0) {
-    // If one or more checkboxes are checked, create an array of values
-    const types = [];
-    bookType.forEach((checkbox) => {
-      types.push(checkbox.value);
-    });
-    // Add the array of values to the query using 'array-contains'
-    query = query.where("booktype", "array-contains", types);
+  //i finally fixed this book type section. The problem was that it was saved as an array and there were square brackets
+  //i solved it by using .join to remove the square brackets and save it as a string
+  const types = [];
+  if (bookTypeF.checked) {
+    types.push("fiction");
+  }
+  if (bookTypeNF.checked) {
+    types.push("non-fiction");
+  }
+  if (bookTypeGN.checked) {
+    types.push("graphic-novel");
+  }
+  if (types.length > 0) {
+    const bookTypeString = types.join("");
+    query = query.where("booktype", "==", bookTypeString);
   }
   if (bookPublication !== "") {
     query = query.where("bookpublication", "==", bookPublication);
@@ -74,63 +82,66 @@ function searchBooks() {
     query = query.where("bookpages", "==", bookPages);
   }
 
-  // Execute the query and handle the results
-  query.get().then((querySnapshot) => {
-    const results = [];
-    querySnapshot.forEach((doc) => {
-      // Extract book data from the document and add it to 'results'
-      const bookData = {
-        bookNumber: doc.data().booknumber || "",
-        bookName: doc.data().bookname || "",
-        bookAuthor: doc.data().bookauthor || "",
-        bookType: doc.data().booktype || "",
-        bookPublication: doc.data().bookpublication || "",
-        bookGenre: doc.data().bookgenre || "",
-        bookPages: doc.data().bookpages || "",
-      };
-       // Concatenate all fields in 'bookData' to create a single string for searching
-      const fields = Object.values(bookData).join(" ").toLowerCase();
-       // Check if any of the search terms are present in the concatenated string
-      if (
-        fields.includes(bookNumber.toLowerCase()) ||
-        fields.includes(bookName.toLowerCase()) ||
-        fields.includes(bookAuthor.toLowerCase()) ||
-        bookType.length === 0 || // If no checkboxes are checked, include all books
-        bookType.some((t) => fields.includes(t.toLowerCase())) || // If one or more checkboxes are checked, include books that match any of the checked values
-        fields.includes(bookPublication.toLowerCase()) ||
-        fields.includes(bookGenre.toLowerCase()) ||
-        fields.includes(bookPages.toLowerCase())
-      ) {
-        results.push(bookData);
+// Execute the query and handle the results
+query.get().then((querySnapshot) => {
+  const results = [];
+  let index = 0;
+  // Clear the local storage before setting new books
+  localStorage.clear();
+  querySnapshot.forEach((doc) => {
+    // Extract book data from the document and add it to 'results'
+    const bookData = {
+      bookNumber: doc.data().booknumber || "",
+      bookName: doc.data().bookname || "",
+      bookAuthor: doc.data().bookauthor || "",
+      bookType: doc.data().booktype || "",
+      bookPublication: doc.data().bookpublication || "",
+      bookGenre: doc.data().bookgenre || "",
+      bookPages: doc.data().bookpages || "",
+      bookCover: doc.data().bookCover || ""
+    };
+    // Concatenate all fields in 'bookData' to create a single string for searching
+    const fields = Object.values(bookData).join(" ").toLowerCase();
+    // Check if any of the search terms are present in the concatenated string
+    if (
+      fields.includes(bookNumber.toLowerCase()) ||
+      fields.includes(bookName.toLowerCase()) ||
+      fields.includes(bookAuthor.toLowerCase()) ||
+      types.length === 0 || // If no checkboxes are checked, include all books
+      (types.includes("fiction") && bookData.bookType.includes("fiction")) ||
+      (types.includes("non-fiction") && bookData.bookType.includes("non-fiction")) ||
+      (types.includes("graphic-novel") && bookData.bookType.includes("graphic-novel")) ||
+      fields.includes(bookPublication.toLowerCase()) ||
+      fields.includes(bookGenre.toLowerCase()) ||
+      fields.includes(bookPages.toLowerCase())
+    ) {
+      // Store the book data in local storage
+      for (const [key, value] of Object.entries(bookData)) {
+        localStorage.setItem(`${key}${index}`, value);
       }
-    });
-    // If one or more books are found, store them in local storage and redirect to search results page
-    if (results.length > 0) {
-      // If there are, log a message indicating that books were found
-      console.log("Books found:");
-      // Clear the local storage (if any) to ensure fresh data is stored
-      localStorage.clear()
-      // For each book in the search results array, store the data as a JSON object in local storage
-      results.forEach((bookData, index) => {
-        localStorage.setItem(`book${index}`, JSON.stringify(bookData));
-        // Also log the book data to the console
-        console.log(bookData);
-      });
-      // Store the total number of books found in local storage
-      localStorage.setItem("bookCount", results.length);
-      // Redirect the user to the search results page
-      window.location.href = "searchresults.html";
-    } else {
-      // If there are no search results, log a message indicating this
-      console.log("No books found.");
-      // Clear the local storage (if any)
-      localStorage.clear();
-      // Store the total number of books found in local storage
-      localStorage.setItem("bookCount", results.length);
-      // Redirect the user to the search results page
-      window.location.href = "searchresults.html";
+      index++;
+      results.push(bookData);
     }
-    // If there was an error during the search, log it to the console
+  });
+  // If one or more books are found, redirect to search results page
+  if (results.length > 0) {
+    // If there are, log a message indicating that books were found
+    console.log("Books found:");
+    // Store the total number of books found in local storage
+    localStorage.setItem("bookCount", results.length);
+    // Redirect the user to the search results page
+    window.location.href = "searchresults.html";
+  } else {
+    // If there are no search results, log a message indicating this
+    console.log("No books found.");
+    // Clear the local storage (if any)
+    localStorage.clear();
+    // Store the total number of books found in local storage
+    localStorage.setItem("bookCount", results.length);
+    // Redirect the user to the search results page
+    window.location.href = "searchresults.html";
+  }
+  // If there was an error during the search, log it to the console
   }).catch((error) => {
     console.log(error);
   });
@@ -221,33 +232,3 @@ console.log(error);
       if (fields.includes(bookPublication.toLowerCase())) {
         matchCount++;
       /*const typeMatches = types.filter((t) => fields.includes(t.toLowerCase())).length;*/
-/*
-      if (typeMatches > 0) {
-        matchCount += typeMatches;
-      }
-      if (fields.includes(bookPublication.toLowerCase())) {
-        matchCount++;
-      }
-      if (fields.includes(bookGenre.toLowerCase())) {
-        matchCount++;
-      }
-      if (fields.includes(bookPages.toLowerCase())) {
-        matchCount++;
-      }
-      if (matchCount > 0) {
-        results.push({ bookData, matchCount });
-      }
-    });
-    if (results.length > 0) {
-      console.log("Books found:");
-      results.sort((a, b) => b.matchCount - a.matchCount);
-      results.forEach((result) => {
-        console.log(result.bookData.join(", "));
-      });
-    } else {
-      console.log("No books found.");
-    }
-  }).catch((error) => {
-    console.log(error);
-  });
-}*/

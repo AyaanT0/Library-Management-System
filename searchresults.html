@@ -1,45 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results</title><!--tab title-->
-    <link rel="stylesheet" href="css/searchresults.css"><!--this links the css stylesheet for this page, located in the css folder-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--this initializes jQuery, the JS library used for scripting and firebase api calls -->
+    <link rel="stylesheet" href="css/searchresults.css">
+    <!--this links the css stylesheet for this page, located in the css folder-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--this initializes jQuery, the JS library used for scripting and firebase api calls -->
     <script src="js/searchresults.js"></script><!--this links the js script for this page, located in the js folder-->
 </head>
 
-<body>
-    <div align="center" class="studentportal" id="studentportal"><!--main content div-->
-        <h1 class="welcome">Search Results</h1><!--page title h1-->
-        <h2 class="logotext">North Park <br>Library</h2><!--north park library title h2-->
-        <p class="sidebartext">STUDENT ACTIONS</p><!--student actions label-->
-        <rect class="rectangle000"></rect><!--sidebar rectangle-->
-        <rect class="rectangle0000"></rect><!--top bar rectangle logo-->
-        <rect class="rectangle0"></rect><!--top bar rectangle title-->
-        <rect class="rectangle69"></rect><!--actions label rectangle-->
-        <rect class="rectangle1bigsportal"></rect><!--main content rectangle-->
-        <rect class="rectangle1bigsearchs"></rect><!--content housing rectangle-->
-        <img src="img/image1.jpg" class="sideimage1"><!--sidebar image-->
-        <a href="homepage.html"><img src="img/logo.png" class="logo"></a><!--top bar logo-->
-        <img src="img/logo.png" class="midlogo"><!--main content logo middle-->
-        <img src="img/triangledown.png" class="triangledown"><!--student actions label button-->
-        <img src="img/searchbook.png" class="topbarimage"><!--top bar icon-->
+<body onload="displayResults()">
+    <!--used to execute JavaScript function called displayResults() when the page loads completely. It ensures that all resources on the page are ready for use before the function is executed-->
 
-        <button onclick="location.href = 'studentportal.html';" type="button" class="logout logout:hover">BACK</button><!--back button to portal-->
-        <button onclick="location.href = 'studentsearch.html';" type="button" class="searchbookside searchbookside:hover">BOOK SEARCH</button><!--book search redirect button-->
-        <button onclick="location.href = 'WIP.html';" type="button" class="checkedoutbookside checkedoutbookside:hover">CHECKED OUT BOOKS</button><!--checked out book redirect button-->
-        <button onclick="location.href = 'WIP.html';" type="button" class="fineholdbookside fineholdbookside:hover">FINES & HOLDS</button><!--fines redirect button-->
-        <button onclick="location.href = 'WIP.html';" type="button" class="requestbookside requestbookside:hover">BOOK REQUEST</button><!--book request redirect button-->
-        <!--copy until here for all future student pages-->
+</body>
+<div align="center" class="studentportal" id="studentportal"><!--main content div-->
+    <h1 class="welcome" id="numberofbooks">RESULTS: </h1><!--page title h1 as results found-->
+    <h2 class="logotext">North Park <br>Library</h2><!--north park library title h2-->
+    <p class="sidebartext">STUDENT ACTIONS</p><!--student actions label-->
+    <rect class="rectangle000"></rect><!--sidebar rectangle-->
+    <rect class="rectangle0000"></rect><!--top bar rectangle logo-->
+    <rect class="rectangle0"></rect><!--top bar rectangle title-->
+    <rect class="rectangle69"></rect><!--actions label rectangle-->
+    <rect class="rectangle1bigsportal"></rect><!--main content rectangle-->
+    <rect class="rectangle1bigsearchs"></rect><!--content housing rectangle-->
+    <img src="img/image1.jpg" class="sideimage1"><!--sidebar image-->
+    <a href="homepage.html"><img src="img/logo.png" class="logo"></a><!--top bar logo-->
+    <img src="img/logo.png" class="midlogo"><!--main content logo middle-->
+    <img src="img/triangledown.png" class="triangledown"><!--student actions label button-->
+    <img src="img/searchbook.png" class="topbarimage"><!--top bar icon-->
 
-        <!--various firebase scripts required for functionality of the database, such as initializing the firebase api instance,
-        initializing firestore database, initializing firebase authentication (for technician auth), and initializing firebase storage 
+    <button onclick="location.href = 'studentportal.html';" type="button"
+        class="logout logout:hover">BACK</button><!--back button to portal-->
+    <button onclick="location.href = 'studentsearch.html';" type="button"
+        class="searchbookside searchbookside:hover">BOOK SEARCH</button><!--book search redirect button-->
+    <button onclick="location.href = 'WIP.html';" type="button"
+        class="checkedoutbookside checkedoutbookside:hover">CHECKED OUT
+        BOOKS</button><!--checked out book redirect button-->
+    <button onclick="location.href = 'WIP.html';" type="button" class="fineholdbookside fineholdbookside:hover">FINES &
+        HOLDS</button><!--fines redirect button-->
+    <button onclick="location.href = 'WIP.html';" type="button" class="requestbookside requestbookside:hover">BOOK
+        REQUEST</button><!--book request redirect button-->
+    <!--copy until here for all future student pages-->
+    <rect class="rectangle1bigresultss"></rect>
+    <div id="carousel-container">
+        <div id="carousel">
+            <p id="results" class="results"></p>
+            <!--this paragraph tag shows the books that match the search query, pulled from local storage-->
+            <span class="resultstext">Book Details:</span><!--results label-->
+        </div>
+    </div>
+
+    <!--various firebase scripts required for functionality of the database, such as initializing the firebase api instance,
+        initializing firestore database, initializing firebase authentication (for technician auth), and initializing firebase storage
         (for book cover storage), defer means to run the script after the others-->
-        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
-        <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
-        <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
-        <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.0.2/firebase-storage.js"></script>
     </body>
+
 </html>

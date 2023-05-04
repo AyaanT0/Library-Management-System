@@ -37,11 +37,6 @@ $(document).ready(function () { //jquery event listener, once page is loaded, th
             window.location = 'technicianportal.html'; //event listener that sends you to technician portal once you are authenticated as a technician  
             }
         });
-        firebase.auth().onAuthStateChanged(user => {
-            if (!user) {
-                window.location = 'homepage.html';
-            }
-        });
   });
 
 // This function is called when the user clicks the login button

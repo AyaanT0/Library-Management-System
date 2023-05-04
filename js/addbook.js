@@ -40,6 +40,12 @@ function add_this() { //takes all the data from the form and adds it to the data
     var BookPages = document.getElementById("bookPagesT").value;
     var db = firebase.firestore();
 
+    // validate the form data
+    if (!bookCoverFile || !BookNumber || !BookName || !BookAuthor || !BookType || !BookPublication || !BookGenre || !BookPages) {
+        window.alert("Please fill in all the fields.");
+        return;
+    }
+
     var bookExists = false; // Flag to check if book already exists in database
 
     // Check if book number already exists in the database

@@ -312,4 +312,38 @@ body {
     z-index: 1;
     background: #D5CFCF;
 }
+
 /*copy from beginning until here for all future student css pages*/
+
+.results {
+    position: absolute;
+    z-index: 10;
+    left: 28.6vw;
+    top: 17vh;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-size: 1.52vw;
+    line-height: 2vw;
+    text-align: center;
+    color: #000000;
+}
+
+.numberofbookstext {
+    position: absolute;
+    z-index: 10;
+}
+
+.rectangle1bigresultss {
+    box-sizing: border-box;
+    z-index: 9;
+    position: absolute;
+    width: 73vw;
+    height: 81.83vh;
+    left: 26vw;
+    top: 16.39vh;
+    background: #EAEEFF;
+    opacity: 0.79;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+}
