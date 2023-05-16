@@ -80,7 +80,7 @@ function add_this() { //takes all the data from the form and adds it to the data
                         //saves variable to specific value/key in database
                         //code is formatted as variable:key
                         return db.collection("books").doc(BookNumber).set({
-                            bookCover: downloadURL, 
+                            bookCover: downloadURL,
                             booknumber: BookNumber,
                             bookname: BookName,
                             bookauthor: BookAuthor,
