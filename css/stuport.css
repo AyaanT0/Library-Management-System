@@ -326,6 +326,7 @@ body {
   font-size: 4.7vw;
   line-height: 5vw;
   color: #000000;
+  padding: 0.4vw;
 }
 
 .rectcheckedoutbook {
@@ -349,6 +350,7 @@ body {
   line-height: 5.5vw;
   text-align: right;
   color: #000000;
+  padding: 1.25vw;
 }
 
 .rectfineholdbook {
@@ -372,6 +374,7 @@ body {
   line-height: 5.5vw;
   text-align: right;
   color: #000000;
+  padding: 1.75vw
 }
 
 .rectbookrequestbook {
@@ -395,6 +398,7 @@ body {
   line-height: 5.5vw;
   text-align: right;
   color: #000000;
+  padding: 1.75vw
 }
 
 .rectsearchbook:hover {
