@@ -488,6 +488,27 @@ body {
     border-radius: 2.05vw;
 }
 
+.bookstatus {
+    box-sizing: border-box;
+    position: absolute;
+    width: 48.2vw;
+    height: 5.64vh;
+    left: 42.5vw;
+    top: 17.8vh;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 200;
+    font-size: 1.76vw;
+    line-height: 1.71vw;
+    opacity: 0.68;
+    color: #000000;
+    background: #D9D9D9;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+    z-index: 8
+}
+
 .searchbookbutton {
     box-sizing: border-box;
     position: absolute;
@@ -519,7 +540,7 @@ body {
     width: 14.43vw;
     height: 4.9vh;
     left: 30.03vw;
-    top: 12.7vw;
+    top: 13.25vw;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
@@ -610,6 +631,21 @@ body {
     height: 5.5vh;
     left: 29.54vw;
     top: 79.2vh;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.95vw;
+    line-height: 2.73vw;
+    color: #000000;
+    z-index: 5;
+}
+
+.bookstatustext {
+    position: absolute;
+    width: 10.25vw;
+    height: 5.5vh;
+    left: 29.54vw;
+    top: 18.15vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;

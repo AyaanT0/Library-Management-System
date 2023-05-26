@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">  <!--favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"> <!--favicon-->
     <title>Book Search</title><!--tab title-->
-    <link rel="stylesheet" href="css/studentsearch.css"><!--this links the css stylesheet for this page, located in the css folder-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--this initializes jQuery, the JS library used for scripting and firebase api calls -->
+    <link rel="stylesheet" href="css/studentsearch.css">
+    <!--this links the css stylesheet for this page, located in the css folder-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--this initializes jQuery, the JS library used for scripting and firebase api calls -->
     <script src="js/studentsearch.js"></script><!--this links the js script for this page, located in the js folder-->
 </head>
+
 <body>
     <div align="center" class="studentportal" id="studentportal"><!--main content div-->
         <h1 class="welcome">Book Search</h1><!--page title h1-->
@@ -27,16 +31,24 @@
         <img src="img/triangledown.png" class="triangledown"><!--student actions label button-->
         <img src="img/searchbook.png" class="topbarimage"><!--top bar icon-->
 
-        <button onclick="location.href = 'studentportal.html';" type="button" class="logout logout:hover">BACK</button><!--back button to portal-->
-        <button onclick="location.href = 'studentsearch.html';" type="button" class="searchbookside searchbookside:hover">BOOK SEARCH</button><!--book search redirect button-->
-        <button onclick="location.href = 'WIP.html';" type="button" class="checkedoutbookside checkedoutbookside:hover">CHECKED OUT BOOKS</button><!--checked out book redirect button-->
-        <button onclick="location.href = 'WIP.html';" type="button" class="fineholdbookside fineholdbookside:hover">FINES & HOLDS</button><!--fines redirect button-->
-        <button onclick="location.href = 'WIP.html';" type="button" class="requestbookside requestbookside:hover">BOOK REQUEST</button><!--book request redirect button-->
+        <button onclick="location.href = 'studentportal.html';" type="button"
+            class="logout logout:hover">BACK</button><!--back button to portal-->
+        <button onclick="location.href = 'studentsearch.html';" type="button"
+            class="searchbookside searchbookside:hover">BOOK SEARCH</button><!--book search redirect button-->
+        <button onclick="location.href = 'WIP.html';" type="button"
+            class="checkedoutbookside checkedoutbookside:hover">CHECKED OUT
+            BOOKS</button><!--checked out book redirect button-->
+        <button onclick="location.href = 'WIP.html';" type="button"
+            class="fineholdbookside fineholdbookside:hover">FINES & HOLDS</button><!--fines redirect button-->
+        <button onclick="location.href = 'WIP.html';" type="button" class="requestbookside requestbookside:hover">BOOK
+            REQUEST</button><!--book request redirect button-->
         <!--copy until here for all future student pages-->
 
-        <form id="booksearchform" class="searchbookform"><!--book search form, all the data is collected and a query is made against firebase-->
+        <form id="booksearchform" class="searchbookform">
+            <!--book search form, all the data is collected and a query is made against firebase-->
             <!--book number input-->
-            <input class=booknumber  type="number" name="bookNumberS" id="bookNumberS" placeholder="Enter Field Here" minlength="4" maxlength="20">
+            <input class=booknumber type="number" name="bookNumberS" id="bookNumberS" placeholder="Enter Field Here"
+                minlength="4" maxlength="20">
             <!--book title text input-->
             <input class="booktitle" type="text" id="bookNameS" name="bookNameS" placeholder="Enter Field Here">
             <!--book author text input-->
@@ -71,7 +83,17 @@
                 <option value="other">Other</option>
             </select>
             <!--book pages amount input-->
-            <input class="pagenumber"  name="bookPagesS" id="bookPagesS" placeholder="Enter Field Here">
+            <input class="pagenumber" name="bookPagesS" id="bookPagesS" placeholder="Enter Field Here">
+            <!--book status radio buttons with options available and checked out-->
+
+            <div class="bookstatus">
+                <input type="radio" id="available" name="bookStatus" value="available" required>
+                <label for="available">Available</label>
+                <input type="radio" id="checkedOut" name="bookStatus" value="checkedOut" required>
+                <label for="checkedOut">Checked Out</label>
+                <input type="radio" id="both" name="bookStatus" value="both" required>
+                <label for="both">Both</label>
+            </div>
             <!--submit button, takes data and runs the js script-->
             <button class="searchbookbutton searchbookbutton:hover" type="submit" id="submit">SUBMIT BOOK</button>
         </form>
@@ -82,13 +104,15 @@
         <span class="bookpublicationtext">Publication Date:</span><!--book publication input label-->
         <span class="bookgenretext">Genre:</span><!--book genre input label-->
         <span class="pagenumbertext"># Of Pages:</span><!--book pages input label-->
+        <span class="bookstatustext">Status*: </span><!--book status input label-->
 
-    <!--various firebase scripts required for functionality of the database, such as initializing the firebase api instance,
+        <!--various firebase scripts required for functionality of the database, such as initializing the firebase api instance,
     initializing firestore database, initializing firebase authentication (for technician auth), and initializing firebase storage 
     (for book cover storage), defer means to run the script after the others-->
         <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
         <script defer src="https://www.gstatic.com/firebasejs/8.0.2/firebase-storage.js"></script>
-    </body>
+</body>
+
 </html>
