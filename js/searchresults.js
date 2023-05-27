@@ -24,8 +24,9 @@ function displayResults() {
         return;
     }
 
-    // Create the table header row
-    var tableHeader = "<thead><tr>" +
+    // Create the table header row with the specified CSS class
+    var tableHeader = "<thead class='sticky-header'>" +
+        "<tr>" +
         "<th>Book Number</th>" +
         "<th>Title</th>" +
         "<th>Author</th>" +
@@ -35,7 +36,8 @@ function displayResults() {
         "<th>Pages</th>" +
         "<th>Cover</th>" +
         "<th>Status</th>" +
-        "</tr></thead>";
+        "</tr>" +
+        "</thead>";
 
     // Create the table body rows
     var tableBody = "<tbody>";
@@ -78,15 +80,18 @@ function displayResults() {
 
     // Set the table dimensions and make it scrollable
     resultsElement.style.width = "73vw";
-    resultsElement.style.height = "76.2vh";
+    resultsElement.style.height = "78.215vh";
     resultsElement.style.overflow = "auto";
     resultsElement.style.left = "25.9766vw";
-    resultsElement.style.top = "18.5vh";
+    resultsElement.style.top = "16.41vh";
     resultsElement.style.position = "relative"; // Set position to relative
 
-    // Make the table header row sticky
-    var table = resultsElement.querySelector("table");
-    var thead = table.querySelector("thead");
-    thead.style.position = "sticky";
-    thead.style.top = "0";
+    // Set the z-index and position for the sticky header
+    var stickyHeader = resultsElement.querySelector(".sticky-header");
+    stickyHeader.style.position = "sticky";
+    stickyHeader.style.top = "0";
+    stickyHeader.style.zIndex = "12"; // Set a higher z-index value
+
+    // Optional: Set other styles for the sticky header
+    stickyHeader.style.background = "#bfc1cc";
 }
