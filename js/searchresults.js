@@ -11,55 +11,82 @@ make all text entry sections pull the data as a string just to make matching aga
 Additionally, since I opted not to use local storage to store book data, I decided to use local storage
 to display search results, just to keep some semblance of the original instructions, while
 adding my own unique code, ideas, and features to the project.
+
 */
 
 function displayResults() {
-    //reteives the number of books from the local storage
+    // Retrieve the number of books from local storage
     var bookAmount = localStorage.getItem("bookCount");
 
-    //check if there are no books, if none then display no results found on the heading bar
+    // Check if there are no books, if none then display "No results found" in the heading bar
     if (bookAmount === 0) {
         document.getElementById("results").innerHTML = "No results found.";
         return;
     }
 
-    //variable to store book list html in a table
-    var bookList = "<table>";
-    //loops through each book
+    // Create the table header row
+    var tableHeader = "<thead><tr>" +
+        "<th>Book Number</th>" +
+        "<th>Title</th>" +
+        "<th>Author</th>" +
+        "<th>Publication Date</th>" +
+        "<th>Type</th>" +
+        "<th>Genre</th>" +
+        "<th>Pages</th>" +
+        "<th>Cover</th>" +
+        "<th>Status</th>" +
+        "</tr></thead>";
+
+    // Create the table body rows
+    var tableBody = "<tbody>";
     for (var i = 0; i < bookAmount; i++) {
-        //gets keys for retrieving book info from the local storage
-        var bookNumber = "bookNumber" + i;
-        var bookName = "bookName" + i;
-        var bookAuthor = "bookAuthor" + i;
-        //retrieves book cover link from local storage
+        // Retrieve book info from local storage
+        var bookNumber = localStorage.getItem("bookNumber" + i);
+        var bookTitle = localStorage.getItem("bookName" + i);
+        var bookAuthor = localStorage.getItem("bookAuthor" + i);
+        var bookPublication = localStorage.getItem("bookPublication" + i);
+        var bookType = localStorage.getItem("bookType" + i);
+        var bookGenre = localStorage.getItem("bookGenre" + i);
+        var bookPages = localStorage.getItem("bookPages" + i);
         var bookCover = localStorage.getItem("bookCover" + i);
+        var bookStatus = localStorage.getItem("bookStatus" + i);
 
-        //stores book info and book cover in a string
-        var bookInfo = "<b>Book Number:</b> " + localStorage.getItem(bookNumber) + "<br>" +
-                       "<b>Title:</b> " + localStorage.getItem(bookName) + "<br>" +
-                       "<b>Author:</b> " + localStorage.getItem(bookAuthor) + "<br>" +
-                       "<img src='" + bookCover + "' width='100' height='150'>";
-
-        //new row if there is an even number of books (always a new row when 2 books)
-        if (i % 2 === 0) {
-            //makes the new row
-            bookList += "<tr>";
-        }
-        //adds the book inf to the table cell
-        bookList += "<td>" + bookInfo + "</td>";
-
-        //check if the current book is odd (if 1 book, add another book to the row)
-        if (i % 2 === 1 || i === bookAmount - 1) {
-            //end row if odd or last book
-            bookList += "</tr>";
-        }
+        // Create a table row for the current book
+        tableBody += "<tr>" +
+            "<td>" + bookNumber + "</td>" +
+            "<td>" + bookTitle + "</td>" +
+            "<td>" + bookAuthor + "</td>" +
+            "<td>" + bookPublication + "</td>" +
+            "<td>" + bookType + "</td>" +
+            "<td>" + bookGenre + "</td>" +
+            "<td>" + bookPages + "</td>" +
+            "<td><img src='" + bookCover + "' width='100' height='150'></td>" +
+            "<td>" + bookStatus + "</td>" +
+            "</tr>";
     }
-     //closing table tag
-    bookList += "</table>";
+    tableBody += "</tbody>";
 
-    //display the number of books in the heading bar "numberofbooks" element
+    // Create the complete table with header and body
+    var bookTable = "<table>" + tableHeader + tableBody + "</table>";
+
+    // Display the number of books in the heading bar "numberofbooks" element
     document.getElementById("numberofbooks").innerHTML = "Results: " + bookAmount;
 
-    //display books in the results table
-    document.getElementById("results").innerHTML = bookList;
+    // Display the books in the results table
+    var resultsElement = document.getElementById("results");
+    resultsElement.innerHTML = bookTable;
+
+    // Set the table dimensions and make it scrollable
+    resultsElement.style.width = "73vw";
+    resultsElement.style.height = "76.2vh";
+    resultsElement.style.overflow = "auto";
+    resultsElement.style.left = "25.9766vw";
+    resultsElement.style.top = "18.5vh";
+    resultsElement.style.position = "relative"; // Set position to relative
+
+    // Make the table header row sticky
+    var table = resultsElement.querySelector("table");
+    var thead = table.querySelector("thead");
+    thead.style.position = "sticky";
+    thead.style.top = "0";
 }

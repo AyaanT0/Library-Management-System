@@ -347,3 +347,18 @@ body {
     box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
     border-radius: 2.05vw;
 }
+
+.rectangle2titleresultss {
+    box-sizing: border-box;
+    z-index: 10;
+    position: absolute;
+    width: 73vw;
+    height: 11vh;
+    left: 26vw;
+    top: 18vh;
+    background: #bfc1cc;
+    opacity: 0.79;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+}

@@ -42,6 +42,9 @@ function move_book_to_checkedout(BookNumber) {
         if (bookDoc.exists) {
             var bookData = bookDoc.data();
 
+            //changes book status to "checked out"
+            bookData.bookstatus = "Checked Out";
+
             //adds book data to "checkedout" section with same data
             db.collection("checkedout").doc(BookNumber).set(bookData)
             .then(function() {

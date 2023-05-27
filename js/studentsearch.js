@@ -106,7 +106,8 @@ function searchBooks() {
             bookPublication: doc.data().bookpublication || "",
             bookGenre: doc.data().bookgenre || "",
             bookPages: doc.data().bookpages || "",
-            bookCover: doc.data().bookCover || ""
+            bookCover: doc.data().bookCover || "",
+            bookStatus: doc.data().bookstatus || ""
           };
           const fields = Object.values(bookData)
             .join(" ")
@@ -213,7 +214,8 @@ function searchBooks() {
             bookPublication: doc.data().bookpublication || "",
             bookGenre: doc.data().bookgenre || "",
             bookPages: doc.data().bookpages || "",
-            bookCover: doc.data().bookCover || ""
+            bookCover: doc.data().bookCover || "",
+            bookStatus: doc.data().bookstatus || ""
           };
           const fields = Object.values(bookData)
             .join(" ")
@@ -294,7 +296,8 @@ function searchBooks() {
             bookPublication: doc.data().bookpublication || "",
             bookGenre: doc.data().bookgenre || "",
             bookPages: doc.data().bookpages || "",
-            bookCover: doc.data().bookCover || ""
+            bookCover: doc.data().bookCover || "",
+            bookStatus: doc.data().bookstatus || ""
           };
           if (isBookMatch(bookData)) {
             for (const [key, value] of Object.entries(bookData)) {
@@ -315,7 +318,8 @@ function searchBooks() {
             bookPublication: doc.data().bookpublication || "",
             bookGenre: doc.data().bookgenre || "",
             bookPages: doc.data().bookpages || "",
-            bookCover: doc.data().bookCover || ""
+            bookCover: doc.data().bookCover || "",
+            bookStatus: doc.data().bookstatus || ""
           };
           if (isBookMatch(bookData)) {
             for (const [key, value] of Object.entries(bookData)) {

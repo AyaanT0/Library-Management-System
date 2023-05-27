@@ -79,6 +79,7 @@ function add_this() { //takes all the data from the form and adds it to the data
                         // Save book details and book cover url from storage
                         //saves variable to specific value/key in database
                         //code is formatted as variable:key
+                        //whenever a book is added, its automatically set to available
                         return db.collection("books").doc(BookNumber).set({
                             bookCover: downloadURL,
                             booknumber: BookNumber,
@@ -87,7 +88,8 @@ function add_this() { //takes all the data from the form and adds it to the data
                             booktype: BookType,
                             bookpublication: BookPublication,
                             bookgenre: BookGenre,
-                            bookpages: BookPages
+                            bookpages: BookPages,
+                            bookstatus: "available"
                         });
                     })
                     //logs and alerts success message if book is added successfully

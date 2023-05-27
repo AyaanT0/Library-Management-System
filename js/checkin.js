@@ -42,6 +42,9 @@ function move_book_to_books(BookNumber) {
         if (bookDoc.exists) {
             var bookData = bookDoc.data();
 
+            //changes book status to "available"
+            bookData.bookstatus = "Available";
+
             // Add the book data to the "books" collection with the same book number as the document ID
             db.collection("books").doc(BookNumber).set(bookData)
             .then(function() {
