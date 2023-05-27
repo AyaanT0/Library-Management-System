@@ -46,6 +46,17 @@ function add_this() { //takes all the data from the form and adds it to the data
         return;
     }
 
+    // Check character limits
+    if (BookNumber.length > 10) {
+        window.alert("Book Number should not exceed 10 characters.");
+        return;
+    }
+
+    if (BookPages.length > 5) {
+        window.alert("Book Pages should not exceed 5 characters.");
+        return;
+    }
+
     var bookExists = false; // Flag to check if book already exists in database
 
     // Check if book number already exists in the database
