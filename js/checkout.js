@@ -38,47 +38,47 @@ function move_book_to_checkedout(BookNumber) {
 
     //collects book data from the database
     boooook.get()
-    .then(function(bookDoc) {
-        if (bookDoc.exists) {
-            var bookData = bookDoc.data();
+        .then(function (bookDoc) {
+            if (bookDoc.exists) {
+                var bookData = bookDoc.data();
 
-            //changes book status to "checked out"
-            bookData.bookstatus = "Checked Out";
+                //changes book status to "checked out"
+                bookData.bookstatus = "Checked Out";
 
-            //adds book data to "checkedout" section with same data
-            db.collection("checkedout").doc(BookNumber).set(bookData)
-            .then(function() {
-                console.log("Book checked out successfully");
-                window.alert("Book checked out successfully");
+                //adds book data to "checkedout" section with same data
+                db.collection("checkedout").doc(BookNumber).set(bookData)
+                    .then(function () {
+                        console.log("Book checked out successfully");
+                        window.alert("Book checked out successfully");
 
-                //deletes book data from books section
-                boooook.delete()
-                .then(function() {
-                    console.log("Book checked out successfully");
-                    //logs success message to console
-                })
-                .catch(function(error) {
-                    console.error("Error checking out: ", error);
-                    //error
-                });
-            })
-            .catch(function(error) {
-                console.error("Error checking out: ", error);
-                //error
-            });
-        } else {
-            console.error("Book not found"); //logs error message to console
-            window.alert("Book not found"); //alerts error message to user
-        }
-    })
-    .catch(function(error) {
-        console.error("Error getting book document: ", error);
-        //error
-    });
+                        //deletes book data from books section
+                        boooook.delete()
+                            .then(function () {
+                                console.log("Book checked out successfully");
+                                //logs success message to console
+                            })
+                            .catch(function (error) {
+                                console.error("Error checking out: ", error);
+                                //error
+                            });
+                    })
+                    .catch(function (error) {
+                        console.error("Error checking out: ", error);
+                        //error
+                    });
+            } else {
+                console.error("Book not found"); //logs error message to console
+                window.alert("Book not found"); //alerts error message to user
+            }
+        })
+        .catch(function (error) {
+            console.error("Error getting book document: ", error);
+            //error
+        });
 }
 
 // collects book number and calls function
-$("#moveToCheckedOutButton").click(function() {
+$("#moveToCheckedOutButton").click(function () {
     var bookNumber = $("#bookNumberT").val();
     move_book_to_checkedout(bookNumber);
 });

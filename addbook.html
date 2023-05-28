@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"><!--this links the favicon for the tab-->
     <title>Add Book</title><!--Tab title-->
-    <link rel="stylesheet" href="css/addbook.css"><!--this links the css stylesheet for this page, located in the css folder-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--this initializes jQuery, the JS library used for scripting and firebase api calls -->
+    <link rel="stylesheet" href="css/addbook.css">
+    <!--this links the css stylesheet for this page, located in the css folder-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--this initializes jQuery, the JS library used for scripting and firebase api calls -->
     <script src="js/addbook.js"></script><!--this links the js script for this page, located in the js folder-->
 </head>
 
@@ -31,11 +33,17 @@
         <img src="img/triangledown.png" class="triangledown"><!--technician actions label button-->
         <img src="img/addbookcover.png" class="addbookcoverimage"><!--add book cover descriptor icon-->
 
-        <button onclick="location.href = 'technicianportal.html';" type="button" class="logout logout:hover">Back</button><!--back button to technician portal-->
-        <button onclick="location.href = 'addbook.html';" type="button" class="addbookside addbookside:hover">ADD BOOK</button><!--add book side button redirect-->
-        <button onclick="location.href = 'removebook.html';" type="button" class="removebookside removebookside:hover">REMOVE BOOK</button><!--remove book side button redirect-->
-        <button onclick="location.href = 'checkoutbook.html';" type="button" class="checkoutbookside checkoutbookside:hover">CHECKOUT BOOK</button><!--checkout book side button redirect-->
-        <button onclick="location.href = 'checkinbook.html';" type="button" class="checkinbookside checkinbookside:hover">CHECK IN BOOK</button><!--checkin book side button redirect-->
+        <button onclick="location.href = 'technicianportal.html';" type="button"
+            class="logout logout:hover">Back</button><!--back button to technician portal-->
+        <button onclick="location.href = 'addbook.html';" type="button" class="addbookside addbookside:hover">ADD
+            BOOK</button><!--add book side button redirect-->
+        <button onclick="location.href = 'removebook.html';" type="button"
+            class="removebookside removebookside:hover">REMOVE BOOK</button><!--remove book side button redirect-->
+        <button onclick="location.href = 'checkoutbook.html';" type="button"
+            class="checkoutbookside checkoutbookside:hover">CHECKOUT
+            BOOK</button><!--checkout book side button redirect-->
+        <button onclick="location.href = 'checkinbook.html';" type="button"
+            class="checkinbookside checkinbookside:hover">CHECK IN BOOK</button><!--checkin book side button redirect-->
         <!--copy until here for all future technician pages-->
 
         <p class="bookcoveraddtext">Add A Cover*</p><!--add book cover label-->
@@ -46,15 +54,20 @@
         <span class="bookpublicationtext">Publication Date*:</span><!--book publication date label-->
         <span class="bookgenretext">Genre*:</span><!--book genre label-->
         <span class="pagenumbertext"># Of Pages*:</span><!--book number of pages label-->
-        <form id="bookaddform" name="bookaddform" class="addbookform"><!--add book form, all the data is collected and sent to firebase-->
+        <form id="bookaddform" name="bookaddform" class="addbookform">
+            <!--add book form, all the data is collected and sent to firebase-->
             <!--book cover image upload-->
-            <input class="bookcover bookcover:hover" type="file" id="bookcovert" name="bookcovert" accept=".jpg, .png, .jpeg, .gif">
+            <input class="bookcover bookcover:hover" type="file" id="bookcovert" name="bookcovert"
+                accept=".jpg, .png, .jpeg, .gif">
             <!--book number input-->
-            <input class=booknumber type="number" name="bookNumberT" id="bookNumberT" placeholder="Enter Field Here" minlength="1" maxlength="10" required>
+            <input class=booknumber type="number" name="bookNumberT" id="bookNumberT" placeholder="Enter Field Here"
+                minlength="1" maxlength="10" required>
             <!--book title text input-->
-            <input class="booktitle" type="text" id="bookNameT" name="bookNameT" placeholder="Enter Field Here" required>
+            <input class="booktitle" type="text" id="bookNameT" name="bookNameT" placeholder="Enter Field Here"
+                required>
             <!--book author text input-->
-            <input class="bookauthor" type="text" name="bookAuthorT" id="bookAuthorT" placeholder="Enter Field Here" required>
+            <input class="bookauthor" type="text" name="bookAuthorT" id="bookAuthorT" placeholder="Enter Field Here"
+                required>
             <!--book type radio buttons with the options of fiction, non-fiction, and graphic novel-->
             <div class="booktype">
                 <input type="radio" id="bookTypeT" name="bookTypeT" value="fiction" required>
@@ -85,8 +98,10 @@
                 <option value="other">Other</option>
             </select>
             <!--input for amount of book pages, the input is required to be a number-->
-            <input class="pagenumber" type="number" name="bookPagesT" id="bookPagesT" placeholder="Enter Field Here" minlength="1" maxlength="5" required>
-            <input class="addbookbutton addbookbutton:hover" id="submit" type='submit'> <!--submit button (linked to firebase)-->
+            <input class="pagenumber" type="number" name="bookPagesT" id="bookPagesT" placeholder="Enter Field Here"
+                minlength="1" maxlength="5" required>
+            <input class="addbookbutton addbookbutton:hover" id="submit" type='submit'>
+            <!--submit button (linked to firebase)-->
         </form>
     </div>
     <!--various firebase scripts required for functionality of the database, such as initializing the firebase api instance,
@@ -99,5 +114,3 @@
 </body>
 
 </html>
-
-

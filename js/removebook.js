@@ -40,48 +40,48 @@ function remove_this(BookNumber) {
 
     //check if book exists
     boooook.get()
-    .then(function(doc) {
-        if (doc.exists) {
-            //gets book cover url from the book data document (saved in storage)
-            var coverImageURL = doc.data().bookCover;
-            
-            //delete book
-            boooook.delete()
-            .then(function() {
-                console.log("Book removed successfully"); //logs success message to console
-                window.alert("Book removed successfully"); //alerts user that book was removed successfully
+        .then(function (doc) {
+            if (doc.exists) {
+                //gets book cover url from the book data document (saved in storage)
+                var coverImageURL = doc.data().bookCover;
 
-                //deletes book cover image from storage
-                if (coverImageURL) {
-                    var storageRef = firebase.storage().refFromURL(coverImageURL);
-                    storageRef.delete()
-                    .then(function() {
-                        console.log("Cover image removed successfully");
-                    }) //cover image deleted
-                    .catch(function(error) {
-                        console.error("Error removing cover image: ", error);
-                    });//could not delete cover image
-                }
-            })
-            .catch(function(error) {
-                console.error("Error removing book: ", error);
-                window.alert("Error removing book: " + error);
+                //delete book
+                boooook.delete()
+                    .then(function () {
+                        console.log("Book removed successfully"); //logs success message to console
+                        window.alert("Book removed successfully"); //alerts user that book was removed successfully
+
+                        //deletes book cover image from storage
+                        if (coverImageURL) {
+                            var storageRef = firebase.storage().refFromURL(coverImageURL);
+                            storageRef.delete()
+                                .then(function () {
+                                    console.log("Cover image removed successfully");
+                                }) //cover image deleted
+                                .catch(function (error) {
+                                    console.error("Error removing cover image: ", error);
+                                });//could not delete cover image
+                        }
+                    })
+                    .catch(function (error) {
+                        console.error("Error removing book: ", error);
+                        window.alert("Error removing book: " + error);
+                        //error
+                    });
+            } else {
                 //error
-            });
-        } else {
+                window.alert("Book does not exist. Please check if the book is checked in first.");
+            }
+        })
+        .catch(function (error) {
+            console.error("Error checking book existence: ", error);
+            window.alert("Error checking book existence: " + error);
             //error
-            window.alert("Book does not exist. Please check if the book is checked in first.");
-        }
-    })
-    .catch(function(error) {
-        console.error("Error checking book existence: ", error);
-        window.alert("Error checking book existence: " + error);
-        //error
-    });
+        });
 }
 
 //gets books number and calls function
-$("#removeBookButton").click(function() {
+$("#removeBookButton").click(function () {
     var bookNumber = $("#bookNumberT").val();
     remove_book(bookNumber);
 });

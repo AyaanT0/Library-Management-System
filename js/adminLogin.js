@@ -7,37 +7,35 @@ $(document).ready(function () { //jquery event listener, once page is loaded, th
         storageBucket: "librarymanagementsystem-fcb1c.appspot.com",
         messagingSenderId: "472846118639",
         appId: "1:472846118639:web:aabfb8d9921c5dc2eb351a",
-      };
+    };
 
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
     var db = firebase.firestore(); //sets up a connection to the firebase database (used to store data)
 
-    $("#loginform").submit(function(e) {
+    $("#loginform").submit(function (e) {
         e.preventDefault();
     });//prevents submission of form when enter is pressed if the form is not filled out
 
-    $('#submit').click(function() {
-      login();
+    $('#submit').click(function () {
+        login();
     }); //once the submit button is clicked, it logs you in after successful authentication
 
-    $('#back').click(function()
-    {
+    $('#back').click(function () {
         logout();
     }); //back function, cancels login process
 
-    $('#logout').click(function()
-    {
+    $('#logout').click(function () {
         logout();
     }); //logout function, cancels login process
 
     firebase.auth().onAuthStateChanged(user => {
-        if(user) {
+        if (user) {
             window.location = 'technicianportal.html'; //event listener that sends you to technician portal once you are authenticated as a technician  
-            }
-        });
-  });
+        }
+    });
+});
 
 // This function is called when the user clicks the login button
 function login() {
@@ -48,7 +46,7 @@ function login() {
     // Check if the email is equal to the default technician email
     if (email === "technician@northpark.com") {
         // Sign in the user with the email and password provided
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
             // Handle Errors if there is any
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -60,9 +58,9 @@ function login() {
 // This function is called when the user clicks the logout button
 function logout() {
     // Sign out the current user
-    firebase.auth().signOut().then(function() {
+    firebase.auth().signOut().then(function () {
         // Sign-out successful.
-    }).catch(function(error) {
+    }).catch(function (error) {
         // An error happened.
     });
 }
