@@ -540,12 +540,12 @@ body {
     width: 14.43vw;
     height: 4.9vh;
     left: 30.03vw;
-    top: 13.25vw;
+    top: 23.8vh;
     font-family: 'Roboto';
     font-style: italic;
     font-weight: 800;
     font-size: 1.95vw;
-    line-height: 2.73vw;
+    line-height: 4.8vw;
     color: #000000;
     z-index: 5;
 }
