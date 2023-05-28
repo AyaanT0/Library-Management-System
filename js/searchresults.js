@@ -15,16 +15,16 @@ adding my own unique code, ideas, and features to the project.
 */
 
 function displayResults() {
-    // Retrieve the number of books from local storage
+    //retrieves the number of books from local storage
     var bookAmount = localStorage.getItem("bookCount");
 
-    // Check if there are no books, if none then display "No results found" in the heading bar
+    //checks if there are no books, if none then display "No results found" in the heading bar
     if (bookAmount === 0) {
         document.getElementById("results").innerHTML = "No results found.";
         return;
     }
 
-    // Create the table header row with the specified CSS class
+    //creates the table header row with the specified CSS class
     var tableHeader = "<thead class='sticky-header'>" +
         "<tr>" +
         "<th>Book Number</th>" +
@@ -39,10 +39,10 @@ function displayResults() {
         "</tr>" +
         "</thead>";
 
-    // Create the table body rows
+    //creates the table body rows
     var tableBody = "<tbody>";
     for (var i = 0; i < bookAmount; i++) {
-        // Retrieve book info from local storage
+        //retrieves book info from local storage
         var bookNumber = localStorage.getItem("bookNumber" + i);
         var bookTitle = localStorage.getItem("bookName" + i);
         var bookAuthor = localStorage.getItem("bookAuthor" + i);
@@ -53,7 +53,7 @@ function displayResults() {
         var bookCover = localStorage.getItem("bookCover" + i);
         var bookStatus = localStorage.getItem("bookStatus" + i);
 
-        // Create a table row for the current book
+        //creates a table row for the current book
         tableBody += "<tr>" +
             "<td>" + bookNumber + "</td>" +
             "<td>" + bookTitle + "</td>" +
@@ -68,30 +68,30 @@ function displayResults() {
     }
     tableBody += "</tbody>";
 
-    // Create the complete table with header and body
+    //creates the table with header and body
     var bookTable = "<table>" + tableHeader + tableBody + "</table>";
 
-    // Display the number of books in the heading bar "numberofbooks" element
+    //displays the number of books in the heading bar "numberofbooks" element
     document.getElementById("numberofbooks").innerHTML = "Results: " + bookAmount;
 
-    // Display the books in the results table
+    //displays the books in the results table
     var resultsElement = document.getElementById("results");
     resultsElement.innerHTML = bookTable;
 
-    // Set the table dimensions and make it scrollable
+    //set the table dimensions and make it scrollable
     resultsElement.style.width = "73vw";
     resultsElement.style.height = "78.215vh";
     resultsElement.style.overflow = "auto";
     resultsElement.style.left = "25.9766vw";
     resultsElement.style.top = "16.41vh";
-    resultsElement.style.position = "relative"; // Set position to relative
+    resultsElement.style.position = "relative"; //sets position to relative
 
-    // Set the z-index and position for the sticky header
+    //this sets the z-index and position for the sticky header
     var stickyHeader = resultsElement.querySelector(".sticky-header");
     stickyHeader.style.position = "sticky";
     stickyHeader.style.top = "0";
     stickyHeader.style.zIndex = "12"; // Set a higher z-index value
 
-    // Optional: Set other styles for the sticky header
+    //set style for the header for the sticky header
     stickyHeader.style.background = "#bfc1cc";
 }
