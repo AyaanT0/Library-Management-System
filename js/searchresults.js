@@ -27,14 +27,14 @@ function displayResults() {
     //creates the table header row with the specified CSS class
     var tableHeader = "<thead class='sticky-header'>" +
         "<tr>" +
-        "<th>Book Number</th>" +
+        "<th>Cover</th>"+
         "<th>Title</th>" +
+        "<th>Book Number</th>" +
         "<th>Author</th>" +
         "<th>Publication Date</th>" +
         "<th>Type</th>" +
         "<th>Genre</th>" +
         "<th>Pages</th>" +
-        "<th>Cover</th>" +
         "<th>Status</th>" +
         "</tr>" +
         "</thead>";
@@ -43,26 +43,26 @@ function displayResults() {
     var tableBody = "<tbody>";
     for (var i = 0; i < bookAmount; i++) {
         //retrieves book info from local storage
-        var bookNumber = localStorage.getItem("bookNumber" + i);
+        var bookCover = localStorage.getItem("bookCover" + i);
         var bookTitle = localStorage.getItem("bookName" + i);
+        var bookNumber = localStorage.getItem("bookNumber" + i);
         var bookAuthor = localStorage.getItem("bookAuthor" + i);
         var bookPublication = localStorage.getItem("bookPublication" + i);
         var bookType = localStorage.getItem("bookType" + i);
         var bookGenre = localStorage.getItem("bookGenre" + i);
         var bookPages = localStorage.getItem("bookPages" + i);
-        var bookCover = localStorage.getItem("bookCover" + i);
         var bookStatus = localStorage.getItem("bookStatus" + i);
 
         //creates a table row for the current book
         tableBody += "<tr>" +
-            "<td>" + bookNumber + "</td>" +
+            "<td><img src='" + bookCover + "' width='100' height='150'></td>" +
             "<td>" + bookTitle + "</td>" +
+            "<td>" + bookNumber + "</td>" +
             "<td>" + bookAuthor + "</td>" +
             "<td>" + bookPublication + "</td>" +
             "<td>" + bookType + "</td>" +
             "<td>" + bookGenre + "</td>" +
             "<td>" + bookPages + "</td>" +
-            "<td><img src='" + bookCover + "' width='100' height='150'></td>" +
             "<td>" + bookStatus + "</td>" +
             "</tr>";
     }
