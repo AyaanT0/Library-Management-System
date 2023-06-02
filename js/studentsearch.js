@@ -387,7 +387,23 @@ function searchBooks() {
     }
 
     // Function to check if a book matches the search criteria
+
     function isBookMatch(bookData) {
+      const fields = Object.values(bookData)
+        .join(" ")
+        .toLowerCase();
+    
+      const searchQueryLowercase = searchQuery.toLowerCase();
+    
+      return (
+        fields.includes(searchQueryLowercase) ||
+        (bookTypeF.checked && bookData.bookType.includes("fiction")) ||
+        (bookTypeNF.checked && bookData.bookType.includes("non-fiction")) ||
+        (bookTypeGN.checked && bookData.bookType.includes("graphic-novel")) ||
+        fields.includes(searchQueryLowercase)
+      );
+    }    
+    /*function isBookMatch(bookData) {
       const fields = Object.values(bookData)
         .join(" ")
         .toLowerCase();
@@ -403,7 +419,7 @@ function searchBooks() {
         fields.includes(bookGenre.toLowerCase()) ||
         fields.includes(bookPages.toLowerCase())
       );
-    }
+    }*/
   }
 }
 
