@@ -388,7 +388,7 @@ function searchBooks() {
 
     // Function to check if a book matches the search criteria
 
-    function isBookMatch(bookData) {
+/*    function isBookMatch(bookData) {
       const fields = Object.values(bookData)
         .join(" ")
         .toLowerCase();
@@ -402,8 +402,8 @@ function searchBooks() {
         (bookTypeGN.checked && bookData.bookType.includes("graphic-novel")) ||
         fields.includes(searchQueryLowercase)
       );
-    }    
-    /*function isBookMatch(bookData) {
+    }*/
+    function isBookMatch(bookData) {
       const fields = Object.values(bookData)
         .join(" ")
         .toLowerCase();
@@ -419,7 +419,7 @@ function searchBooks() {
         fields.includes(bookGenre.toLowerCase()) ||
         fields.includes(bookPages.toLowerCase())
       );
-    }*/
+    }
   }
 }
 
