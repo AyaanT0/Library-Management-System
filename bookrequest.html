@@ -6,20 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"> <!--favicon-->
-    <title>Search Results</title><!--tab title-->
-    <link rel="stylesheet" href="css/searchresults.css">
+    <title>Book Request</title><!--tab title-->
+    <link rel="stylesheet" href="css/bookrequest.css">
     <!--this links the css stylesheet for this page, located in the css folder-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
     <!--this initializes jQuery, the JS library used for scripting and firebase api calls -->
-    <script src="js/searchresults.js"></script><!--this links the js script for this page, located in the js folder-->
+    <script src="js/bookrequest.js"></script><!--this links the js script for this page, located in the js folder-->
 </head>
 
-<body onload="displayResults()">
-    <!--used to execute JavaScript function called displayResults() when the page loads completely. It ensures that all resources on the page are ready for use before the function is executed-->
+<body>
 
-</body>
 <div align="center" class="studentportal" id="studentportal"><!--main content div-->
-    <h1 class="welcome" id="numberofbooks">RESULTS: </h1><!--page title h1 as results found-->
+    <h1 class="welcome" id="numberofbooks">Book Request</h1><!--page title h1 as results found-->
     <h2 class="logotext">North Park <br>Library</h2><!--north park library title h2-->
     <p class="sidebartext">STUDENT ACTIONS</p><!--student actions label-->
     <rect class="rectangle000"></rect><!--sidebar rectangle-->
@@ -32,7 +35,7 @@
     <a href="homepage.html"><img src="img/logo.png" class="logo"></a><!--top bar logo-->
     <img src="img/logo.png" class="midlogo"><!--main content logo middle-->
     <img src="img/triangledown.png" class="triangledown"><!--student actions label button-->
-    <img src="img/searchbook.png" class="topbarimage"><!--top bar icon-->
+    <img src="img/bookrequest.png" class="topbarimage"><!--top bar icon-->
 
     <button onclick="location.href = 'studentportal.html';" type="button"
         class="logout logout:hover">BACK</button><!--back button to portal-->
@@ -43,15 +46,49 @@
         BOOKS</button><!--checked out book redirect button-->
     <button onclick="location.href = 'WIP.html';" type="button" class="fineholdbookside fineholdbookside:hover">FINES &
         HOLDS</button><!--fines redirect button-->
-    <button onclick="location.href = 'bookrequest.html';" type="button" class="requestbookside requestbookside:hover">BOOK
+    <button onclick="location.href = 'bookrequest.html';" type="button"
+        class="requestbookside requestbookside:hover">BOOK
         REQUEST</button><!--book request redirect button-->
     <!--copy until here for all future student pages-->
-    <rect class="rectangle1bigresultss"></rect>
+    <rect class="rectangle1bigresultss"></rect> <!--content housing rectangle-->
 
-    <p id="results" class="results"></p>
-    <!--this paragraph tag shows the books that match the search query, pulled from local storage-->
-    <span class="resultstext">Book Details:</span><!--results label-->
 
+    <form class="bookrequestform" id="bookrequestform"> <!--form for book request-->
+        <input type="text" class="booktitle" id="title" placeholder="Enter Field Here..." required>
+        <input type="text" class="bookauthor" id="author" placeholder="Enter Field Here..." required>
+        <textarea class="bookwhy" id="why" placeholder="Enter Field Here..." required></textarea>
+        <button type="submit" class="submitrequest submitrequest:hover" id="submitrequest">SUBMIT REQUEST</button>
+    </form>
+    
+    <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">REQUEST SENT SUCCESSFULLY</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Do you want to submit another request or view existing requests?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="submitAnotherBtn">Submit Another</button>
+                    <button type="button" class="btn btn-secondary" id="viewExistingBtn" data-dismiss="modal">View
+                        Existing</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="location.href = 'bookrequests.html';" type="button"
+        class="existingrequest existingrequest:hover">SEE EXISTING REQUESTS
+    </button><!--book request redirect button-->
+
+    <span class="booktitletext">Title*:</span><!--book title input label-->
+    <span class="bookauthortext">Author*:</span><!--book author input label-->
+    <span class="bookwhytext">Why do you want this book?*:</span><!--book request info input label-->
     <!--various firebase scripts required for functionality of the database, such as initializing the firebase api instance,
         initializing firestore database, initializing firebase authentication (for technician auth), and initializing firebase storage
         (for book cover storage), defer means to run the script after the others-->

@@ -1,0 +1,504 @@
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.studentportal {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.topbarimage {
+    position: absolute;
+    width: 5.79vw;
+    height: 13vh;
+    left: 81vw;
+    top: 1.04vh;
+    z-index: 3;
+}
+
+.sideimage1 {
+    position: absolute;
+    width: 25vw;
+    height: 86vh;
+    left: 0vw;
+    top: 15vh;
+    opacity: 0.25;
+    z-index: 5;
+}
+
+.rectangle000 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 25vw;
+    height: 86vh;
+    left: 0vw;
+    top: 15vh;
+    z-index: 3;
+    background: #7B7B7B;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+}
+
+.rectangle0000 {
+    position: absolute;
+    width: 25vw;
+    height: 15vh;
+    left: 0vw;
+    top: 0vh;
+    background: #7294EE;
+    transform: rotate(180deg);
+    z-index: 2;
+}
+
+.rectangle0 {
+    position: absolute;
+    width: 75vw;
+    height: 15vh;
+    left: 25vw;
+    top: 0vh;
+    background: #90A8E9;
+    transform: rotate(180deg);
+    z-index: 2;
+}
+
+.rectangle69 {
+    position: absolute;
+    width: 25vw;
+    height: 6.5vh;
+    left: 0vw;
+    top: 19.44vh;
+    background: #9C9C9C;
+    transform: rotate(180deg);
+    z-index: 5;
+}
+
+.welcome {
+    top: -1vh;
+    left: 36vw;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 6.48vw;
+    align-self: auto;
+    font-style: italic;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: condensed;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    z-index: 3;
+    text-shadow: 0.1vw 0 white, 0 0.1vw white, 0.1vw 0 white, 0 0.1vw white;
+}
+
+.sidebartext {
+    top: 20.5vh;
+    left: 0.3vw;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 2vw;
+    align-self: auto;
+    font-style: italic;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: condensed;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.logo {
+    position: absolute;
+    width: 9.8vw;
+    height: 19.8vh;
+    left: 0.5vw;
+    top: -2.5vh;
+    z-index: 45;
+}
+
+.logotext {
+    top: 1vh;
+    left: 10vw;
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    position: absolute;
+    font-size: 2.44vw;
+    align-self: auto;
+    font-style: italic;
+    z-index: 2;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: condensed;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-decoration: none;
+    z-index: 5;
+    text-shadow: 0.07vw 0 white, 0 0.07vw white, 0.07vw 0 white, 0 0.07vw white;
+}
+
+.midlogo {
+    position: absolute;
+    width: 75vw;
+    height: 114vh;
+    left: 24.5vw;
+    top: 0.6vh;
+    opacity: 0.45;
+    z-index: 3;
+}
+
+.logout {
+    box-sizing: border-box;
+    position: absolute;
+    width: 4.9vw;
+    height: 3vh;
+    left: 91vw;
+    top: 9.5vh;
+    font-size: 1.4vh;
+    font-family: Roboto;
+    z-index: 10;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    background: #cfd9f6;
+    border: 0.075vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2vw;
+}
+
+.logout:hover {
+    background-color: #e48d7a;
+    color: white;
+    transform: scale(1.1);
+}
+
+.triangledown {
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    left: 21.8vw;
+    top: 20.7vh;
+    z-index: 420;
+}
+
+.searchbookside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 30.45vh;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.3vw;
+    z-index: 5;
+    text-align: center;
+    background: #D9D9D9;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+    box-sizing: border-box;
+}
+
+.searchbookside:hover {
+    background-color: #C0C0C0;
+    color: white;
+    transform: scale(1.03);
+}
+
+.checkedoutbookside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 43.2vh;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.3vw;
+    z-index: 5;
+    text-align: center;
+    background: #D9D9D9;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+    box-sizing: border-box;
+}
+
+.checkedoutbookside:hover {
+    background-color: #C0C0C0;
+    color: white;
+    transform: scale(1.03);
+}
+
+.fineholdbookside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 56.4vh;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.3vw;
+    z-index: 5;
+    text-align: center;
+    background: #D9D9D9;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+    box-sizing: border-box;
+}
+
+.fineholdbookside:hover {
+    background-color: #C0C0C0;
+    color: white;
+    transform: scale(1.03);
+}
+
+.requestbookside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 69.2vh;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.3vw;
+    z-index: 5;
+    text-align: center;
+    background: #D9D9D9;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+    box-sizing: border-box;
+}
+
+.requestbookside:hover {
+    background-color: #C0C0C0;
+    color: white;
+    transform: scale(1.03);
+}
+
+.rectangle1bigsportal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: #D5CFCF;
+}
+
+/*copy from beginning until here for all future student css pages*/
+
+.rectangle1bigresultss {
+    box-sizing: border-box;
+    z-index: 3;
+    position: absolute;
+    width: 73vw;
+    height: 81.83vh;
+    left: 26vw;
+    top: 16.39vh;
+    background: #EAEEFF;
+    opacity: 0.79;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+}
+
+.booktitle {
+    box-sizing: border-box;
+    position: absolute;
+    width: 45.85vw;
+    height: 7.13vh;
+    left: 44.92vw;
+    top: 24.75vh;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.76vw;
+    line-height: 2.05vw;
+    text-align: left;
+    text-decoration-line: underline;
+    z-index: 5;
+    color: #000000;
+    opacity: 0.68;
+    background: #D9D9D9;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+    padding: 0.5vw;
+}
+
+.bookauthor {
+    box-sizing: border-box;
+    position: absolute;
+    width: 45.85vw;
+    height: 7.13vh;
+    left: 44.92vw;
+    top: 34.65vh;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.76vw;
+    line-height: 2.05vw;
+    text-align: left;
+    text-decoration-line: underline;
+    z-index: 5;
+    color: #000000;
+    opacity: 0.68;
+    background: #D9D9D9;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+    padding: 0.5vw;
+}
+
+.bookwhy {
+    box-sizing: border-box;
+    position: absolute;
+    width: 45.85vw;
+    height: 36vh;
+    left: 44.92vw;
+    top: 45vh;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.76vw;
+    line-height: 2.05vw;
+    text-align: left;
+    text-decoration-line: underline;
+    z-index: 5;
+    color: #000000;
+    opacity: 0.68;
+    background: #D9D9D9;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+    resize: none;
+    padding: 0.5vw;
+}
+
+.booktitletext {
+    position: absolute;
+    width: 5vw;
+    height: 5.5vh;
+    left: 29.2vw;
+    top: 25.64vh;
+    text-align: left;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.95vw;
+    line-height: 2.73vw;
+    color: #000000;
+    z-index: 5;
+}
+
+.bookauthortext {
+    position: absolute;
+    width: 12.3vw;
+    height: 5.5vh;
+    left: 26.58vw;
+    top: 35.05vh;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.95vw;
+    line-height: 2.73vw;
+    color: #000000;
+    z-index: 5;
+}
+
+.bookwhytext {
+    position: absolute;
+    width: 15vw;
+    height: 5.5vh;
+    left: 28.54vw;
+    top: 45.97vh;
+    text-align: left;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.95vw;
+    line-height: 2.73vw;
+    color: #000000;
+    z-index: 5;
+}
+
+.submitrequest {
+    box-sizing: border-box;
+    position: absolute;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 51.51vw;
+    top: 84.6vh;
+    background: #887676;
+    border: 0.07vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 800;
+    font-size: 2.34vw;
+    line-height: 2.73vw;
+    text-align: center;
+    z-index: 5;
+    color: #000000;
+}
+
+.submitrequest:hover {
+    background-color: #768888;
+    transform: scale(1.03);
+}
+
+.existingrequest {
+    box-sizing: border-box;
+    position: absolute;
+    width: 22.56vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 82.2vh;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.3vw;
+    z-index: 5;
+    text-align: center;
+    background: #8ebd9f;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+    text-shadow: -0.05vw -0.05vw 0 #e1dcdc, 0.05vw -0.05vw 0 #e1dcdc, -0.05vw 0.05vw 0 #e1dcdc, 0.05vw 0.05vw 0 #e1dcdc;
+}
+
+.existingrequest:hover {
+    background-color: #BD8EAC;
+    color: white;
+    transform: scale(1.045);
+    text-shadow: -0.05vw -0.05vw 0 #000000, 0.05vw -0.05vw 0 #000000, -0.05vw 0.05vw 0 #000000, 0.05vw 0.05vw 0 #000000;
+}
