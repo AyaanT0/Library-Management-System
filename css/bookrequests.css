@@ -365,22 +365,23 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-  }
-  
-  /* Style the book requests container */
-  #bookRequestsContainer {
+}
+
+/* Style the book requests container */
+#bookRequestsContainer {
     width: 73vw;
-    height: 81.83vh;
+    height: 74vh;
     left: 26vw;
-    top: 16.39vh;
+    top: 16vh;
+    transform: translate(12.5vw, 6.5vw);
     overflow-y: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  
-  /* Style each book request */
-  .bookRequest {
+}
+
+/* Style each book request */
+.bookRequest {
     background-color: #ffffff;
     border: 1px solid #363d55;
     border-radius: 4vw;
@@ -392,10 +393,48 @@ body {
     font-weight: 600;
     color: #363d55;
     word-break: break-word;
-  }
-  
-  /* Add hover effect for book requests */
-  .bookRequest:hover {
+}
+
+/* Add hover effect for book requests */
+.bookRequest:hover {
     background-color: #f5f5f5;
     cursor: pointer;
-  }
+}
+
+/* Set the width and height of the scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 8px;
+    z-index: 9999;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Corner */
+::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+    border: 2px solid #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
