@@ -9,7 +9,7 @@ $(document).ready(function () { //jquery event listener, once page is loaded, th
         appId: "1:472846118639:web:aabfb8d9921c5dc2eb351a",
     };
 
-    // Initialize Firebase
+    //initializes firebase
     firebase.initializeApp(firebaseConfig);
 
     var db = firebase.firestore(); //sets up a connection to the firebase database (used to store data)
@@ -37,31 +37,31 @@ $(document).ready(function () { //jquery event listener, once page is loaded, th
     });
 });
 
-// This function is called when the user clicks the login button
+//this function is called when the user clicks the login button
 function login() {
-    // Get the values of the email and password fields
+    //gets the values of the email and password fields
     var email = document.getElementById("usert").value;
     var password = document.getElementById("passt").value;
 
-    // Check if the email is equal to the default technician email
+    //checks if the email is equal to the default technician email
     if (email === "technician@northpark.com") {
-        // Sign in the user with the email and password provided
+        //signs in the user with the email and password provided
         firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
-            // Handle Errors if there is any
+            //handle Errors if there is any
             var errorCode = error.code;
             var errorMessage = error.message;
-            window.alert(errorMessage); // Display the error message to the user
+            window.alert(errorMessage); //displays the error message to the user
         });
     }
 }
 
-// This function is called when the user clicks the logout button
+//this function is called when the user clicks the logout button
 function logout() {
-    // Sign out the current user
+    //signs out the current user
     firebase.auth().signOut().then(function () {
-        // Sign-out successful.
+        //sign-out successful
     }).catch(function (error) {
-        // An error happened.
+        //error
     });
 }
 

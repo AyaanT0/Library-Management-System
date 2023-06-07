@@ -8,7 +8,7 @@ $(document).ready(function () { //jquery event listener, once page is loaded, th
         messagingSenderId: "472846118639",
         appId: "1:472846118639:web:aabfb8d9921c5dc2eb351a",
     };
-    // Initialize Firebase
+    //initializes firebase
     firebase.initializeApp(firebaseConfig);
 
     var db = firebase.firestore(); //sets up a connection to the firebase database (used to store data)

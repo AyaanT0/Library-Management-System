@@ -9,7 +9,7 @@ $(document).ready(function () { //jquery event listener, once page is loaded, th
         appId: "1:472846118639:web:aabfb8d9921c5dc2eb351a",
     };
 
-    // Initialize Firebase
+    //initializes firebase
     firebase.initializeApp(firebaseConfig);
 
     var db = firebase.firestore(); //sets up a connection to the firebase database (used to store data)
@@ -25,15 +25,15 @@ $(document).ready(function () { //jquery event listener, once page is loaded, th
     });
 });
 
-// This function is called when the user clicks the logout button
+//this function is called when the user clicks the logout button
 function logout() {
     // Sign out the current user
     firebase.auth().signOut().then(function () {
         console.log("logout done");
         window.location = 'homepage.html';
-        // Sign-out successful.
+        //sign-out successful.
     }).catch(function (error) {
-        // An error happened.
+        //an error happened.
         console.log("error"); //logs error
     });
 }

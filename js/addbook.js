@@ -8,7 +8,7 @@ $(document).ready(function () { //jquery event listener, once page is loaded, th
         messagingSenderId: "472846118639",
         appId: "1:472846118639:web:aabfb8d9921c5dc2eb351a",
     };
-    // Initialize Firebase
+    //initializes firebase
     firebase.initializeApp(firebaseConfig);
 
     var db = firebase.firestore(); //sets up a connection to the firebase database (used to store data)
@@ -40,13 +40,13 @@ function add_this() { //takes all the data from the form and adds it to the data
     var BookPages = document.getElementById("bookPagesT").value;
     var db = firebase.firestore();
 
-    // validate the form data
+    //validate the form data
     if (!bookCoverFile || !BookNumber || !BookName || !BookAuthor || !BookType || !BookPublication || !BookGenre || !BookPages) {
         window.alert("Please fill in all the fields.");
         return;
     }
 
-    // Check character limits
+    //checks character limits
     if (BookNumber.length > 10) {
         window.alert("Book Number should not exceed 10 characters.");
         return;
@@ -57,29 +57,31 @@ function add_this() { //takes all the data from the form and adds it to the data
         return;
     }
 
-    var bookExists = false; // Flag to check if book already exists in database
+    var bookExists = false; //variable flag to check if book already exists in database
 
-    // Check if book number already exists in the database
+    //i accounted for books being both available and checked out, so it only adds books that are new and not in the system
+
+    //checks if book number already exists in the database
     db.collection("books").doc(BookNumber).get().then(function (doc) {
         if (doc.exists) {
-            // Book already exists in books collection, so alert user and do not add book
+            //book already exists in books collection in this case, so alert user and do not add book
             window.alert("Book already exists");
             bookExists = true;
             return;
         }
 
-        // Check if book number exists in checkedout collection
+        //checks if book number exists in checkedout collection
         db.collection("checkedout").doc(BookNumber).get().then(function (doc) {
             if (doc.exists) {
-                // Book already exists in checkedout collection, so alert user and do not add book
+                //book already exists in checkedout collection, so alert user and do not add book
                 window.alert("Book already exists");
                 bookExists = true;
                 return;
             }
 
-            // If the book does not exist, continue with adding the book
+            //if the book does not exist, continue with adding the book
             if (!bookExists) {
-                // Upload book cover image to firebase storage
+                //uploads book cover image to firebase storage with the filename of the book number
                 var storageRef = firebase.storage().ref();
                 var coverImageRef = storageRef.child('book_covers/' + BookNumber);
                 coverImageRef.put(bookCoverFile)
@@ -87,7 +89,7 @@ function add_this() { //takes all the data from the form and adds it to the data
                         return snapshot.ref.getDownloadURL();
                     })
                     .then(function (downloadURL) {
-                        // Save book details and book cover url from storage
+                        //saves book details and book cover url from storage
                         //saves variable to specific value/key in database
                         //code is formatted as variable:key
                         //whenever a book is added, its automatically set to available

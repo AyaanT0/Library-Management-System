@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // Initialize Firebase
+    //initializes firebase
     firebase.initializeApp({
         apiKey: "AIzaSyBuyAp0-coTH4f2B-yV90Yk9rbnE7Qwb3w",
         authDomain: "librarymanagementsystem-fcb1c.firebaseapp.com",
@@ -10,27 +10,27 @@ $(document).ready(function () {
         appId: "1:472846118639:web:aabfb8d9921c5dc2eb351a",
     });
 
-    // Get a reference to the Firestore database
+    //gets a referecne to firestore database
     var db = firebase.firestore();
 
-    // Handle form submission
+    //handles form submission
     $('#bookrequestform').on('submit', function (e) {
-        e.preventDefault(); // Prevent the default form submission
+        e.preventDefault(); //prevents the default form submission (required by firebase, handles null requests)
 
-        // Get form values
+        //gets form values
         var title = $('#title').val();
         var author = $('#author').val();
         var why = $('#why').val();
 
-        // Check if why is longer than 150 characters
-        if (why.length > 250) {
-            alert('Please limit your request to 250 characters.');
-            return; // Stop further execution
+        //check if 'why' is longer than 150 characters
+        if (why.length > 150) {
+            alert('Please limit your request to 150 characters.');
+            return; //stops further execution (submission of the form is blocked)
         }
 
-        // Generate the request ID with book title and request number
+        //generates the request ID with book title and request number
         generateRequestId(title).then(function (requestId) {
-            // Create a new document in the "requests" collection with the generated request ID
+            //creates a new document in the "requests" collection with the generated request ID
             db.collection('requests').doc(requestId).set({
                 title: title,
                 author: author,
@@ -38,7 +38,7 @@ $(document).ready(function () {
             })
                 .then(function () {
                     console.log('Document written with ID: ', requestId);
-                    // Reset the form after successful submission
+                    //resets the form after successful submission
                     $('#bookrequestform')[0].reset();
                     $('#confirmationModal').modal('show');
                 })
@@ -48,25 +48,28 @@ $(document).ready(function () {
         });
     });
 
-    // Handle the "Submit Another" button click
+    //custom dialog box since you can't change the buttons (ok, cancel) on a regular alert box
+
+    //handle the "Submit Another" button click
     $('#submitAnotherBtn').on('click', function () {
         window.location.href = 'bookrequest.html';
     });
 
-    // Handle the "View Existing" button click
+    //handles the "View Existing" button click
     $('#viewExistingBtn').on('click', function () {
         window.location.href = 'bookrequests.html';
     });
 
-    // Function to generate the request ID using the book title and request count
+    //function to generate the request ID using the book title and request count
+    //it basically takes whatever the request number is and appends it to the end of the book title
     function generateRequestId(title) {
-        var sanitizedTitle = title.replace(/\s/g, ''); // Remove whitespace from the title
+        var cleanTitle = title.replace(/\s/g, ''); //removes whitespace from the title (i added this to clean up the format)
 
         return db.collection('requests').get().then(function (querySnapshot) {
-            var requestCount = querySnapshot.size + 1; // Increment the count by 1 for the new request
+            var requestCount = querySnapshot.size + 1; //increment the count by 1 for the new request
 
-            // Combine the sanitized title and request count to generate the request ID
-            var requestId = sanitizedTitle + requestCount;
+            //combines the title and request count to generate the request ID
+            var requestId = cleanTitle + requestCount;
 
             return requestId;
         });

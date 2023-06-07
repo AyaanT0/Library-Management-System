@@ -78,7 +78,7 @@ function displayResults() {
     var resultsElement = document.getElementById("results");
     resultsElement.innerHTML = bookTable;
 
-    //set the table dimensions and make it scrollable
+    //the table dimensions and make it scrollable
     resultsElement.style.width = "73vw";
     resultsElement.style.height = "78.215vh";
     resultsElement.style.overflow = "auto";
@@ -92,6 +92,6 @@ function displayResults() {
     stickyHeader.style.top = "0";
     stickyHeader.style.zIndex = "12"; // Set a higher z-index value
 
-    //set style for the header for the sticky header
+    //style for the header for the sticky header
     stickyHeader.style.background = "#bfc1cc";
 }
