@@ -20,7 +20,7 @@ function displayResults() {
 
     //checks if there are no books, if none then display "No results found" in the heading bar
     if (bookAmount === 0) {
-        document.getElementById("results").innerHTML = "No results found.";
+        document.getElementById("numberofbooks").innerHTML = "No Results Found";
         return;
     }
 
