@@ -39,59 +39,70 @@ function displayResults() {
         "</tr>" +
         "</thead>";
 
-    //creates the table body rows
-    var tableBody = "<tbody>";
-    for (var i = 0; i < bookAmount; i++) {
-        //retrieves book info from local storage
-        var bookCover = localStorage.getItem("bookCover" + i);
-        var bookTitle = localStorage.getItem("bookName" + i);
-        var bookNumber = localStorage.getItem("bookNumber" + i);
-        var bookAuthor = localStorage.getItem("bookAuthor" + i);
-        var bookPublication = localStorage.getItem("bookPublication" + i);
-        var bookType = localStorage.getItem("bookType" + i);
-        var bookGenre = localStorage.getItem("bookGenre" + i);
-        var bookPages = localStorage.getItem("bookPages" + i);
-        var bookStatus = localStorage.getItem("bookStatus" + i);
+  // creates the table body rows
+  var tableBody = "<tbody>";
+  for (var i = 0; i < bookAmount; i++) {
+    // retrieves book info from local storage
+    var bookData = JSON.parse(localStorage.getItem("book" + i));
 
-        //creates a table row for the current book
-        tableBody += "<tr>" +
-            "<td><img src='" + bookCover + "' width='100' height='150'></td>" +
-            "<td>" + bookTitle + "</td>" +
-            "<td>" + bookNumber + "</td>" +
-            "<td>" + bookAuthor + "</td>" +
-            "<td>" + bookPublication + "</td>" +
-            "<td>" + bookType + "</td>" +
-            "<td>" + bookGenre + "</td>" +
-            "<td>" + bookPages + "</td>" +
-            "<td>" + bookStatus + "</td>" +
-            "</tr>";
-    }
-    tableBody += "</tbody>";
+    // creates a table row for the current book
+    tableBody +=
+      "<tr>" +
+      "<td><img src='" +
+      bookData[7] +
+      "' width='100' height='150'></td>" +
+      "<td>" +
+      bookData[1] +
+      "</td>" +
+      "<td>" +
+      bookData[0] +
+      "</td>" +
+      "<td>" +
+      bookData[2] +
+      "</td>" +
+      "<td>" +
+      bookData[4] +
+      "</td>" +
+      "<td>" +
+      bookData[3] +
+      "</td>" +
+      "<td>" +
+      bookData[5] +
+      "</td>" +
+      "<td>" +
+      bookData[6] +
+      "</td>" +
+      "<td>" +
+      bookData[8] +
+      "</td>" +
+      "</tr>";
+  }
+  tableBody += "</tbody>";
 
-    //creates the table with header and body
-    var bookTable = "<table>" + tableHeader + tableBody + "</table>";
+  // creates the table with header and body
+  var bookTable = "<table>" + tableHeader + tableBody + "</table>";
 
-    //displays the number of books in the heading bar "numberofbooks" element
-    document.getElementById("numberofbooks").innerHTML = "Results: " + bookAmount;
+  // displays the number of books in the heading bar "numberofbooks" element
+  document.getElementById("numberofbooks").innerHTML = "Results: " + bookAmount;
 
-    //displays the books in the results table
-    var resultsElement = document.getElementById("results");
-    resultsElement.innerHTML = bookTable;
+  // displays the books in the results table
+  var resultsElement = document.getElementById("results");
+  resultsElement.innerHTML = bookTable;
 
-    //the table dimensions and make it scrollable
-    resultsElement.style.width = "73vw";
-    resultsElement.style.height = "78.215vh";
-    resultsElement.style.overflow = "auto";
-    resultsElement.style.left = "25.9766vw";
-    resultsElement.style.top = "16.41vh";
-    resultsElement.style.position = "relative"; //sets position to relative
+  // sets the table dimensions and makes it scrollable
+  resultsElement.style.width = "73vw";
+  resultsElement.style.height = "78.215vh";
+  resultsElement.style.overflow = "auto";
+  resultsElement.style.left = "25.9766vw";
+  resultsElement.style.top = "16.41vh";
+  resultsElement.style.position = "relative";
 
-    //this sets the z-index and position for the sticky header
-    var stickyHeader = resultsElement.querySelector(".sticky-header");
-    stickyHeader.style.position = "sticky";
-    stickyHeader.style.top = "0";
-    stickyHeader.style.zIndex = "12"; // Set a higher z-index value
+  // sets the z-index and position for the sticky header
+  var stickyHeader = resultsElement.querySelector(".sticky-header");
+  stickyHeader.style.position = "sticky";
+  stickyHeader.style.top = "0";
+  stickyHeader.style.zIndex = "12";
 
-    //style for the header for the sticky header
-    stickyHeader.style.background = "#bfc1cc";
+  // styles the header for the sticky header
+  stickyHeader.style.background = "#bfc1cc";
 }

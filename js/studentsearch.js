@@ -124,11 +124,14 @@ function searchBooks() {
             fields.includes(bookGenre.toLowerCase()) ||
             fields.includes(bookPages.toLowerCase())
           ) {
-            for (const [key, value] of Object.entries(bookData)) {
-              localStorage.setItem(`${key}${index}`, value);
-            }
-            index++;
-            results.push(bookData);
+            const bookArray = Object.values(bookData); // Convert bookData object to an array
+
+            // Save the book array to localStorage
+            localStorage.setItem(`book${index}`, JSON.stringify(bookArray));
+
+            results.push(bookArray); // Add the book array to the results array
+
+            index++; // Increment the index
           }
         });
         if (results.length > 0) {
@@ -232,11 +235,14 @@ function searchBooks() {
             fields.includes(bookGenre.toLowerCase()) ||
             fields.includes(bookPages.toLowerCase())
           ) {
-            for (const [key, value] of Object.entries(bookData)) {
-              localStorage.setItem(`${key}${index}`, value);
-            }
-            index++;
-            results.push(bookData);
+            const bookArray = Object.values(bookData); // Convert bookData object to an array
+
+            // Save the book array to localStorage
+            localStorage.setItem(`book${index}`, JSON.stringify(bookArray));
+
+            results.push(bookArray); // Add the book array to the results array
+
+            index++; // Increment the index
           }
         });
         if (results.length > 0) {
@@ -279,14 +285,16 @@ function searchBooks() {
     const booksQuery = applyFiltersToQuery(booksRef);
     const checkedOutQuery = applyFiltersToQuery(checkedOutRef);
 
+    //clear localstorage before adding new results
+    localStorage.clear();
+
     //execute both queries concurrently
     Promise.all([booksQuery, checkedOutQuery])
       .then(([booksSnapshot, checkedOutSnapshot]) => {
         const results = [];
         let index = 0;
-        localStorage.clear();
 
-        //process 'books' collection snapshot
+        // Process 'books' collection snapshot
         booksSnapshot.forEach(doc => {
           const bookData = {
             bookNumber: doc.data().booknumber || "",
@@ -300,15 +308,14 @@ function searchBooks() {
             bookStatus: doc.data().bookstatus || ""
           };
           if (isBookMatch(bookData)) {
-            for (const [key, value] of Object.entries(bookData)) {
-              localStorage.setItem(`${key}${index}`, value);
-            }
+            const bookKey = `book${index}`;
+            localStorage.setItem(bookKey, JSON.stringify(Object.values(bookData))); // Store book data array in localStorage
             index++;
             results.push(bookData);
           }
         });
 
-        //process 'checkedout' collection snapshot
+        // Process 'checkedout' collection snapshot
         checkedOutSnapshot.forEach(doc => {
           const bookData = {
             bookNumber: doc.data().booknumber || "",
@@ -322,9 +329,8 @@ function searchBooks() {
             bookStatus: doc.data().bookstatus || ""
           };
           if (isBookMatch(bookData)) {
-            for (const [key, value] of Object.entries(bookData)) {
-              localStorage.setItem(`${key}${index}`, value);
-            }
+            const bookKey = `book${index}`;
+            localStorage.setItem(bookKey, JSON.stringify(Object.values(bookData))); // Store book data array in localStorage
             index++;
             results.push(bookData);
           }
