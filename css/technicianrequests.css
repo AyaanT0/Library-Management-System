@@ -199,7 +199,7 @@ body {
     z-index: 420;
 }
 
-.searchbookside {
+.addbookside {
     box-sizing: border-box;
     position: absolute;
     width: 22.56vw;
@@ -219,13 +219,13 @@ body {
     box-sizing: border-box;
 }
 
-.searchbookside:hover {
+.addbookside:hover {
     background-color: #C0C0C0;
     color: white;
     transform: scale(1.03);
 }
 
-.checkedoutbookside {
+.removebookside {
     box-sizing: border-box;
     position: absolute;
     width: 22.56vw;
@@ -245,13 +245,13 @@ body {
     box-sizing: border-box;
 }
 
-.checkedoutbookside:hover {
+.removebookside:hover {
     background-color: #C0C0C0;
     color: white;
     transform: scale(1.03);
 }
 
-.fineholdbookside {
+.checkoutbookside {
     box-sizing: border-box;
     position: absolute;
     width: 22.56vw;
@@ -271,13 +271,13 @@ body {
     box-sizing: border-box;
 }
 
-.fineholdbookside:hover {
+.checkoutbookside:hover {
     background-color: #C0C0C0;
     color: white;
     transform: scale(1.03);
 }
 
-.requestbookside {
+.checkinbookside {
     box-sizing: border-box;
     position: absolute;
     width: 22.56vw;
@@ -297,7 +297,33 @@ body {
     box-sizing: border-box;
 }
 
-.requestbookside:hover {
+.checkinbookside:hover {
+    background-color: #C0C0C0;
+    color: white;
+    transform: scale(1.03);
+}
+
+.technicianrequestside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 11vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 82vh;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.15vw;
+    z-index: 5;
+    text-align: center;
+    background: #D9D9D9;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+    box-sizing: border-box;
+}
+
+.technicianrequestside:hover {
     background-color: #C0C0C0;
     color: white;
     transform: scale(1.03);
@@ -312,6 +338,8 @@ body {
     z-index: 1;
     background: #D5CFCF;
 }
+
+
 
 /*copy from beginning until here for all future student css pages*/
 
@@ -369,7 +397,7 @@ body {
 
 /* Style the book requests container */
 #bookRequestsContainer {
-    width: 73vw;
+    width: 75vw;
     height: 74vh;
     left: 26vw;
     top: 16vh;
@@ -438,3 +466,35 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
+
+.bookRequest {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.deleteButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.deleteButton:hover {
+    background-color: #c0392b;
+}
+
+.bookRequestTitle {
+    font-weight: bold;
+}
+
+.bookRequestDetails {
+    margin-top: 10px;
+}
+

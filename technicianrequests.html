@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"> <!--favicon-->
+    <title>Manage Requests</title><!--tab title-->
+    <link rel="stylesheet" href="css/technicianrequests.css">
+    <!--this links the css stylesheet for this page, located in the css folder-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--this initializes jQuery, the JS library used for scripting and firebase api calls -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!--bootstrap css-->
+    <script src="js/technicianrequests.js"></script>
+    <!--this links the js script for this page, located in the js folder-->
+</head>
+
+<body>
+
+    <div align="center" class="studentportal" id="studentportal"><!--main content div-->
+        <h1 class="welcome" id="numberofbooks">Book Requests</h1><!--page title h1 as results found-->
+        <h2 class="logotext">North Park <br>Library</h2><!--north park library title h2-->
+        <p class="sidebartext">Technician ACTIONS</p><!--student actions label-->
+        <rect class="rectangle000"></rect><!--sidebar rectangle-->
+        <rect class="rectangle0000"></rect><!--top bar rectangle logo-->
+        <rect class="rectangle0"></rect><!--top bar rectangle title-->
+        <rect class="rectangle69"></rect><!--actions label rectangle-->
+        <rect class="rectangle1bigsportal"></rect><!--main content rectangle-->
+        <rect class="rectangle1bigsearchs"></rect><!--content housing rectangle-->
+        <img src="img/image1.jpg" class="sideimage1"><!--sidebar image-->
+        <a href="homepage.html"><img src="img/logo.png" class="logo"></a><!--top bar logo-->
+        <img src="img/logo.png" class="midlogo"><!--main content logo middle-->
+        <img src="img/triangledown.png" class="triangledown"><!--student actions label button-->
+        <img src="img/bookrequest.png" class="topbarimage"><!--top bar icon-->
+
+        <button type="button" id="logout"
+            class="logout logout:hover">LOGOUT</button><!--logout button linked to firebase auth-->
+        <button onclick="location.href = 'addbook.html';" type="button" class="addbookside addbookside:hover">ADD
+            BOOK</button><!--add book side button redirect-->
+        <button onclick="location.href = 'removebook.html';" type="button"
+            class="removebookside removebookside:hover">REMOVE BOOK</button><!--remove book side button redirect-->
+        <button onclick="location.href = 'checkoutbook.html';" type="button"
+            class="checkoutbookside checkoutbookside:hover">CHECKOUT
+            BOOK</button><!--checkout book side button redirect-->
+        <button onclick="location.href = 'checkinbook.html';" type="button"
+            class="checkinbookside checkinbookside:hover">CHECK IN BOOK</button><!--checkin book side button redirect-->
+        <!--copy until here for all future technician pages-->
+        <button onclick="location.href = 'technicianrequests.html';" type="button"
+            class="technicianrequestside technicianrequestside:hover">See Requests</button>
+
+        <!--copy until here for all future student pages-->
+        <rect class="rectangle1bigresultss"></rect> <!--content housing rectangle-->
+
+        <div class="container">
+            <div id="bookRequestsContainer"></div>
+        </div>
+
+
+        <!--various firebase scripts required for functionality of the database, such as initializing the firebase api instance,
+        initializing firestore database, initializing firebase authentication (for technician auth), and initializing firebase storage
+        (for book cover storage), defer means to run the script after the others-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.0.2/firebase-storage.js"></script>
+</body>
+
+</html>

@@ -294,6 +294,32 @@ body {
     transform: scale(1.03);
 }
 
+.technicianrequestside {
+    box-sizing: border-box;
+    position: absolute;
+    width: 11vw;
+    height: 9.5vh;
+    left: 0.6vw;
+    top: 82vh;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.15vw;
+    z-index: 5;
+    text-align: center;
+    background: #D9D9D9;
+    border: 0.14vw solid #000000;
+    box-shadow: 0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.25);
+    border-radius: 2.05vw;
+    box-sizing: border-box;
+}
+
+.technicianrequestside:hover {
+    background-color: #C0C0C0;
+    color: white;
+    transform: scale(1.03);
+}
+
 .rectangle1bigtportal {
     position: fixed;
     width: 100%;
